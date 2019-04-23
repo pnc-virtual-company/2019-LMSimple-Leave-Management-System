@@ -8,7 +8,7 @@
             @include('session-flash')
 
             <div class="card">
-                <div class="card-header">@lang('List of users')</div>
+                <div class="card-header bg-info">@lang('List of users')</div>
 
                 <div class="card-body">
 
