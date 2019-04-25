@@ -20,7 +20,7 @@
     <!-- Fonts and Icons -->
     <link rel="stylesheet" href="{{ asset('css/materialdesignicons.min.css') }}" />
 </head>
-<body>
+<body> 
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
