@@ -38,7 +38,7 @@
                   <p>HR</p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="#">List Employees</a>
+                  <a class="dropdown-item" href="{{route('manager.index')}}">List Employees</a>
                 <a class="dropdown-item" href="{{route('department.index')}}">Department</a>
                   <a class="dropdown-item" href="#">Position</a>
                 </div>
