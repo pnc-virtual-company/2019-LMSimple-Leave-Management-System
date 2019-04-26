@@ -66,3 +66,7 @@ Route::resource('home','pageController');
 Route::resource('department','departmentController');
 Route::resource('manager','ManagerController');
 
+Route::resource('/home','pageController');
+Route::resource('/department','departmentController');
+Route::resource('/manager','ManagerController');
+
