@@ -61,9 +61,8 @@ Route::get('examples/pdf/downloadPDF', 'ExamplesController@downloadPDF');
 Route::get('examples', 'ExamplesController@index')->name('examples');
 /*
 =============================================================================*/
+
 Route::resource('/home','pageController');
-
 Route::resource('/department','departmentController');
-
 Route::resource('/manager','ManagerController');
 
