@@ -13,7 +13,7 @@ class pageController extends Controller
      */
     public function index()
     {
-        return view('pages.manager');
+        return view('pages.home');
     }
 
     /**
