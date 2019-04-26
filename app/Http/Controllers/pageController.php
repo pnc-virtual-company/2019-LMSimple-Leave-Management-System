@@ -23,7 +23,7 @@ class pageController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.dashboard');
     }
 
     /**
