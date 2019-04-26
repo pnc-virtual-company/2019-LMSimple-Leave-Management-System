@@ -62,8 +62,5 @@ Route::get('examples', 'ExamplesController@index')->name('examples');
 /*
 =============================================================================*/
 Route::resource('home','pageController');
-<<<<<<< HEAD
 Route::resource('department','departmentController');
-=======
 Route::resource('manager','pageController');
->>>>>>> 41c1f33dc5dcf66e8cb301f2a101cf3f87ce0395
