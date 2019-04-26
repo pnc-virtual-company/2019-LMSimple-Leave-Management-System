@@ -329,6 +329,9 @@ class ExamplesController extends Controller
      * You might use this wrapper: https://github.com/barryvdh/laravel-dompdf
      * @return void
      */
+    function calendar(){
+        return view('pages.calendar');
+    }
 	function downloadPDF()
 	{
 		// instantiate and use the dompdf class

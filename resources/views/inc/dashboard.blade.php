@@ -44,11 +44,8 @@
                   <p>HR</p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="#">List Employees</a>
-                  <a class="dropdown-item" href="#">Department</a>
-                <a class="dropdown-item" href="{{route('position.index')}}">Position</a>
                   <a class="dropdown-item" href="{{route('manager.index')}}">List Employees</a>
-                <a class="dropdown-item" href="{{route('department.index')}}">Department</a>
+                  <a class="dropdown-item" href="{{route('department.index')}}">Department</a>
                   <a class="dropdown-item" href="{{route('position.index')}}">Position</a>
                 </div>
           </li>
@@ -74,7 +71,7 @@
           </li>
           
           <li class="nav-item ">
-            <a class="nav-link" href="#">
+          <a class="nav-link" href="{{url('calendar')}}">
               <i class="material-icons">date_range</i>
               <p>Calendar</p>
             </a>
