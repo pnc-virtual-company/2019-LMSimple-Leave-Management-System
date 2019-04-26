@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head> 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
@@ -38,8 +38,8 @@
                   <p>HR</p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                <a class="dropdown-item" href="{{url('manager')}}">List Employees</a>
-                  <a class="dropdown-item" href="#">Department</a>
+                  <a class="dropdown-item" href="#">List Employees</a>
+                <a class="dropdown-item" href="{{route('department.index')}}">Department</a>
                   <a class="dropdown-item" href="#">Position</a>
                 </div>
           </li>
