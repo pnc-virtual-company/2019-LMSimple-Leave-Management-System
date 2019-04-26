@@ -64,3 +64,8 @@ Route::get('examples', 'ExamplesController@index')->name('examples');
 Route::resource('home','pageController');
 Route::resource('department','departmentController');
 Route::resource('manager','pageController');
+
+Route::resource('/home','pageController');
+Route::resource('/department','departmentController');
+Route::resource('/manager','ManagerController');
+
