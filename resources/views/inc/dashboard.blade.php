@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head> 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
@@ -33,7 +33,7 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboard.html">
+            <a class="nav-link" href="{{route('home.create')}}">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
@@ -47,6 +47,9 @@
                   <a class="dropdown-item" href="#">List Employees</a>
                   <a class="dropdown-item" href="#">Department</a>
                 <a class="dropdown-item" href="{{route('position.index')}}">Position</a>
+                  <a class="dropdown-item" href="{{route('manager.index')}}">List Employees</a>
+                <a class="dropdown-item" href="{{route('department.index')}}">Department</a>
+                  <a class="dropdown-item" href="{{route('position.index')}}">Position</a>
                 </div>
           </li>
           <li class="nav-item dropdown">
@@ -69,6 +72,7 @@
                   <a class="dropdown-item" href="#">Leave request</a>
                 </div>
           </li>
+          
           <li class="nav-item ">
             <a class="nav-link" href="#">
               <i class="material-icons">date_range</i>
