@@ -62,3 +62,5 @@ Route::get('examples', 'ExamplesController@index')->name('examples');
 /*
 =============================================================================*/
 Route::resource('home','pageController');
+Route::resource('position','PositionController');
+Route::resource('profile','PictureProfile');
