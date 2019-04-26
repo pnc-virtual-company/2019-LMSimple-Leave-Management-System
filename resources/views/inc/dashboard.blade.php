@@ -50,7 +50,7 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
                   <a class="dropdown-item" href="#">Profile picture</a>
-                  <a class="dropdown-item" href="#">Personal Information</a>
+                <a class="dropdown-item" href="{{route('personal.create')}}">Personal Information</a>
                 </div>
           </li>
           <li class="nav-item dropdown">
@@ -59,8 +59,8 @@
                   <p>Requests</p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="#">Leave type</a>
-                  <a class="dropdown-item" href="#">Leave request</a>
+                  <a class="dropdown-item" href="{{route('leave_type.index')}}">Leave type</a> 
+                  <a class="dropdown-item" href="{{route('leave_request.index')}}">Leave request</a>
                 </div>
           </li>
           <li class="nav-item ">

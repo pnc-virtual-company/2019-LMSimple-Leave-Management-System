@@ -62,3 +62,10 @@ Route::get('examples', 'ExamplesController@index')->name('examples');
 /*
 =============================================================================*/
 Route::resource('home','pageController');
+Route::resource('personal','LeaveTypeController');
+Route::resource('leave_type','LeaveTypeController');
+
+Route::resource('leave_request','LeaveRequestController');
+
+
+
