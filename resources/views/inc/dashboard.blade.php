@@ -8,12 +8,18 @@
     Leave Management System
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+
+
+  <link rel="stylesheet" href="{{asset('css/app.css')}}">
+  <link rel="stylesheet" href="{{asset('css/jquery.dataTables.min.css')}}">
+<link rel="stylesheet" href="{{asset('css/profile.css')}}">
+  
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
-  <link href="{{asset('css/material-dashboard.css')}}" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="{{asset('css/material-dashboard.css')}}" rel="stylesheet" />
 </head>
 
 <body class="">
@@ -39,8 +45,8 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
                   <a class="dropdown-item" href="{{route('manager.index')}}">List Employees</a>
-                <a class="dropdown-item" href="{{route('department.index')}}">Department</a>
-                  <a class="dropdown-item" href="#">Position</a>
+                  <a class="dropdown-item" href="{{route('department.index')}}">Department</a>
+                  <a class="dropdown-item" href="{{route('position.index')}}">Position</a>
                 </div>
           </li>
           <li class="nav-item dropdown">
@@ -49,7 +55,7 @@
                   <p>Employees Profile</p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="#">Profile picture</a>
+                <a class="dropdown-item" href="{{route('profile.index')}}">Profile picture</a>
                   <a class="dropdown-item" href="#">Personal Information</a>
                 </div>
           </li>
@@ -63,8 +69,9 @@
                   <a class="dropdown-item" href="#">Leave request</a>
                 </div>
           </li>
+          
           <li class="nav-item ">
-            <a class="nav-link" href="#">
+          <a class="nav-link" href="{{url('calendar')}}">
               <i class="material-icons">date_range</i>
               <p>Calendar</p>
             </a>
@@ -131,8 +138,13 @@
       <div class="content">
         <div class="container-fluid">
     </div>
-      <script src="{{asset('js/jquery.min.js')}}"></script>
-      <script src="{{asset('js/popper.min.js')}}"></script>
+    <script src="{{asset('js/jquery.min.js')}}"></script>
+    <script src="{{asset('js/jquery-3.2.1.slim.min.js')}}"></script>
+    <script src="{{asset('js/popper.min.js')}}"></script>
+    {{-- <script src="{{asset('js/jquery.dataTables.min.js')}}"></script> --}}
+    <script src="{{asset('js/position.js')}}"></script> 
+
+    
       <script src="{{asset('js/bootstrap-material-design.min.js')}}"></script>
       <script src="{{asset('js/perfect-scrollbar.jquery.min.js')}}"></script>
       <script src="{{asset('js/moment.min.js')}}"></script>
@@ -150,9 +162,12 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
       <script src="{{asset('/js/arrive.min.js')}}"></script>
       <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-      <script src="{{asset('js/plugins/chartist.min.js')}}"></script>
-      <script src="{{asset('js/plugins/bootstrap-notify.js')}}"></script>
+      {{-- <script src="{{asset('js/plugins/chartist.min.js')}}"></script> --}}
+      {{-- <script src="{{asset('js/plugins/bootstrap-notify.js')}}"></script> --}}
       <script src="{{asset('js/material-dashboard.js?v=2.1.1')}}" type="text/javascript"></script>
+
+      {{-- <script src="{{asset('js/bootstrap.min.js')}}"></script> --}}
+    
       <script>
         $(document).ready(function() {
           $().ready(function() {

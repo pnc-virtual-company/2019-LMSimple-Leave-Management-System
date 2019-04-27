@@ -66,6 +66,10 @@ Route::resource('home','pageController');
 Route::resource('department','departmentController');
 Route::resource('manager','ManagerController');
 
+Route::get('calendar', 'ExamplesController@calendar');
+Route::resource('home','pageController');
+Route::resource('position','PositionController');
+Route::resource('profile','PictureProfile');
 Route::resource('/home','pageController');
 Route::resource('/department','departmentController');
 Route::resource('/manager','ManagerController');

@@ -1,0 +1,47 @@
+/* body {
+    margin: 0;
+    padding: 0;
+/* } */
+ .containern {
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 65%;
+    height: 50px;
+} 
+.rows {
+    width: 103%;
+    height: 298px;
+    
+}
+.imge {
+    width: 140px;
+    height: 150px;
+    margin-top: 53px;
+    margin-right: -110px;
+    border: 2px solid black;
+    overflow: auto;
+
+}
+
+
+.text {
+    font-style: italic;
+   
+}
+.icons {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-right: -110px;
+}
+.fa-sign-out-alt{
+ /* float: right; */
+ margin: 0px;
+ padding: 0px;
+ float:right;
+ 
+}
+.fa-plus,
+.fa-pencil-alt,
+.fa-trash-alt{
+    padding: 5px;
+}
