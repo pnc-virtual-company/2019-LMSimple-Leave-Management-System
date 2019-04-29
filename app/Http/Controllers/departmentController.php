@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Department;
 class departmentController extends Controller
 {
     /**
@@ -13,7 +13,8 @@ class departmentController extends Controller
      */
     public function index()
     {
-        return view('pages.department');
+        $demp = Department::all();
+        return view('pages.department',compact('demp'));
     }
 
     /**
@@ -23,7 +24,7 @@ class departmentController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.department');
     }
 
     /**
