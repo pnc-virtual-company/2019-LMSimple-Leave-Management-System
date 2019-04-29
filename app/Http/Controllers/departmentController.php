@@ -13,7 +13,6 @@ class departmentController extends Controller
      */
     public function index()
     {
-        // $demp = Department::all();
         return view('pages.department');
     }
 
