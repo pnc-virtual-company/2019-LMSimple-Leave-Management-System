@@ -33,19 +33,88 @@
                 </tr>
             </thead>
             <tbody>
-                    @foreach ($leave as $type)
+                    {{-- @foreach ($leave as $type) --}}
                     <tr>
-                        <td>{{$type->id}}</td>
-                        <td>{{$type->position}}</td>
+                        <td>01</td>
+                        <td>teacher</td>
                         <td>
-                        <a href="delete/{{$type->id}}"data-toggle="modal" data-target="#delete" data-id="{{$type->id}}"
-                            data-title="{{$type->position}}"> 
+                        <a href=""data-toggle="modal" data-target="#delete"> 
                                 <i class="material-icons">delete</i> </a>
                             <a href="" data-toggle="modal" data-target="#edit"> 
                                 <i class="material-icons">edit</i></a>
                         </td>
                     </tr>
-                    @endforeach
+                    <tr>
+                        <td>01</td>
+                        <td>teacher</td>
+                        <td>
+                        <a href=""data-toggle="modal" data-target="#delete"> 
+                                <i class="material-icons">delete</i> </a>
+                            <a href="" data-toggle="modal" data-target="#edit"> 
+                                <i class="material-icons">edit</i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>teacher</td>
+                        <td>
+                        <a href=""data-toggle="modal" data-target="#delete"> 
+                                <i class="material-icons">delete</i> </a>
+                            <a href="" data-toggle="modal" data-target="#edit"> 
+                                <i class="material-icons">edit</i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>teacher</td>
+                        <td>
+                        <a href=""data-toggle="modal" data-target="#delete"> 
+                                <i class="material-icons">delete</i> </a>
+                            <a href="" data-toggle="modal" data-target="#edit"> 
+                                <i class="material-icons">edit</i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>teacher</td>
+                        <td>
+                        <a href=""data-toggle="modal" data-target="#delete"> 
+                                <i class="material-icons">delete</i> </a>
+                            <a href="" data-toggle="modal" data-target="#edit"> 
+                                <i class="material-icons">edit</i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>teacher</td>
+                        <td>
+                        <a href=""data-toggle="modal" data-target="#delete"> 
+                                <i class="material-icons">delete</i> </a>
+                            <a href="" data-toggle="modal" data-target="#edit"> 
+                                <i class="material-icons">edit</i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>teacher</td>
+                        <td>
+                        <a href=""data-toggle="modal" data-target="#delete"> 
+                                <i class="material-icons">delete</i> </a>
+                            <a href="" data-toggle="modal" data-target="#edit"> 
+                                <i class="material-icons">edit</i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td>student</td>
+                        <td>
+                        <a href=""data-toggle="modal" data-target="#delete"> 
+                                <i class="material-icons">delete</i> </a>
+                            <a href="" data-toggle="modal" data-target="#edit"> 
+                                <i class="material-icons">edit</i></a>
+                        </td>
+                    </tr>
+                    {{-- @endforeach --}}
             </tbody>
         </table>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
