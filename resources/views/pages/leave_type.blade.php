@@ -22,12 +22,8 @@
         crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-
-
 </head>
-
 <body>
-
     <div class="container mt-4">
         <table id="example" class="table table-striped table-bordered" style="width:100%">
             <thead>
@@ -35,80 +31,67 @@
                     <th>ID</th>
                     <th>Position</th>
                     <th>Action</th>
-
-
                 </tr>
             </thead>
             <tbody>
-
                 <tr>
-
                     <td>40</td>
                     <td>teacher</td>
-                   
                     <td>
                         <a href=" class="btn btn-primary" data-toggle="modal" data-target="#delete" "> 
-                                    <i class="material-icons">delete</i> </a>
+                        <i class="material-icons">delete</i> </a>
                         <a href=" class="btn btn-primary" data-toggle="modal" data-target="#edit" "> 
                         <i class="material-icons">edit</i>   </a>
-                
-                       
                     </td>
                 </tr>
                 <tr>
-
                     <td>21</td>
                     <td>student</td>
                     <td>
                         <a href=" class="btn btn-primary" data-toggle="modal" data-target="#delete" "> 
-                             <i class="material-icons">delete</i> </a>
-                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#edit" "> 
-                                <i class="material-icons">edit</i>   </a>
-                    </td>
-                </tr>
-                <tr>
-
-                    <td>23</td>
-                    <td>trainer</td>
-                    <td>
-                      
-                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#delete" "> 
-                                <i class="material-icons">delete</i> </a>
+                         <i class="material-icons">delete</i> </a>
                         <a href=" class="btn btn-primary" data-toggle="modal" data-target="#edit" "> 
                         <i class="material-icons">edit</i>   </a>
                     </td>
                 </tr>
                 <tr>
-
+                    <td>23</td>
+                    <td>trainer</td>
+                    <td>
+                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#delete" "> 
+                        <i class="material-icons">delete</i> </a>
+                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#edit" "> 
+                        <i class="material-icons">edit</i>   </a>
+                    </td>
+                </tr>
+                <tr>
                     <td>47</td>
                     <td>admin</td>
                     <td>
-                            <a href=" class="btn btn-primary" data-toggle="modal" data-target="#delete" "> 
-                                    <i class="material-icons">delete</i> </a>
+                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#delete" "> 
+                        <i class="material-icons">delete</i> </a>
                         <a href=" class="btn btn-primary" data-toggle="modal" data-target="#edit" "> 
-                                <i class="material-icons">edit</i>   </a>
+                        <i class="material-icons">edit</i>   </a>
                     </td>
                 </tr>
                 <tr>
-
                     <td>42</td>
                     <td>teacher</td>
                     <td>
-                            <a href=" class="btn btn-primary" data-toggle="modal" data-target="#delete" "> 
-                                    <i class="material-icons">delete</i> </a>
+                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#delete" "> 
+                        <i class="material-icons">delete</i> </a>
                         <a href=" class="btn btn-primary" data-toggle="modal" data-target="#edit" "> 
-                                <i class="material-icons">edit</i>   </a>
+                        <i class="material-icons">edit</i> </a>
                     </td>
                 </tr>
                 <tr>
-
                     <td>28</td>
                     <td>student</td>
                     <td>
                         <a href=" class="btn btn-primary" data-toggle="modal" data-target="#delete" "> 
-                            <i class="material-icons">delete</i> </a>
+                        <i class="material-icons">delete</i> </a>
                         <a href=" class="btn btn-primary" data-toggle="modal" data-target="#edit" "> 
-                                <i class="material-icons">edit</i>   </a>
+                        <i class="material-icons">edit</i>   </a>
                     </td>
                 </tr>
                 <tr>
@@ -116,48 +99,37 @@
                     <td>28</td>
                     <td>finance</td>
                     <td>
-                            <a href=" class="btn btn-primary" data-toggle="modal" data-target="#delete" "> 
-                                    <i class="material-icons">delete</i> </a>
+                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#delete" "> 
+                        <i class="material-icons">delete</i> </a>
                         <a href=" class="btn btn-primary" data-toggle="modal" data-target="#edit" "> 
-                                <i class="material-icons">edit</i>   </a>
+                         <i class="material-icons">edit</i>   </a>
                     </td>
                 </tr>
                 <tr>
-
                     <td>48</td>
                     <td>trainer</td>
-                  
                     <td>
-
-                            <a href=" class="btn btn-primary" data-toggle="modal" data-target="#delete" "> 
-                                    <i class="material-icons">delete</i> </a>
+                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#delete" "> 
+                        <i class="material-icons">delete</i> </a>
                         <a href=" class="btn btn-primary" data-toggle="modal" data-target="#edit" "> 
-                                <i class="material-icons">edit</i>   </a>
+                        <i class="material-icons">edit</i>   </a>
                     </td>
                 </tr>
-
-
                 <tr>
-
                     <td>38</td>
                     <td>trainer</td>
                     <td>
-                            <a href=" class="btn btn-primary" data-toggle="modal" data-target="#delete" "> 
-                                    <i class="material-icons">delete</i> </a>
+                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#delete" "> 
+                        <i class="material-icons">delete</i> </a>
                         <a href=" class="btn btn-primary" data-toggle="modal" data-target="#edit" "> 
-                                <i class="material-icons">edit</i>   </a>
+                        <i class="material-icons">edit</i>   </a>
                     </td>
                 </tr>
-
             </tbody>
-
-
         </table>
-       
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
                 <i class="material-icons">add</i>Create Leave Type
         </button>
-        
               <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
@@ -172,7 +144,7 @@
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
-                      <button type="button" class="btn btn-primary">Cencel</button>
+                      <button type="button" class="btn btn-info">Cencel</button>
                     </div>
                   </div>
                 </div>
@@ -193,7 +165,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Yes</button>
-                    <button type="button" class="btn btn-primary">No</button>
+                    <button type="button" class="btn btn-info">No</button>
                 </div>
             </div>
         </div>
@@ -214,7 +186,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
-                        <button type="button" class="btn btn-primary">Cencel</button>
+                        <button type="button" class="btn btn-info">Cencel</button>
                     </div>
                 </div>
             </div>

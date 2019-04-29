@@ -17,18 +17,13 @@
 <br><br>
 <div class="container ">
         <h2>Employee Personal Information</h2>
+        <br>
         <div class="row-fluid user-infos">
             <div class="span10 offset1">
                 <div class="panel panel-primary">
                     <div class="panel-body">
                         <div class="row-fluid">
-                                <div class="span3">
-                                        <img class="img-circle"
-                                             src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100"
-                                             alt="User Pic">
-                                    </div>
                             <div class="span6">
-                                <strong>Profile</strong><br>
                                 <table class="table table-condensed table-responsive table-user-information">
                                     <tbody>
                                     <tr>
@@ -67,7 +62,7 @@
                     </div>
                     <div class="panel-footer">
                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                            <i id="material" class="material-icons flaot-rihg">add</i>Create Leave Type
+                            <i id="material" class="material-icons flaot-left">add</i>Create Leave Type
                     </button>
                         <span class="pull-right">
                             <button class="btn btn-warning" type="button"><i class="material-icons flaot-left">do_not_disturb</i>Deactivate Employee</button>
