@@ -301,7 +301,7 @@
                 </tr>
             </tbody>
         </table>
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal"
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal"
             data-whatever="@mdo"><i class="fas fa-plus-circle"></i> Create News</button>
 
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -372,8 +372,8 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancle</button>
-                        <a href="#"><button class="btn btn-primary">OK</button></a>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
+                        <a href="#"><button class="btn btn-info">OK</button></a>
                     </div>
                 </div>
             </div>
@@ -448,8 +448,8 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancle</button>
-                    <a href="index.html"><button class="btn btn-primary">OK</button></a>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
+                    <a href="index.html"><button class="btn btn-info">OK</button></a>
                 </div>
             </div>
         </div>
