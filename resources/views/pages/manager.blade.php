@@ -42,8 +42,8 @@
                 <tr>
                     <td>
                         <i class="fas fa-trash-alt"></i>
-                        <a href="class=" btn btn-primary" data-toggle="modal" data-target="#Edit"
-                            data-whatever="@mdo""><i class=" fas fa-pencil-alt"></i></a>
+                        <a href="" data-toggle="modal" data-target="#Edit"
+                            data-whatever="@mdo"><i class=" fas fa-pencil-alt"></i></a>
                         001</td>
                     <td>Tiger Nixon</td>
                     <td>Architect</td>
