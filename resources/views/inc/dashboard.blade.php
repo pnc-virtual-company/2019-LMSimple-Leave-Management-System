@@ -32,9 +32,9 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item active  ">
-            <a class="nav-link" href="{{route('home.create')}}">
-              <i class="material-icons">dashboard</i>
+          <li class="nav-item active">
+            <a class="nav-link bg-primary" href="{{route('home.create')}}">
+              <i class="material-icons text-white">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
@@ -47,6 +47,7 @@
                   <a class="dropdown-item" href="{{route('manager.index')}}">List Employees</a>
                   <a class="dropdown-item" href="{{route('department.index')}}">Department</a>
                   <a class="dropdown-item" href="{{route('position.index')}}">Position</a>
+                  <a class="dropdown-item" href="{{route('leave_type.index')}}">Leave type</a>
                 </div>
           </li>
           <li class="nav-item dropdown">
@@ -67,7 +68,7 @@
                   <p>Requests</p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="{{route('leave_type.index')}}">Leave type</a> 
+                   
                   <a class="dropdown-item" href="{{route('leave_request.index')}}">Leave request</a>
                 </div>
           </li>
