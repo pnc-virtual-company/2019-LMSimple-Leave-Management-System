@@ -13,7 +13,10 @@ class LeaveTypeController extends Controller
      */
     public function index()
     {
-        return view('pages.leave_type');
+        // return view('pages.leave_type');
+        $leave = \App\LeaveType::all();
+        return view('pages.leave_type',compact('leave'));
+
     }
 
     /**
@@ -23,7 +26,8 @@ class LeaveTypeController extends Controller
      */
     public function create()
     {
-        return view ('pages.personal');
+        $leave = \App\LeaveType::all();
+        // return view ('pages.personal');
     }
 
     /**
@@ -34,7 +38,7 @@ class LeaveTypeController extends Controller
      */
     public function store(Request $request)
     {
-        return view ('pages.leave_request');
+        // return view ('pages.leave_request');
     }
 
     /**

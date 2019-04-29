@@ -1,21 +1,32 @@
 @extends('layout.app')
 @section('content')
-{{-- <!DOCTYPE html> --}}
+<!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Manage position</title>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Employee Manager</title>
+    <link rel="stylesheet" href="{{asset('css/manager.css')}}">
+    <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset('css/dataTables.bootstrap4.min.css')}}">
+    {{-- <script src="{{asset('js/jquery-3.3.1.js')}}"></script> --}}
+    <script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('js/dataTables.bootstrap4.min.js')}}"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    
 </head>
 
 <body>
-    <div class="container mt-4">
-        <h1 class="text-center" >list of positions </h1>
-        <table id="example" class=" table table-bordered nowrap" style="width:100%">
+    <h1>List of position</h1><br>
+    <div class="container">
+        <table id="table" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -25,104 +36,107 @@
             <tbody>
                 <tr>
                     <td>
+                    
+                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
+                        class="far fa-trash-alt"></i></a>
+                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
+                        class="fas fa-pencil-alt"></i></a>
+                        
                         10
-                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                class="far fa-trash-alt"></i></a>
-                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                class="fas fa-pencil-alt"></i></a>
                     </td>
                     <td>General Manager</td>
                 </tr>
                 <tr>
-                    <td>
-                        11
-                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                class="far fa-trash-alt"></i></a>
-                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                class="fas fa-pencil-alt"></i></a>
-                    </td>
-                    <td>WEP Training Coordinator</td>
-                </tr>
-                <tr>
-                    <td>
-                        12
-                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                class="far fa-trash-alt"></i></a>
-                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                class="fas fa-pencil-alt"></i></a>
-                    </td>
-                    <td>IT Admin</td>
-                </tr>
-                <tr>
-                    <td>
-                        13
-                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                class="far fa-trash-alt"></i></a>
-                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                class="fas fa-pencil-alt"></i></a>
-                    </td>
-                    <td>Educator</td>
-                </tr>
-                <tr>
-                    <td>
-                        14
-                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                class="far fa-trash-alt"></i></a>
-                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                class="fas fa-pencil-alt"></i></a>
-                    </td>
-                    <td>English teacher</td>
-                </tr>
-                <tr>
-                    <td>
-                        15
-                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                class="far fa-trash-alt"></i></a>
-                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                class="fas fa-pencil-alt"></i></a>
-                    </td>
-                    <td>General Manager</td>
-                </tr>
-                <tr>
-                    <td>
-                        16
-                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                class="far fa-trash-alt"></i></a>
-                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                class="fas fa-pencil-alt"></i></a>
-                    </td>
-                    <td>General Manager</td>
-                </tr>
-                <tr>
-                    <td>
-                        17
-                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                class="far fa-trash-alt"></i></a>
-                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                class="fas fa-pencil-alt"></i></a>
-                    </td>
-                    <td>General Manager</td>
-                </tr>
-                <tr>
-                    <td>
-                        18
-                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                class="far fa-trash-alt"></i></a>
-                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                class="fas fa-pencil-alt"></i></a>
-                    </td>
-                    <td>General Manager</td>
-                </tr>
-                <tr>
-                    <td>
-                        19
-                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                class="far fa-trash-alt"></i></a>
-                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                class="fas fa-pencil-alt"></i></a>
-                    </td>
-                    <td>General Manager</td>
-                </tr>
+                        <td>
+                            <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
+                                    class="far fa-trash-alt"></i></a>
+                            <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
+                                    class="fas fa-pencil-alt"></i></a>
+                                    11
+                        </td>
+                        <td>WEP Training Coordinator</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
+                                    class="far fa-trash-alt"></i></a>
+                            <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
+                                    class="fas fa-pencil-alt"></i></a>
+                                   12
+                        </td>
+                        <td>IT Admin</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
+                                    class="far fa-trash-alt"></i></a>
+                            <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
+                                    class="fas fa-pencil-alt"></i></a>
+                                   13
+                        </td>
+                        <td>Educator</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
+                                    class="far fa-trash-alt"></i></a>
+                            <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
+                                    class="fas fa-pencil-alt"></i></a>
+                                    14
+                        </td>
+                        <td>English teacher</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
+                                    class="far fa-trash-alt"></i></a>
+                            <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
+                                    class="fas fa-pencil-alt"></i></a>
+                                    15
+                        </td>
+                        <td>General Manager</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
+                                    class="far fa-trash-alt"></i></a>
+                            <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
+                                    class="fas fa-pencil-alt"></i></a>
+                                    16
+                        </td>
+                        <td>General Manager</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
+                                    class="far fa-trash-alt"></i></a>
+                            <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
+                                    class="fas fa-pencil-alt"></i></a>
+                                    17
+                        </td>
+                        <td>General Manager</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
+                                    class="far fa-trash-alt"></i></a>
+                            <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
+                            class="fas fa-pencil-alt"></i></a>
+                            18
+                        </td>
+                        <td>General Manager</td>
+                    </tr>
+                    <tr>
+                        <td> 
+                            <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
+                                    class="far fa-trash-alt"></i></a>
+                            <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
+                                    class="fas fa-pencil-alt"></i></a>
+                                    19
+                        </td>
+                        
+                        <td>General Manager</td>
+                    </tr>
             </tbody>
         </table>
         <!-- modal delete  -->
@@ -202,9 +216,15 @@
             </div>
         </div>
         <a href="" class="btn btn-primary" data-toggle="modal" data-target="#createModal"><i
-                class="fas fa-plus-circle"></i> Create position</a>
+        class="fas fa-plus-circle"></i> Create position</a>
     </div>
 </body>
-
-</html>
-@endsection   
+<script>
+    $(document).ready(function () {
+        $('#table').DataTable({
+            "scrollY": 300,
+            "scrollX": true
+        });
+    });
+</script> 
+@endsection 
