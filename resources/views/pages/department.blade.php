@@ -35,7 +35,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($demp as $demps)
+               
                     
                 
                 <tr>
@@ -46,11 +46,11 @@
                         <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
                                         class="fas fa-pencil-alt"></i></a>
                     </td>
-                    <td>{{$demps->id}}</td>
-                    <td>{{$demps->department}}</td>
+                   <td>1</td>
+                    <td>Trianing&Education Team</td>
                    
                 </tr>
-                @endforeach
+               
              
             </tbody>
         </table>
