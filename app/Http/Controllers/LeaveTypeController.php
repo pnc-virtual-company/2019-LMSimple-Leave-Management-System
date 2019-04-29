@@ -25,6 +25,8 @@ class LeaveTypeController extends Controller
     public function create()
     {
 
+
+
         return view ('pages.personal');
     }
 
@@ -36,6 +38,7 @@ class LeaveTypeController extends Controller
      */
     public function store(Request $request)
     {
+
       
     }
 

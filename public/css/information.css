@@ -1,0 +1,28 @@
+.inputs {
+    border:none;
+    padding:1px;
+}
+.cont {
+    width:95%;
+    height:600px;
+    border: 1px solid black;
+}
+hr{
+    width:100%;
+    border: 1px solid black;
+    margin-right:40px;
+}
+.row1 {
+    width: 83%;
+    height: 180px;
+    margin: 34px 66px 24px;
+    border: 1px solid black;
+}
+.fa-paper-plane{
+    font-size: 50px;
+    float: right;
+}
+
+
+
+

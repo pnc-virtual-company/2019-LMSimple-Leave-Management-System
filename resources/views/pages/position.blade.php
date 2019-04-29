@@ -20,7 +20,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    
+
 </head>
 
 <body>
@@ -36,107 +36,105 @@
             <tbody>
                 <tr>
                     <td>
-                    
                         <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                        class="far fa-trash-alt"></i></a>
+                                class="far fa-trash-alt"></i></a>
                         <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                        class="fas fa-pencil-alt"></i></a>
-                        
+                                class="fas fa-pencil-alt"></i></a>
                         10
                     </td>
                     <td>General Manager</td>
                 </tr>
                 <tr>
-                        <td>
-                            <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                    class="far fa-trash-alt"></i></a>
-                            <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                    class="fas fa-pencil-alt"></i></a>
-                                    11
-                        </td>
-                        <td>WEP Training Coordinator</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                    class="far fa-trash-alt"></i></a>
-                            <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                    class="fas fa-pencil-alt"></i></a>
-                                   12
-                        </td>
-                        <td>IT Admin</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                    class="far fa-trash-alt"></i></a>
-                            <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                    class="fas fa-pencil-alt"></i></a>
-                                   13
-                        </td>
-                        <td>Educator</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                    class="far fa-trash-alt"></i></a>
-                            <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                    class="fas fa-pencil-alt"></i></a>
-                                    14
-                        </td>
-                        <td>English teacher</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                    class="far fa-trash-alt"></i></a>
-                            <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                    class="fas fa-pencil-alt"></i></a>
-                                    15
-                        </td>
-                        <td>General Manager</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                    class="far fa-trash-alt"></i></a>
-                            <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                    class="fas fa-pencil-alt"></i></a>
-                                    16
-                        </td>
-                        <td>General Manager</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                    class="far fa-trash-alt"></i></a>
-                            <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                    class="fas fa-pencil-alt"></i></a>
-                                    17
-                        </td>
-                        <td>General Manager</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                    class="far fa-trash-alt"></i></a>
-                            <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                            class="fas fa-pencil-alt"></i></a>
-                            18
-                        </td>
-                        <td>General Manager</td>
-                    </tr>
-                    <tr>
-                        <td> 
-                            <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                    class="far fa-trash-alt"></i></a>
-                            <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                    class="fas fa-pencil-alt"></i></a>
-                                    19
-                        </td>
-                        
-                        <td>General Manager</td>
-                    </tr>
+                    <td>
+                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
+                                class="far fa-trash-alt"></i></a>
+                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
+                                class="fas fa-pencil-alt"></i></a>
+                        11
+                    </td>
+                    <td>WEP Training Coordinator</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
+                                class="far fa-trash-alt"></i></a>
+                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
+                                class="fas fa-pencil-alt"></i></a>
+                        12
+                    </td>
+                    <td>IT Admin</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
+                                class="far fa-trash-alt"></i></a>
+                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
+                                class="fas fa-pencil-alt"></i></a>
+                        13
+                    </td>
+                    <td>Educator</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
+                                class="far fa-trash-alt"></i></a>
+                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
+                                class="fas fa-pencil-alt"></i></a>
+                        14
+                    </td>
+                    <td>English teacher</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
+                                class="far fa-trash-alt"></i></a>
+                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
+                                class="fas fa-pencil-alt"></i></a>
+                        15
+                    </td>
+                    <td>General Manager</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
+                                class="far fa-trash-alt"></i></a>
+                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
+                                class="fas fa-pencil-alt"></i></a>
+                        16
+                    </td>
+                    <td>General Manager</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
+                                class="far fa-trash-alt"></i></a>
+                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
+                                class="fas fa-pencil-alt"></i></a>
+                        17
+                    </td>
+                    <td>General Manager</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
+                                class="far fa-trash-alt"></i></a>
+                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
+                                class="fas fa-pencil-alt"></i></a>
+                        18
+                    </td>
+                    <td>General Manager</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
+                                class="far fa-trash-alt"></i></a>
+                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
+                                class="fas fa-pencil-alt"></i></a>
+                        19
+                    </td>
+
+                    <td>General Manager</td>
+                </tr>
             </tbody>
         </table>
         <!-- modal delete  -->
@@ -151,8 +149,9 @@
                         Are you sure that you want to delete this position?
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">No</button>
-                       <a href="{{url('position')}}"> <button type="button" class="btn btn-danger btn-sm">Yes</button></a>
+                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">No</button>
+                        <a href="{{url('position')}}"> <button type="button"
+                                class="btn btn-info btn-sm">Yes</button></a>
                     </div>
                 </div>
             </div>
@@ -170,15 +169,15 @@
                             <div class="form-group row">
                                 <label for="inputPassword" class="col-sm-2 col-form-label">Position</label>
                                 <div class="col-sm-10">
-                                    <input type="text" id="createInput"
-                                        placeholder="Communication officer">
+                                    <input type="text" id="createInput" placeholder="Communication officer">
                                 </div>
                             </div>
                         </form>
                     </div>
                     <div class="modal-footer">
-                            <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Ok</button>
-                            <a href="{{url('position')}}"> <button type="button" class="btn btn-danger btn-sm">Cancel</button></a>
+                        <button type="button" class="btn btn-info btn-sm" data-dismiss="modal">Ok</button>
+                        <a href="{{url('position')}}"> <button type="button"
+                                class="btn btn-danger btn-sm">Cancel</button></a>
                     </div>
                 </div>
             </div>
@@ -203,20 +202,21 @@
                             <div class="form-group row">
                                 <label for="input" class="col-sm-2 col-form-label">Position</label>
                                 <div class="col-sm-10">
-                                    <input type="text"  id="input" placeholder="IT Admin">
+                                    <input type="text" id="input" placeholder="IT Admin">
                                 </div>
                             </div>
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal">Ok</button>
-                       <a href="{{url('position')}}"> <button type="button" class="btn btn-danger btn-sm">Cancel</button></a>
+                        <button type="button" class="btn btn-info btn-sm" data-dismiss="modal">Ok</button>
+                        <a href="{{url('position')}}"> <button type="button"
+                                class="btn btn-danger btn-sm">Cancel</button></a>
                     </div>
                 </div>
             </div>
         </div>
-        <a href="" class="btn btn-primary" data-toggle="modal" data-target="#createModal"><i
-        class="fas fa-plus-circle"></i> Create position</a>
+        <a href="" class="btn btn-info" data-toggle="modal" data-target="#createModal"><i
+                class="fas fa-plus-circle"></i> Create position</a>
     </div>
 </body>
 <script>
@@ -226,5 +226,5 @@
             "scrollX": true
         });
     });
-</script> 
-@endsection 
+</script>
+@endsection
