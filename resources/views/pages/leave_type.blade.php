@@ -21,11 +21,12 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 </head>
-
 <body>
-    <h1>Type of leave</h1><br>
-    <div class="container">
-        <table id="table" class="table table-striped table-bordered" style="width:100%">
+
+    <div class="container mt-4">
+        <table id="example" class="table table-striped table-bordered" style="width:100%">
+
+   
             <thead>
                 <tr>
                     <th>ID</th>
@@ -34,98 +35,108 @@
                 </tr>
             </thead>
             <tbody>
-                {{-- @foreach ($leave as $type) --}}
                 <tr>
-                    <td>01</td>
+                    <td>40</td>
                     <td>teacher</td>
                     <td>
-                        <a href="" data-toggle="modal" data-target="#delete">
-                            <i class="material-icons text-danger">delete</i> </a>
-                        <a href="" data-toggle="modal" data-target="#edit">
-                            <i class="material-icons text-info">edit</i></a>
+                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#delete" "> 
+                        <i class="material-icons">delete</i> </a>
+                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#edit" "> 
+                        <i class="material-icons">edit</i>   </a>
                     </td>
                 </tr>
                 <tr>
-                    <td>01</td>
-                    <td>teacher</td>
-                    <td>
-                        <a href="" data-toggle="modal" data-target="#delete">
-                            <i class="material-icons text-danger">delete</i> </a>
-                        <a href="" data-toggle="modal" data-target="#edit">
-                            <i class="material-icons text-info">edit</i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>teacher</td>
-                    <td>
-                        <a href="" data-toggle="modal" data-target="#delete">
-                            <i class="material-icons text-danger">delete</i> </a>
-                        <a href="" data-toggle="modal" data-target="#edit">
-                            <i class="material-icons text-info">edit</i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>teacher</td>
-                    <td>
-                        <a href="" data-toggle="modal" data-target="#delete">
-                            <i class="material-icons text-danger">delete</i> </a>
-                        <a href="" data-toggle="modal" data-target="#edit">
-                            <i class="material-icons text-info">edit</i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>teacher</td>
-                    <td>
-                        <a href="" data-toggle="modal" data-target="#delete">
-                            <i class="material-icons text-danger">delete</i> </a>
-                        <a href="" data-toggle="modal" data-target="#edit">
-                            <i class="material-icons text-info">edit</i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>teacher</td>
-                    <td>
-                        <a href="" data-toggle="modal" data-target="#delete">
-                            <i class="material-icons text-danger">delete</i> </a>
-                        <a href="" data-toggle="modal" data-target="#edit">
-                            <i class="material-icons text-info">edit</i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>teacher</td>
-                    <td>
-                        <a href="" data-toggle="modal" data-target="#delete">
-                            <i class="material-icons text-danger">delete</i> </a>
-                        <a href="" data-toggle="modal" data-target="#edit">
-                            <i class="material-icons text-info">edit</i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>03</td>
+                    <td>21</td>
                     <td>student</td>
                     <td>
-                        <a href="" data-toggle="modal" data-target="#delete">
-                            <i class="material-icons text-danger">delete</i> </a>
-                        <a href="" data-toggle="modal" data-target="#edit">
-                            <i class="material-icons text-info">edit</i></a>
+                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#delete" "> 
+                         <i class="material-icons">delete</i> </a>
+                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#edit" "> 
+                        <i class="material-icons">edit</i>   </a>
                     </td>
                 </tr>
-                {{-- @endforeach --}}
+                <tr>
+                    <td>23</td>
+                    <td>trainer</td>
+                    <td>
+                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#delete" "> 
+                        <i class="material-icons">delete</i> </a>
+                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#edit" "> 
+                        <i class="material-icons">edit</i>   </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>47</td>
+                    <td>admin</td>
+                    <td>
+                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#delete" "> 
+                        <i class="material-icons">delete</i> </a>
+                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#edit" "> 
+                        <i class="material-icons">edit</i>   </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>42</td>
+                    <td>teacher</td>
+                    <td>
+                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#delete" "> 
+                        <i class="material-icons">delete</i> </a>
+                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#edit" "> 
+                        <i class="material-icons">edit</i> </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>student</td>
+                    <td>
+                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#delete" "> 
+                        <i class="material-icons">delete</i> </a>
+                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#edit" "> 
+                        <i class="material-icons">edit</i>   </a>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>01</td>
+                    <td>teacher</td>
+                    <td>
+
+                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#delete" "> 
+                        <i class="material-icons">delete</i> </a>
+                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#edit" "> 
+                         <i class="material-icons">edit</i>   </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>48</td>
+                    <td>trainer</td>
+                    <td>
+                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#delete" "> 
+                        <i class="material-icons">delete</i> </a>
+                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#edit" "> 
+                        <i class="material-icons">edit</i>   </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>38</td>
+                    <td>trainer</td>
+                    <td>
+                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#delete" "> 
+                        <i class="material-icons">delete</i> </a>
+                        <a href=" class="btn btn-primary" data-toggle="modal" data-target="#edit" "> 
+                        <i class="material-icons">edit</i>   </a>
+                    </td>
+                </tr>
             </tbody>
         </table>
-        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
-            <i class="material-icons">add</i>Create Leave Type
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+                <i class="material-icons">add</i>Create Leave Type
         </button>
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
 
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
+                      
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Create Leave type</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close" name="close">
@@ -142,30 +153,34 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-info" data-dismiss="modal" name="btn_submit">Ok</button>
-                        <a href="leave_type"><button type="button" class="btn btn-danger">Cencel</button></a>
+
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+                      <button type="button" class="btn btn-info">Cencel</button>
+
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Comfirmation</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        Are You Sure want to delete?
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-info" data-dismiss="modal" name="delete">Yes</button>
-                        <a href="leave_type"><button type="button" class="btn btn-danger">No</button></a>
-                    </div>
+
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Comfirmation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                  Are You Sure want to delete?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Yes</button>
+                    <button type="button" class="btn btn-info">No</button>
+
+            
                 </div>
             </div>
         </div>
@@ -193,8 +208,10 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-info" data-dismiss="modal" name="edit">Ok</button>
-                        <a href="leave_type"><button type="button" class="btn btn-danger">Cencel</button></a>
+
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+                        <button type="button" class="btn btn-info">Cencel</button>
+
                     </div>
                 </div>
             </div>

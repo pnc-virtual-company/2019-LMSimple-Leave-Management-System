@@ -1,0 +1,19 @@
+.inputs {
+    border:none;
+    padding: 1px;
+}
+.cont{
+    width:100%;
+    height: 601px;
+   
+}
+.row1 {
+    width: 83%;
+    height: 180px;
+    margin: 34px 50px 24px;
+    border: 1px solid black;
+    
+}
+.row{
+    margin-right:80px;
+}

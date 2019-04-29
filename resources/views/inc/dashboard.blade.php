@@ -55,8 +55,7 @@
                   <i class="material-icons">people</i>
                   <p>Employees Profile</p>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">       
                 <a class="dropdown-item" href="{{route('personal.create')}}">Personal Information</a>
                 <a class="dropdown-item" href="{{route('profile.index')}}">Profile picture</a>
                   
@@ -72,7 +71,6 @@
                   <a class="dropdown-item" href="{{route('leave_request.index')}}">Leave request</a>
                 </div>
           </li>
-          
           <li class="nav-item ">
           <a class="nav-link" href="{{url('calendar')}}">
               <i class="material-icons">date_range</i>
