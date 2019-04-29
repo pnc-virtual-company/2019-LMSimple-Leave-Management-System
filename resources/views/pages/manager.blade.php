@@ -308,10 +308,16 @@
             aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Create Employee Manager</h5>
-
-                    </div>
+                    <div class="col-12">
+                        <div>
+                            <img src="{{asset('images/examples/images.png')}}" class="imge" alt="images" style="border:1px solid black;">
+                        </div>
+                        <div class="icons">
+                            <a href=""><i class="fas fa-plus text-success"></i></a>
+                            <a href=""> <i class="fas fa-pencil-alt text-info"></i></a>
+                            <a href=""> <i class="far fa-trash-alt text-danger"></i></a>
+                        </div>
+                    </div>    
                     <div class="container mt-4">
                         <form action="#" method="post">
                             <div class="form-group row">
@@ -384,15 +390,21 @@
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Edit Employee Manager </h5>
-
-                </div>
+                <div class="col-12">
+                    <div>
+                        <img src="{{asset('images/examples/images.png')}}" class="imge" alt="images" style="border:1px solid black;">
+                    </div>
+                    <div class="icons">
+                        <a href=""><i class="fas fa-plus text-success"></i></a>
+                        <a href=""> <i class="fas fa-pencil-alt text-info"></i></a>
+                        <a href=""> <i class="far fa-trash-alt text-danger"></i></a>
+                    </div>
+                </div>    
                 <div class="container mt-4">
                     <form action="#" method="post">
                         <div class="form-group row">
                              <label class="col-4" for="firstname">ID</label>
-                             <p class="col-4">001</p>
+                             <p class="col-4">001</p>   
                         </div>
                         <div class="form-group row">
                             <label class="col-4" for="firstname">First Name</label>
