@@ -14,6 +14,9 @@ class LeaveTypeController extends Controller
     public function index()
     {
         return view('pages.leave_type');
+        // $leave = \App\LeaveType::all();
+        // return view('pages.leave_type',compact('leave'));
+
     }
 
     /**
@@ -23,6 +26,7 @@ class LeaveTypeController extends Controller
      */
     public function create()
     {
+        // $leave = \App\LeaveType::all();
         return view ('pages.personal');
     }
 
