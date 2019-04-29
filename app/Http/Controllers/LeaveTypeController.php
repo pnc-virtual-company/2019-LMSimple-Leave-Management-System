@@ -26,7 +26,7 @@ class LeaveTypeController extends Controller
      */
     public function create()
     {
-        $leave = \App\LeaveType::all();
+        // $leave = \App\LeaveType::all();
         return view ('pages.personal');
     }
 
