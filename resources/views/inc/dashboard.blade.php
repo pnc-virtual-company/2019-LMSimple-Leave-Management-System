@@ -60,7 +60,7 @@
                 <a class="dropdown-item" href="{{route('profile.index')}}">Profile picture</a>
                   
                 </div>
-          </li>
+          </li> 
           <li class="nav-item dropdown">
                 <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">content_paste</i>
