@@ -66,7 +66,7 @@
                     </div>
                     <div class="panel-footer">
 
-                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                       <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
                             <i id="material" class="material-icons flaot-left">add</i>Create Leave Type
                     </button>
 

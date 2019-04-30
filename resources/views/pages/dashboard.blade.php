@@ -23,7 +23,7 @@
 			<div class="table table-bordered">
 				<p>Accept Requests <b>11</b></p>
 				<p>Reject Requests <b>2</b></p>
-				<p>Submitted Requests <b>5</b><i class="material-icons text-warning">report_problem</i></p>
+				<p>Submitted Requests <b>5</b><i class="material-icons text-danger">report_problem</i></p>
 			</div>
 		</div>
 		<div class="col col-md-4">

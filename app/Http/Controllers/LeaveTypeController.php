@@ -13,7 +13,7 @@ class LeaveTypeController extends Controller
      */
     public function index()
     {
-        return view('pages.personal');
+        return view('pages.leave_type');
 
     }
 

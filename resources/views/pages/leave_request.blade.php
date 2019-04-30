@@ -41,10 +41,10 @@
                 <tr>
                     <td>
 
-                     <a href="#" data-toggle="modal" data-target="#delete" "> 
-                    <i class="material-icons">delete</i></a>
-                    <a href=" class="btn btn-primary" data-toggle="modal" data-target="#edit" "> 
-                    <i class="material-icons">edit</i></a>
+                     <a href="#" data-toggle="modal" data-target="#delete"> 
+                    <i class="material-icons text-danger">delete</i></a>
+                    <a href="" data-toggle="modal" data-target="#edit"> 
+                    <i class="material-icons text-info">edit</i></a>
 
                     </td>
                     <td>2009/06/25</td>
@@ -137,7 +137,7 @@
             </tbody>
         </table>
 
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal"
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal"
             data-whatever="@mdo"> <i class="material-icons flaot-left">add</i>Create Leave Request</button> 
 
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
