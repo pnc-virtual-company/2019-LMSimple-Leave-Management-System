@@ -61,10 +61,17 @@ Route::get('examples/pdf/downloadPDF', 'ExamplesController@downloadPDF');
 Route::get('examples', 'ExamplesController@index')->name('examples');
 /*
 =============================================================================*/
-Route::resource('home','pageController');
+
+
+Route::resource('department','departmentController');
+Route::resource('manager','ManagerController');
 Route::resource('personal','LeaveTypeController');
 Route::resource('leave_type','LeaveTypeController');
 Route::resource('leave_request','LeaveRequestController');
+Route::get('information','InfoController@create');
+
+
+
 Route::get('calendar', 'ExamplesController@calendar');
 Route::resource('home','pageController');
 Route::resource('position','PositionController');

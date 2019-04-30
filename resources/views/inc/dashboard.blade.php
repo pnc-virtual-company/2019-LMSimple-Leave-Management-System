@@ -12,14 +12,14 @@
 
   <link rel="stylesheet" href="{{asset('css/app.css')}}">
   <link rel="stylesheet" href="{{asset('css/jquery.dataTables.min.css')}}">
-<link rel="stylesheet" href="{{asset('css/profile.css')}}">
+  <link rel="stylesheet" href="{{asset('css/profile.css')}}">
   
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
   <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="{{asset('css/material-dashboard.css')}}" rel="stylesheet" />
+  <link href="{{asset('css/material-dashboard.css')}}" rel="stylesheet"/>
 </head>
 
 <body class="">
@@ -31,9 +31,9 @@
         </a>
       </div>
       <div class="sidebar-wrapper">
-        <ul class="nav" id="ul">
-          <li class="nav-item active" id="li">
-            <a class="nav-link" id="a" href="{{route('home.create')}}">
+        <ul class="nav">
+          <li class="nav-item">
+          <a class="nav-link bg-info active" href="{{route('home.create')}}">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
@@ -47,6 +47,7 @@
                   <a class="dropdown-item" href="{{route('manager.index')}}">List Employees</a>
                   <a class="dropdown-item" href="{{route('department.index')}}">Department</a>
                   <a class="dropdown-item" href="{{route('position.index')}}">Position</a>
+                  <a class="dropdown-item" href="{{route('leave_type.index')}}">Leave type</a>
                 </div>
           </li>
           <li class="nav-item dropdown">
@@ -54,24 +55,17 @@
                   <i class="material-icons">people</i>
                   <p>Employees Profile</p>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">       
                 <a class="dropdown-item" href="{{route('personal.create')}}">Personal Information</a>
                 <a class="dropdown-item" href="{{route('profile.index')}}">Profile picture</a>
-                  
                 </div>
           </li>
-          <li class="nav-item dropdown">
-                <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="material-icons">content_paste</i>
-                  <p>Requests</p>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="{{route('leave_type.index')}}">Leave type</a> 
-                  <a class="dropdown-item" href="{{route('leave_request.index')}}">Leave request</a>
-                </div>
-          </li>
-          
+          <li class="nav-item ">
+            <a class="nav-link" href="{{route('leave_request.index')}}">
+                <i class="material-icons">content_paste</i>
+                <p>Leave Request</p>
+            </a>
+          </li> 
           <li class="nav-item ">
           <a class="nav-link" href="{{url('calendar')}}">
               <i class="material-icons">date_range</i>
@@ -168,7 +162,6 @@
       <script src="{{asset('js/material-dashboard.js?v=2.1.1')}}" type="text/javascript"></script>
 
       {{-- <script src="{{asset('js/bootstrap.min.js')}}"></script> --}}
-    
       <script>
         $(document).ready(function() {
           $().ready(function() {
