@@ -69,8 +69,8 @@
                      Are you sure that you want to delete this department?
                  </div>
                  <div class="modal-footer">
-                     <button type="button" class="btn btn-warning btn-sm" data-dismiss="modal">No</button>
-                     <button type="button" class="btn btn-primary btn-sm">Yes</button>
+                     <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">No</button>
+                     <button type="button" class="btn btn-info btn-sm">Yes</button>
                  </div>
              </div>
          </div>
@@ -133,13 +133,13 @@
                      </form>
                  </div>
                  <div class="modal-footer">
-                     <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                     <button type="button" class="btn btn-info" data-dismiss="modal">Ok</button>
                      <button type="button" class="btn btn-danger">Cancel</button>
                  </div>
              </div>
          </div>
      </div>
-     <a href="" class="btn btn-primary" data-toggle="modal" data-target="#createModal"><i
+     <a href="#" class="btn btn-info" data-toggle="modal" data-target="#createModal"><i
              class="fas fa-plus-circle"></i> Create Department</a>
  </div>
 
