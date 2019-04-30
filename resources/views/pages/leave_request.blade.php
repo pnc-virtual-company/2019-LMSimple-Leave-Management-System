@@ -29,7 +29,7 @@
         <table id="example" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>Name</th>
                     <th>Start Date</th>
                     <th>End Date</th>
                     <th>Duration (Days)</th>
@@ -38,7 +38,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                {{-- <tr>
                     <td>
 
                      <a href="#" data-toggle="modal" data-target="#delete"> 
@@ -47,90 +47,127 @@
                     <i class="material-icons text-info">edit</i></a>
 
                     </td>
-                    <td>2009/06/25</td>
-                    <td>2009/06/25</td>
+                    <td>2019/05/25</td>
+                    <td>2019/06/25</td>
                     <td>6</td>
                     <td>Vacation</td>
                     <td>Planed</td>
-                </tr> 
+                </tr>  --}}
                 <tr>
 
-                    <td><a href="{{route('leave_request.create')}}">1013</a></td>         
+                    <td><a href="{{route('leave_request.create')}}">sovannthai</a></td>         
 
                     <td>2011/12/12</td>
                     <td>2009/06/25</td>
-                    <td>6</td>
+                    <td>9</td>
                     <td>Vacation</td>
                     <td>Planed</td>
 
                 </tr>
                 <tr>
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
+                    <td><a href="{{route('leave_request.create')}}">virak</a></td>
 
                     <td>2010/09/20</td>
                     <td>2009/06/25</td>
-                    <td>6</td>
+                    <td>7</td>
                     <td>Vacation</td>
                     <td>Planed</td>
 
                 </tr>
                 <tr>
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
+                    <td><a href="{{route('leave_request.create')}}">sinat</a></td>
 
                     <td>2009/10/09</td>
                     <td>2009/06/25</td>
-                    <td>6</td>
+                    <td>23</td>
                     <td>Vacation</td>
                     <td>Planed</td>
 
                 </tr>
                 <tr>
 
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
+                    <td><a href="{{route('leave_request.create')}}">kuthea</a></td>
 
                     <td>2010/12/22</td>
                     <td>2009/06/25</td>
-                    <td>6</td>
+                    <td>5</td>
                     <td>Vacation</td>
                     <td>Planed</td>
 
                 </tr>
                 <tr>
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
+                    <td><a href="{{route('leave_request.create')}}">sreykhouch</a></td>
 
-                    <td>2010/11/14</td>
-                    <td>2009/06/25</td>
-                    <td>6</td>
+                    <td>2019/11/14</td>
+                    <td>2099/06/20</td>
+                    <td>10</td>
                     <td>Vacation</td>
                     <td>Planed</td>
 
                 </tr>
                 <tr>
-                     <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
+                     <td><a href="{{route('leave_request.create')}}">pharim</a></td>
 
-                    <td>2011/06/07</td>
-                    <td>2009/06/25</td>
+                    <td>2019/06/07</td>
+                    <td>2019/06/25</td>
+                    <td>12</td>
+                    <td>Vacation</td>
+                    <td>Planed</td>
+                </tr>
+                <tr>
+
+                    <td><a href="{{route('leave_request.create')}}">phanna</a></td>
+
+                    <td>2019/03/11</td>
+                    <td>2019/06/15</td>
                     <td>6</td>
                     <td>Vacation</td>
                     <td>Planed</td>
                 </tr>
                 <tr>
 
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
+                    <td><a href="{{route('leave_request.create')}}">sokhun</a></td>
 
-                    <td>2010/03/11</td>
-                    <td>2009/06/25</td>
-                    <td>6</td>
+                    <td>2019/05/03</td>
+                    <td>2019/06/29</td>
+                    <td>18</td>
                     <td>Vacation</td>
                     <td>Planed</td>
                 </tr>
                 <tr>
 
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
+                    <td><a href="{{route('leave_request.create')}}">hanny</a></td>
+
+                    <td>2019/05/23</td>
+                    <td>2019/06/05</td>
+                    <td>12</td>
+                    <td>Vacation</td>
+                    <td>Planed</td>
+                </tr><tr>
+
+                    <td><a href="{{route('leave_request.create')}}">kosal</a></td>
+
+                    <td>2019/05/03</td>
+                    <td>2019/06/25</td>
+                    <td>29</td>
+                    <td>Vacation</td>
+                    <td>Planed</td>
+                </tr><tr>
+
+                    <td><a href="{{route('leave_request.create')}}">samoun</a></td>
+
+                    <td>2019/05/03</td>
+                    <td>2019/05/25</td>
+                    <td>8</td>
+                    <td>Vacation</td>
+                    <td>Planed</td>
+                </tr><tr>
+
+                    <td><a href="{{route('leave_request.create')}}">vibol</a></td>
 
                     <td>2011/05/03</td>
-                    <td>2009/06/25</td>
-                    <td>6</td>
+                    <td>2019/06/25</td>
+                    <td>9</td>
                     <td>Vacation</td>
                     <td>Planed</td>
                 </tr>
@@ -194,8 +231,8 @@
                             </div>
                             <div class="form-group row">
                                 <label class="col-4" for="date">Comments</label>
-                                <textarea class="col-7" name="comment" id="" cols="5"
-                                    rows="5">comment somethings</textarea>
+                                <textarea class="col-7" name="comment" id="" cols="2"
+                                    rows="2">comment somethings</textarea>
                             </div>
                         </form>
                     </div>
@@ -212,15 +249,12 @@
 <script>
     $(document).ready(function () {
         $('#example').DataTable({
-            "scrollY": "200px",
+            "scrollY": "300px",
             "scrollCollapse": true,
 
         });
     });
 </script>
-
-
-
 @endsection   
 
 
