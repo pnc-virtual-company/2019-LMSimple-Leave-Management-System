@@ -38,7 +38,7 @@
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown" id="li">
                 <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">person</i>
                   <p>HR</p>
@@ -139,13 +139,12 @@
       <div class="content">
         <div class="container-fluid">
     </div>
-    <script src="{{asset('js/jquery.min.js')}}"></script>
-    <script src="{{asset('js/jquery-3.2.1.slim.min.js')}}"></script>
-    <script src="{{asset('js/popper.min.js')}}"></script>
-    {{-- <script src="{{asset('js/jquery.dataTables.min.js')}}"></script> --}}
-    <script src="{{asset('js/position.js')}}"></script> 
+      <script src="{{asset('js/jquery.min.js')}}"></script>
+      <script src="{{asset('js/jquery-3.2.1.slim.min.js')}}"></script>
+      <script src="{{asset('js/popper.min.js')}}"></script>
+      {{-- <script src="{{asset('js/jquery.dataTables.min.js')}}"></script> --}}
+      <script src="{{asset('js/position.js')}}"></script> 
 
-    
       <script src="{{asset('js/bootstrap-material-design.min.js')}}"></script>
       <script src="{{asset('js/perfect-scrollbar.jquery.min.js')}}"></script>
       <script src="{{asset('js/moment.min.js')}}"></script>
