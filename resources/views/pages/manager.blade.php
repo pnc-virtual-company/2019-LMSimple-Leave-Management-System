@@ -20,7 +20,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    
+
 </head>
 
 <body>
@@ -41,9 +41,9 @@
             <tbody>
                 <tr>
                     <td>
-                        <i class="fas fa-trash-alt"></i>
-                        <a href="class=" btn btn-primary" data-toggle="modal" data-target="#Edit"
-                            data-whatever="@mdo""><i class=" fas fa-pencil-alt"></i></a>
+                        <i class="fas fa-trash-alt text-danger"></i>
+                        <a href="" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"><i
+                                class=" fas fa-pencil-alt text-info"></i></a>
                         001</td>
                     <td>Tiger Nixon</td>
                     <td>Architect</td>
@@ -54,9 +54,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <i class="fas fa-trash-alt"></i>
-                        <a href="class=" btn btn-primary" data-toggle="modal" data-target="#Edit"
-                            data-whatever="@mdo""><i class=" fas fa-pencil-alt"></i></a>
+                        <i class="fas fa-trash-alt text-danger"></i>
+                        <a href="" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"><i
+                                class=" fas fa-pencil-alt text-info"></i></a>
                         002</td>
                     <td>Garrett Winters</td>
                     <td>Accountant</td>
@@ -67,9 +67,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <i class="fas fa-trash-alt"></i>
-                        <a href="class=" btn btn-primary" data-toggle="modal" data-target="#Edit"
-                            data-whatever="@mdo""><i class=" fas fa-pencil-alt"></i></a>
+                        <i class="fas fa-trash-alt text-danger"></i>
+                        <a href="" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"><i
+                                class=" fas fa-pencil-alt text-info"></i></a>
                         003</td>
                     <td>Ashton Cox</td>
                     <td>Junior Technical Author</td>
@@ -80,9 +80,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <i class="fas fa-trash-alt"></i>
-                        <a href="class=" btn btn-primary" data-toggle="modal" data-target="#Edit"
-                            data-whatever="@mdo""><i class=" fas fa-pencil-alt"></i></a>
+                        <i class="fas fa-trash-alt text-danger"></i>
+                        <a href="" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"><i
+                                class=" fas fa-pencil-alt text-info"></i></a>
                         004</td>
                     <td>Cedric Kelly</td>
                     <td>Senior Javascript Developer</td>
@@ -93,9 +93,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <i class="fas fa-trash-alt"></i>
-                        <a href="class=" btn btn-primary" data-toggle="modal" data-target="#Edit"
-                            data-whatever="@mdo""><i class=" fas fa-pencil-alt"></i></a>
+                        <i class="fas fa-trash-alt text-danger"></i>
+                        <a href="" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"><i
+                                class=" fas fa-pencil-alt text-info"></i></a>
                         005</td>
                     <td>Airi Satou</td>
                     <td>Accountant</td>
@@ -106,9 +106,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <i class="fas fa-trash-alt"></i>
-                        <a href="class=" btn btn-primary" data-toggle="modal" data-target="#Edit"
-                            data-whatever="@mdo""><i class=" fas fa-pencil-alt"></i></a>
+                        <i class="fas fa-trash-alt text-danger"></i>
+                        <a href="" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"><i
+                                class=" fas fa-pencil-alt text-info"></i></a>
                         006</td>
                     <td>Brielle Williamson</td>
                     <td>Integration Specialist</td>
@@ -119,9 +119,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <i class="fas fa-trash-alt"></i>
-                        <a href="class=" btn btn-primary" data-toggle="modal" data-target="#Edit"
-                            data-whatever="@mdo""><i class=" fas fa-pencil-alt"></i></a>
+                        <i class="fas fa-trash-alt text-danger"></i>
+                        <a href="" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"><i
+                                class=" fas fa-pencil-alt text-info"></i></a>
                         007</td>
                     <td>Herrod Chandler</td>
                     <td>Sales Assistant</td>
@@ -132,9 +132,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <i class="fas fa-trash-alt"></i>
-                        <a href="class=" btn btn-primary" data-toggle="modal" data-target="#Edit"
-                            data-whatever="@mdo""><i class=" fas fa-pencil-alt"></i></a>
+                        <i class="fas fa-trash-alt text-danger"></i>
+                        <a href="" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"><i
+                                class=" fas fa-pencil-alt text-info"></i></a>
                         008</td>
                     <td>Rhona Davidson</td>
                     <td>Integration Specialist</td>
@@ -145,9 +145,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <i class="fas fa-trash-alt"></i>
-                        <a href="class=" btn btn-primary" data-toggle="modal" data-target="#Edit"
-                            data-whatever="@mdo""><i class=" fas fa-pencil-alt"></i></a>
+                        <i class="fas fa-trash-alt text-danger"></i>
+                        <a href="" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"><i
+                                class=" fas fa-pencil-alt text-info"></i></a>
                         009</td>
                     <td>Colleen Hurst</td>
                     <td>Javascript Developer</td>
@@ -158,9 +158,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <i class="fas fa-trash-alt"></i>
-                        <a href="class=" btn btn-primary" data-toggle="modal" data-target="#Edit"
-                            data-whatever="@mdo""><i class=" fas fa-pencil-alt"></i></a>
+                        <i class="fas fa-trash-alt text-danger"></i>
+                        <a href="" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"><i
+                                class=" fas fa-pencil-alt text-info"></i></a>
                         010</td>
                     <td>Sonya Frost</td>
                     <td>Software Engineer</td>
@@ -171,9 +171,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <i class="fas fa-trash-alt"></i>
-                        <a href="class=" btn btn-primary" data-toggle="modal" data-target="#Edit"
-                            data-whatever="@mdo""><i class=" fas fa-pencil-alt"></i></a>
+                        <i class="fas fa-trash-alt text-danger"></i>
+                        <a href="" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"><i
+                                class=" fas fa-pencil-alt text-info"></i></a>
                         011</td>
                     <td>Jena </td>
                     <td>Gaines</td>
@@ -184,9 +184,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <i class="fas fa-trash-alt"></i>
-                        <a href="class=" btn btn-primary" data-toggle="modal" data-target="#Edit"
-                            data-whatever="@mdo""><i class=" fas fa-pencil-alt"></i></a>
+                        <i class="fas fa-trash-alt text-danger"></i>
+                        <a href="" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"><i
+                                class=" fas fa-pencil-alt text-info"></i></a>
                         012</td>
                     <td>Quinn </td>
                     <td>Flynn</td>
@@ -197,9 +197,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <i class="fas fa-trash-alt"></i>
-                        <a href="class=" btn btn-primary" data-toggle="modal" data-target="#Edit"
-                            data-whatever="@mdo""><i class=" fas fa-pencil-alt"></i></a>
+                        <i class="fas fa-trash-alt text-danger"></i>
+                        <a href="" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"><i
+                                class=" fas fa-pencil-alt text-info"></i></a>
                         013</td>
                     <td>Marshall</td>
                     <td>Charde</td>
@@ -210,9 +210,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <i class="fas fa-trash-alt"></i>
-                        <a href="class=" btn btn-primary" data-toggle="modal" data-target="#Edit"
-                            data-whatever="@mdo""><i class=" fas fa-pencil-alt"></i></a>
+                        <i class="fas fa-trash-alt text-danger"></i>
+                        <a href="" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"><i
+                                class=" fas fa-pencil-alt text-info"></i></a>
                         014</td>
                     <td>Haley</td>
                     <td>Kennedy</td>
@@ -223,9 +223,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <i class="fas fa-trash-alt"></i>
-                        <a href="class=" btn btn-primary" data-toggle="modal" data-target="#Edit"
-                            data-whatever="@mdo""><i class=" fas fa-pencil-alt"></i></a>
+                        <i class="fas fa-trash-alt text-danger"></i>
+                        <a href="" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"><i
+                                class=" fas fa-pencil-alt text-info"></i></a>
                         015</td>
                     <td>Tatyana </td>
                     <td>Regional</td>
@@ -236,9 +236,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <i class="fas fa-trash-alt"></i>
-                        <a href="class=" btn btn-primary" data-toggle="modal" data-target="#Edit"
-                            data-whatever="@mdo""><i class=" fas fa-pencil-alt"></i></a>
+                        <i class="fas fa-trash-alt text-danger"></i>
+                        <a href="" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"><i
+                                class=" fas fa-pencil-alt text-info"></i></a>
                         016</td>
                     <td>Michael </td>
                     <td>Silva</td>
@@ -249,9 +249,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <i class="fas fa-trash-alt"></i>
-                        <a href="class=" btn btn-primary" data-toggle="modal" data-target="#Edit"
-                            data-whatever="@mdo""><i class=" fas fa-pencil-alt"></i></a>
+                        <i class="fas fa-trash-alt text-danger"></i>
+                        <a href="" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"><i
+                                class=" fas fa-pencil-alt text-info"></i></a>
                         017</td>
                     <td>Tatyana </td>
                     <td>Regional</td>
@@ -262,9 +262,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <i class="fas fa-trash-alt"></i>
-                        <a href="class=" btn btn-primary" data-toggle="modal" data-target="#Edit"
-                            data-whatever="@mdo""><i class=" fas fa-pencil-alt"></i></a>
+                        <i class="fas fa-trash-alt text-danger"></i>
+                        <a href="" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"><i
+                                class=" fas fa-pencil-alt text-info"></i></a>
                         018</td>
                     <td>Michael </td>
                     <td>Silva</td>
@@ -275,9 +275,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <i class="fas fa-trash-alt"></i>
-                        <a href="class=" btn btn-primary" data-toggle="modal" data-target="#Edit"
-                            data-whatever="@mdo""><i class=" fas fa-pencil-alt"></i></a>
+                        <i class="fas fa-trash-alt text-danger"></i>
+                        <a href="" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"><i
+                                class=" fas fa-pencil-alt text-info"></i></a>
                         019</td>
                     <td>Tatyana </td>
                     <td>Regional</td>
@@ -288,9 +288,9 @@
                 </tr>
                 <tr>
                     <td>
-                        <i class="fas fa-trash-alt"></i> 
-                        <a href="class=" btn btn-primary" data-toggle="modal" data-target="#Edit"
-                            data-whatever="@mdo""><i class=" fas fa-pencil-alt"></i></a>
+                        <i class="fas fa-trash-alt text-danger"></i>
+                        <a href="" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"><i
+                                class=" fas fa-pencil-alt text-info"></i></a>
                         020</td>
                     <td>Michael </td>
                     <td>Silva</td>
@@ -301,22 +301,28 @@
                 </tr>
             </tbody>
         </table>
-        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal"
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal"
             data-whatever="@mdo"><i class="fas fa-plus-circle"></i> Create News</button>
 
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Create Employee Manager</h5>
-
-                    </div>
+                    <div class="col-12">
+                        <div>
+                            <img src="{{asset('images/examples/images.png')}}" class="imge" alt="images" style="border:1px solid black;">
+                        </div>
+                        <div class="icons">
+                            <a href=""><i class="fas fa-plus text-success"></i></a>
+                            <a href=""> <i class="fas fa-pencil-alt text-info"></i></a>
+                            <a href=""> <i class="far fa-trash-alt text-danger"></i></a>
+                        </div>
+                    </div>    
                     <div class="container mt-4">
                         <form action="#" method="post">
                             <div class="form-group row">
-                                 <label class="col-4" for="firstname">ID</label>
-                                 <p class="col-4">001</p>
+                                <label class="col-4" for="firstname">ID</label>
+                                <p class="col-4">001</p>
                             </div>
                             <div class="form-group row">
                                 <label class="col-4" for="firstname">First Name</label>
@@ -372,8 +378,8 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancle</button>
-                        <a href="#"><button class="btn btn-primary">OK</button></a>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
+                        <a href="#"><button class="btn btn-info">OK</button></a>
                     </div>
                 </div>
             </div>
@@ -384,15 +390,23 @@
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Edit Employee Manager </h5>
 
-                </div>
+                <div class="col-12">
+                    <div>
+                        <img src="{{asset('images/examples/images.png')}}" class="imge" alt="images" style="border:1px solid black;">
+                    </div>
+                    <div class="icons">
+                        <a href=""><i class="fas fa-plus text-success"></i></a>
+                        <a href=""> <i class="fas fa-pencil-alt text-info"></i></a>
+                        <a href=""> <i class="far fa-trash-alt text-danger"></i></a>
+                    </div>
+                </div>    
                 <div class="container mt-4">
                     <form action="#" method="post">
                         <div class="form-group row">
                              <label class="col-4" for="firstname">ID</label>
-                             <p class="col-4">001</p>
+                             <p class="col-4">001</p>   
+
                         </div>
                         <div class="form-group row">
                             <label class="col-4" for="firstname">First Name</label>
@@ -413,7 +427,6 @@
                                     <option value="2">HR</option>
                                     <option value="3">SNA Triner</option>
                                 </select>
-
                             </div>
                         </div>
                         <div class="form-group row">
@@ -442,14 +455,13 @@
                                     <option value="2">Thalai</option>
                                     <option value="3">Vothy</option>
                                 </select>
-
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancle</button>
-                    <a href="index.html"><button class="btn btn-primary">OK</button></a>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
+                    <a href="index.html"><button class="btn btn-info">OK</button></a>
                 </div>
             </div>
         </div>
@@ -463,7 +475,5 @@
             "scrollX": true
         });
     });
-</script> 
-@endsection 
-
-
+</script>
+@endsection

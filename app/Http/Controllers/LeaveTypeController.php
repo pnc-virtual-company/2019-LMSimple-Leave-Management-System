@@ -14,6 +14,7 @@ class LeaveTypeController extends Controller
     public function index()
     {
         return view('pages.leave_type');
+
     }
 
     /**
@@ -23,6 +24,9 @@ class LeaveTypeController extends Controller
      */
     public function create()
     {
+
+
+
         return view ('pages.personal');
     }
 
@@ -34,7 +38,8 @@ class LeaveTypeController extends Controller
      */
     public function store(Request $request)
     {
-        return view ('pages.leave_request');
+
+      
     }
 
     /**
