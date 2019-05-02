@@ -112,7 +112,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request, $id)
+    public function show(Request $request, $id) 
     {
         $request->user()->authorizeRoles(['Administrator']);
         $user = User::find($id);
@@ -166,7 +166,7 @@ class UserController extends Controller
             $user->email = Input::get('email');
             $user->save();
             $user->roles()->sync(Input::get('roles'));
-            
+             
             // redirect
             Session::flash('message.level', 'success');
             Session::flash('message.content', __('The user was successfully updated'));
@@ -181,7 +181,7 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy(Request $request, $id)
-    {
+    { 
         $request->user()->authorizeRoles(['Administrator']);
         $user = User::find($id);
         $user->delete();
