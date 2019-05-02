@@ -14,8 +14,10 @@ class departmentController extends Controller
     public function index()
     {
 
+
         $item = Department::all();
         return view('pages.department',compact('item'));
+
     }
 
     /**

@@ -29,7 +29,7 @@
         <table id="example" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>Name</th>
                     <th>Start Date</th>
                     <th>End Date</th>
                     <th>Duration (Days)</th>
@@ -38,7 +38,9 @@
                 </tr>
             </thead>
             <tbody>
+
                 <tr>
+
                     <td>
 
                      <a href="#" data-toggle="modal" data-target="#delete"> 
@@ -47,84 +49,99 @@
                     <i class="material-icons text-info">edit</i></a>
 
                     </td>
-                    <td>2009/06/25</td>
-                    <td>2009/06/25</td>
+                    <td>2019/05/25</td>
+                    <td>2019/06/25</td>
                     <td>6</td>
                     <td>Vacation</td>
                     <td>Planed</td>
+
                 </tr> 
                 <tr>
 
                     <td><a href="{{route('leave_request.create')}}">1013</a></td>         
 
+
                     <td>2011/12/12</td>
                     <td>2009/06/25</td>
-                    <td>6</td>
+                    <td>9</td>
                     <td>Vacation</td>
                     <td>Planed</td>
 
                 </tr>
                 <tr>
+
                     <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
+
 
                     <td>2010/09/20</td>
                     <td>2009/06/25</td>
-                    <td>6</td>
+                    <td>7</td>
                     <td>Vacation</td>
                     <td>Planed</td>
 
                 </tr>
                 <tr>
+
                     <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
+
 
                     <td>2009/10/09</td>
                     <td>2009/06/25</td>
-                    <td>6</td>
+                    <td>23</td>
                     <td>Vacation</td>
                     <td>Planed</td>
 
                 </tr>
                 <tr>
+
 
                     <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
 
+
                     <td>2010/12/22</td>
                     <td>2009/06/25</td>
-                    <td>6</td>
+                    <td>5</td>
                     <td>Vacation</td>
                     <td>Planed</td>
 
                 </tr>
                 <tr>
+
                     <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
 
                     <td>2010/11/14</td>
                     <td>2009/06/25</td>
                     <td>6</td>
+
                     <td>Vacation</td>
                     <td>Planed</td>
 
                 </tr>
                 <tr>
+
                      <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
 
                     <td>2011/06/07</td>
                     <td>2009/06/25</td>
                     <td>6</td>
+
                     <td>Vacation</td>
                     <td>Planed</td>
                 </tr>
                 <tr>
+
 
                     <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
 
                     <td>2010/03/11</td>
                     <td>2009/06/25</td>
+
                     <td>6</td>
                     <td>Vacation</td>
                     <td>Planed</td>
                 </tr>
                 <tr>
+
 
                     <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
 
@@ -134,6 +151,7 @@
                     <td>Vacation</td>
                     <td>Planed</td>
                 </tr>
+
             </tbody>
         </table>
 
@@ -155,7 +173,7 @@
                             </div>
                             <div class="form-group row">
                                 <label class="col-4" for="firstname">Start Date</label>
-                                <input class="col-4" type="text" name="firstname" class="form-control"
+                                <input class="col-4" type="date" name="firstname" class="form-control"
                                     placeholder="start date" required>
                                 <div class="col-4" class="input-group">
                                     <select class="custom-select" id="inputGroupSelect04">
@@ -167,7 +185,9 @@
                             </div>
                             <div class="form-group row">
                                 <label class="col-4" for="firstname">End Date</label>
+
                                 <input class="col-4" type="text" name="firstname" class="form-control"
+
                                     placeholder="end date" required>
                                 <div class="col-4" class="input-group">
                                     <select class="custom-select" id="inputGroupSelect04">
@@ -194,14 +214,18 @@
                             </div>
                             <div class="form-group row">
                                 <label class="col-4" for="date">Comments</label>
+
                                 <textarea class="col-7" name="comment" id="" cols="5"
                                     rows="5">comment somethings</textarea>
+
                             </div>
                         </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
+
                         <a href="index.html"><button class="btn btn-info">OK</button></a>
+
                     </div>
                 </div>
             </div>
@@ -212,16 +236,20 @@
 <script>
     $(document).ready(function () {
         $('#example').DataTable({
-            "scrollY": "200px",
+            "scrollY": "300px",
             "scrollCollapse": true,
 
         });
     });
 </script>
+@endsection   
+
+
 
 
 
 @endsection   
+
 
 
 

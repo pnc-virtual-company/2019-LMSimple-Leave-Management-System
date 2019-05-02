@@ -38,7 +38,9 @@
                         <p>Status</p>
                     </div>
                     <div class="col-3">
+
                         <p> <textarea name="" id="" cols="25" rows="3">OFF</textarea></p>
+
                         <br>
                         <br>
                         <p>Phaned</p>

@@ -72,7 +72,9 @@
                     @method('DELETE')
                  <div class="modal-footer">
                      <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">No</button>
+
                      <button type="submit" class="btn btn-info btn-sm">Yes</button>
+
                  </div>
                 </form>
              </div>
@@ -107,8 +109,10 @@
                  </div>
                 
                  <div class="modal-footer">
+
                      <button type="submit" class="btn btn-info" >Ok</button>
                      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+
                  </div>
                 </form>
              </div>
@@ -146,14 +150,18 @@
                  </div>
                 
                  <div class="modal-footer">
+
                      <button type="submit" class="btn btn-info" >Ok</button>
                      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+
                  </div>
                 </form>
              </div>
          </div>
      </div>
+
      <a href="#" class="btn btn-info" data-toggle="modal" data-target="#createModal"><i
+
              class="fas fa-plus-circle"></i> Create Department</a>
  </div>
 
