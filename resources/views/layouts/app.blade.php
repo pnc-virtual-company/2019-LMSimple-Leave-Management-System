@@ -78,7 +78,7 @@
                         @endguest
                     </ul>
                 </div>
-            </div>
+            </div> 
         </nav>
 
         <main>
