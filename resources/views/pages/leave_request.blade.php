@@ -193,7 +193,7 @@
                             <div class="form-group row">
                                 <label class="col-4" for="firstname">End Date</label>
 
-                                <input class="col-4" type="text" name="firstname" class="form-control"
+                                <input class="col-4" type="date" name="firstname" class="form-control"
 
                                     placeholder="end date" required>
                                 <div class="col-4" class="input-group">
@@ -231,7 +231,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
 
-                        <a href="index.html"><button class="btn btn-info">OK</button></a>
+                    <a href=""><button class="btn btn-info">OK</button></a>
 
                     </div>
                 </div>
