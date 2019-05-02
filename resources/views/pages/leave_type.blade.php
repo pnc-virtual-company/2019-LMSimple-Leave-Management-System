@@ -36,7 +36,9 @@
             <tbody>
                 {{-- @foreach ($leave as $type) --}}
                 <tr>
-                    <td>sovannathai</td>
+
+                    <td>01</td>
+
                     <td>teacher</td>
                     <td>
                         <a href="" data-toggle="modal" data-target="#delete">
@@ -46,7 +48,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Riht</td>
+
+                    <td>01</td>
+
                     <td>teacher</td>
                     <td>
                         <a href="" data-toggle="modal" data-target="#delete">
@@ -56,7 +60,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Rady</td>
+
+                    <td>01</td>
+
                     <td>teacher</td>
                     <td>
                         <a href="" data-toggle="modal" data-target="#delete">
@@ -66,7 +72,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Channak</td>
+
+                    <td>01</td>
+
                     <td>teacher</td>
                     <td>
                         <a href="" data-toggle="modal" data-target="#delete">
@@ -76,7 +84,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Seyha</td>
+
+                    <td>01</td>
+
                     <td>teacher</td>
                     <td>
                         <a href="" data-toggle="modal" data-target="#delete">
@@ -86,7 +96,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Lavy</td>
+
+                    <td>01</td>
+
                     <td>teacher</td>
                     <td>
                         <a href="" data-toggle="modal" data-target="#delete">
@@ -96,7 +108,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Sreyme</td>
+
+                    <td>01</td>
+
                     <td>teacher</td>
                     <td>
                         <a href="" data-toggle="modal" data-target="#delete">
@@ -106,7 +120,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Davy</td>
+
+                    <td>03</td>
+
                     <td>student</td>
                     <td>
                         <a href="" data-toggle="modal" data-target="#delete">
