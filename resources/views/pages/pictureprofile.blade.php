@@ -39,10 +39,11 @@
             </div>
             <div class="col-7 text-center">
                 <div>
-                    <img src="{{asset('images/examples/images.png')}}" class="imge" alt="images" style="border:1px solid black;">
+                    <img src="{{asset('images/examples/images.png')}}" class="imge" alt="images"
+                        style="border:1px solid black;">
                 </div>
                 <div class="icons">
-                    <a href=""><i class="fas fa-plus text-success"></i></a>
+                    <a href=""><i class="fas fa-plus text-info"></i></a>
                     <a href=""> <i class="fas fa-pencil-alt text-info"></i></a>
                     <a href=""> <i class="far fa-trash-alt text-danger"></i></a>
                 </div>
@@ -54,5 +55,5 @@
     </div>
 </body>
 
-</html>    
-@endsection 
+</html>
+@endsection

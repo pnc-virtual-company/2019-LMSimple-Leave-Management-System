@@ -32,13 +32,13 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item active  ">
-            <a class="nav-link" href="{{route('home.create')}}">
-              <i class="material-icons">dashboard</i>
+          <li class="nav-item active">
+            <a class="nav-link bg-primary" href="{{route('home.create')}}">
+              <i class="material-icons text-white">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown" id="li">
                 <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">person</i>
                   <p>HR</p>
@@ -47,6 +47,7 @@
                   <a class="dropdown-item" href="{{route('manager.index')}}">List Employees</a>
                   <a class="dropdown-item" href="{{route('department.index')}}">Department</a>
                   <a class="dropdown-item" href="{{route('position.index')}}">Position</a>
+                  <a class="dropdown-item" href="{{route('leave_type.index')}}">Leave type</a>
                 </div>
           </li>
           <li class="nav-item dropdown">
@@ -54,24 +55,22 @@
                   <i class="material-icons">people</i>
                   <p>Employees Profile</p>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">       
                 <a class="dropdown-item" href="{{route('personal.create')}}">Personal Information</a>
                 <a class="dropdown-item" href="{{route('profile.index')}}">Profile picture</a>
                   
                 </div>
-          </li>
+          </li> 
           <li class="nav-item dropdown">
                 <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">content_paste</i>
                   <p>Requests</p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="{{route('leave_type.index')}}">Leave type</a> 
+                   
                   <a class="dropdown-item" href="{{route('leave_request.index')}}">Leave request</a>
                 </div>
           </li>
-          
           <li class="nav-item ">
           <a class="nav-link" href="{{url('calendar')}}">
               <i class="material-icons">date_range</i>
@@ -140,13 +139,12 @@
       <div class="content">
         <div class="container-fluid">
     </div>
-    <script src="{{asset('js/jquery.min.js')}}"></script>
-    <script src="{{asset('js/jquery-3.2.1.slim.min.js')}}"></script>
-    <script src="{{asset('js/popper.min.js')}}"></script>
-    {{-- <script src="{{asset('js/jquery.dataTables.min.js')}}"></script> --}}
-    <script src="{{asset('js/position.js')}}"></script> 
+      <script src="{{asset('js/jquery.min.js')}}"></script>
+      <script src="{{asset('js/jquery-3.2.1.slim.min.js')}}"></script>
+      <script src="{{asset('js/popper.min.js')}}"></script>
+      {{-- <script src="{{asset('js/jquery.dataTables.min.js')}}"></script> --}}
+      <script src="{{asset('js/position.js')}}"></script> 
 
-    
       <script src="{{asset('js/bootstrap-material-design.min.js')}}"></script>
       <script src="{{asset('js/perfect-scrollbar.jquery.min.js')}}"></script>
       <script src="{{asset('js/moment.min.js')}}"></script>

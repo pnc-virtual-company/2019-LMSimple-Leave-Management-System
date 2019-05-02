@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+ 
 use Illuminate\Http\Request;
 
 class LeaveRequestController extends Controller
@@ -22,7 +22,7 @@ class LeaveRequestController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.request_id');
     }
 
     /**
@@ -33,7 +33,7 @@ class LeaveRequestController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
     }
 
     /**

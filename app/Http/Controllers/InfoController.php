@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 
 class InfoController extends Controller
 {
-//     public function personal(){
-//         return view('pages.personal');
-
-//    }
+    public function create()
+    {
+        return view('pages.information');
+    }
 
 }
 

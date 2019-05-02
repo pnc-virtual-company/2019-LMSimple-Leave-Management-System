@@ -13,8 +13,9 @@ class departmentController extends Controller
      */
     public function index()
     {
-        
-        return view('pages.department');
+
+        $item = Department::all();
+        return view('pages.department',compact('item'));
     }
 
     /**
@@ -35,7 +36,11 @@ class departmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
+        $item = new Department;
+        $item->department= $request->input('department');
+        $item->save();
+        return redirect('department');
     }
 
     /**
@@ -57,7 +62,7 @@ class departmentController extends Controller
      */
     public function edit($id)
     {
-        //
+      
     }
 
     /**
@@ -69,7 +74,10 @@ class departmentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      
+     $item = Department::Find($id);
+     $item->update($request->all());
+     return redirect('department');
     }
 
     /**
@@ -80,6 +88,8 @@ class departmentController extends Controller
      */
     public function destroy($id)
     {
-        //
+       $item = Department::find($id);
+       $item ->delete();
+       return redirect('department');
     }
 }
