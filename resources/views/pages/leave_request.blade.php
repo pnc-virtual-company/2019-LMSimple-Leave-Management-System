@@ -141,7 +141,7 @@
                     <td>2019/05/23</td>
                     <td>2019/06/05</td>
                     <td>12</td>
-                    <td>Vacation</td>
+                    <td>Vacation</td> 
                     <td>Planed</td>
                 </tr><tr>
 
