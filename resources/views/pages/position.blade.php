@@ -26,205 +26,146 @@
 <body>
     <h1>List of position</h1><br>
     <div class="container">
-        <table id="table" class="table table-striped table-bordered" style="width:100%">
-            <thead>
+        <table id="table" class="table ttable-striped table-bordered" style="width:100%">
+            <thead class="text-center">
                 <tr>
                     <th>ID</th>
                     <th>Position</th>
                 </tr>
             </thead>
             <tbody>
+                    @foreach ( $position as $positions)
                 <tr>
                     <td>
-                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
+                        <a href="" data-toggle="modal" data-position="{{$positions->position}}"
+                            data-id="{{$positions->id}}" data-target="#deleteModal" class="text-danger"><i
                                 class="far fa-trash-alt"></i></a>
-                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                class="fas fa-pencil-alt"></i></a>
-                        10
+                        <a href="" data-toggle="modal" data-target="#editModal" data-position="{{$positions->position}}"
+                            data-id="{{$positions->id}}" class="text-info"><i class="fas fa-pencil-alt"></i></a>
+                        {{$positions->id}}
                     </td>
-                    <td>General Manager</td>
+                    <td>{{$positions->position}}</td>
                 </tr>
-                <tr>
-                    <td>
-                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                class="far fa-trash-alt"></i></a>
-                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                class="fas fa-pencil-alt"></i></a>
-                        11
-                    </td>
-                    <td>WEP Training Coordinator</td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                class="far fa-trash-alt"></i></a>
-                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                class="fas fa-pencil-alt"></i></a>
-                        12
-                    </td>
-                    <td>IT Admin</td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                class="far fa-trash-alt"></i></a>
-                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                class="fas fa-pencil-alt"></i></a>
-                        13
-                    </td>
-                    <td>Educator</td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                class="far fa-trash-alt"></i></a>
-                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                class="fas fa-pencil-alt"></i></a>
-                        14
-                    </td>
-                    <td>English teacher</td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                class="far fa-trash-alt"></i></a>
-                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                class="fas fa-pencil-alt"></i></a>
-                        15
-                    </td>
-                    <td>General Manager</td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                class="far fa-trash-alt"></i></a>
-                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                class="fas fa-pencil-alt"></i></a>
-                        16
-                    </td>
-                    <td>General Manager</td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                class="far fa-trash-alt"></i></a>
-                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                class="fas fa-pencil-alt"></i></a>
-                        17
-                    </td>
-                    <td>General Manager</td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                class="far fa-trash-alt"></i></a>
-                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                class="fas fa-pencil-alt"></i></a>
-                        18
-                    </td>
-                    <td>General Manager</td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
-                                class="far fa-trash-alt"></i></a>
-                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                class="fas fa-pencil-alt"></i></a>
-                        19
-                    </td>
 
-                    <td>General Manager</td>
-                </tr>
+                @endforeach
             </tbody>
         </table>
-        <!-- modal delete  -->
-        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
-                    </div>
-                    <div class="modal-body">
-                        Are you sure that you want to delete this position?
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">No</button>
-                        <a href="{{url('position')}}"> <button type="button"
-                                class="btn btn-info btn-sm">Yes</button></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- modal create position -->
-        <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Create position</h5>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group row">
-                                <label for="inputPassword" class="col-sm-2 col-form-label">Position</label>
-                                <div class="col-sm-10">
-                                    <input type="text" id="createInput" placeholder="Communication officer">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-info btn-sm" data-dismiss="modal">Ok</button>
-                        <a href="{{url('position')}}"> <button type="button"
-                                class="btn btn-danger btn-sm">Cancel</button></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Modal Edit Position -->
-        <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="editModalLabel">Edit position</h5>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group row">
-                                <label for="input" class="col-sm-2 col-form-label">ID</label>
-                                <div class="col-sm-10">
-                                    <input type="text" readonly class="form-control-plaintext" id="input"
-                                        placeholder="12">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="input" class="col-sm-2 col-form-label">Position</label>
-                                <div class="col-sm-10">
-                                    <input type="text" id="input" placeholder="IT Admin">
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-info btn-sm" data-dismiss="modal">Ok</button>
-                        <a href="{{url('position')}}"> <button type="button"
-                                class="btn btn-danger btn-sm">Cancel</button></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
+    <div>
         <a href="" class="btn btn-info" data-toggle="modal" data-target="#createModal"><i
                 class="fas fa-plus-circle"></i> Create position</a>
+    </div>
+    <!-- modal delete  -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
+                </div>
+                <div class="modal-body">
+                    Are you sure that you want to delete this position?
+                    <small id="mPostTitle"></small>
+                </div>
+                <form action="" id="deleteposition" method="POST">
+                    <div class="modal-footer">
+                        @method('DELETE')
+                        @csrf
+                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">No</button>
+                        <button type="submit" class="btn btn-info btn-sm" name="btn-delete">Yes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- modal create position -->
+    <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create position</h5>
+                </div>
+                <form action="{{route('position.store')}}" method="POST" id="mCreate">
+                    @csrf
+                    <div class="modal-body">
+                        <div class="form-group row">
+                            <label for="inputPassword" class="col-sm-2 col-form-label">Position</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="createInput" placeholder="Communication officer" name="position"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-info btn-sm">Ok</button>
+                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancel</button></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Edit Position -->
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">Edit position</h5>
+                </div>
+                <form action="" id="mEdit" method="POST">
+                    @csrf
+                    @method('PATCH')
+                    <div class="modal-body">
+                        <div class="form-group row">
+                            <label for="input" class="col-sm-2 col-form-label">ID</label>
+                            <div class="col-sm-10">
+                                <input type="text" value="" class="form-control-plaintext" id="inputId"
+                                    placeholder="12">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="input" class="col-sm-2 col-form-label">Position</label>
+                            <div class="col-sm-10">
+                                <input type="text" value="" id="input" name="position" placeholder="IT Admin">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" name="btn-edit" class="btn btn-info btn-sm">Ok</button>
+                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 <script>
     $(document).ready(function () {
         $('#table').DataTable({
-            "scrollY": 300,
+            "scrollY":150,
             "scrollX": true
         });
+        $('#deleteModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget)
+            var position = button.data('position')
+            var id = button.data('id')
+            var modal = $(this)
+            modal.find('#mPostTitle').text(position)
+            var url = "{{url('position')}}/" + id;
+            $('#deleteposition').attr('action', url);
+        })
+        // edit position
+        $('#editModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget)
+            var position = button.data('position')
+            var id = button.data('id')
+            var modal = $(this)
+            modal.find('#inputId').attr('value', id)
+            modal.find('#input').attr('value', position)
+            var url = "{{url('position')}}/" + id;
+            $('#mEdit').attr('action', url);
+        })
     });
 </script>
 @endsection

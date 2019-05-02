@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Position;
 
 class PositionController extends Controller
 {
@@ -13,8 +14,10 @@ class PositionController extends Controller
      */
     public function index()
     {
-        return view('pages.position');
-        // return view('page.position')-with('position',$position);
+        $position=Position::all();
+        return view('pages.position',compact('position'));
+
+       
     }
 
     /**
@@ -24,7 +27,8 @@ class PositionController extends Controller
      */
     public function create()
     {
-        //
+        $add_position =Position::all();
+        return view('pages.position');
     }
 
     /**
@@ -35,7 +39,8 @@ class PositionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $add_position = Position::create($request->all());
+        return redirect('position');
     }
 
     /**
@@ -69,7 +74,9 @@ class PositionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $position = Position::Find($id);
+        $position->update($request->all());
+        return redirect('position');
     }
 
     /**
@@ -80,6 +87,8 @@ class PositionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $position =Position::findOrFail($id);
+        $position->delete();
+        return redirect('position');
     }
 }
