@@ -216,7 +216,8 @@
                             </div>
                             <div class="form-group row">
                                 <label class="col-4" for="date">Duration</label>
-                                <p class="col-4"> 3 Days</p>
+                                <input class="col-4" type="text" name="durations" class="form-control"
+                                    placeholder="Duration" required>
                             </div>
                             <div class="form-group row">
                                 <label class="col-4" for="leave">Leave Types</label>
