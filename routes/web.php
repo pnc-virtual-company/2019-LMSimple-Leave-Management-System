@@ -65,11 +65,10 @@ Route::get('examples', 'ExamplesController@index')->name('examples');
 
 Route::resource('department','departmentController');
 Route::resource('manager','ManagerController');
-Route::resource('personal','LeaveTypeController');
 Route::resource('leave_type','LeaveTypeController');
+// Route::resource('leave_type','LeaveTypeController');
 Route::resource('leave_request','LeaveRequestController');
 Route::get('information','InfoController@create');
-
 
 
 Route::get('calendar', 'ExamplesController@calendar');
