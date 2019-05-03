@@ -56,7 +56,7 @@
                 </tr>  --}}
                 <tr>
 
-                    <td><a href="{{route('leave_request.create')}}">1013</a></td>         
+                    <td><a href="{{route('leave_request.create')}}">Bro</a></td>         
 
                     <td>2011/12/12</td>
                     <td>2009/06/25</td>
@@ -66,7 +66,7 @@
                 </tr>
                 <tr>
 
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
+                    <td><a href="{{route('leave_request.create')}}">Sis</a></td>
 
                     <td>2010/09/20</td>
                     <td>2009/06/25</td>
@@ -76,7 +76,7 @@
                 </tr>
                 <tr>
 
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
+                    <td><a href="{{route('leave_request.create')}}">Brother</a></td>
 
                     <td>2009/10/09</td>
                     <td>2009/06/25</td>
@@ -86,7 +86,7 @@
                 </tr>
                 <tr>
 
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
+                    <td><a href="{{route('leave_request.create')}}">Sister</a></td>
 
                     <td>2010/12/22</td>
                     <td>2009/06/25</td>
@@ -96,7 +96,7 @@
                 </tr>
                 <tr>
 
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
+                    <td><a href="{{route('leave_request.create')}}">Mother</a></td>
 
                     <td>2010/11/14</td>
                     <td>2009/06/25</td>
@@ -107,7 +107,7 @@
                 </tr>
                 <tr>
 
-                     <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
+                     <td><a href="{{route('leave_request.create')}}">Farther</a></td>
 
                     <td>2011/06/07</td>
                     <td>2009/06/25</td>
@@ -118,7 +118,7 @@
                 </tr>
                 <tr>
 
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
+                    <td><a href="{{route('leave_request.create')}}">Teacher</a></td>
 
                     <td>2010/03/11</td>
                     <td>2009/06/25</td>
@@ -129,7 +129,7 @@
                 </tr>
                 <tr>
 
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
+                    <td><a href="{{route('leave_request.create')}}">Student</a></td>
 
                     <td>2011/05/03</td>
                     <td>2009/06/25</td>
