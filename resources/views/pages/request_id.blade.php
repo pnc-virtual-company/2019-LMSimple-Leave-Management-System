@@ -39,7 +39,7 @@
                     </div>
                     <div class="col-3">
 
-                        <p> <textarea name="" id="" cols="25" rows="3">OFF</textarea></p>
+                        <p> <textarea name="" id="" cols="21" rows="3">OFF</textarea></p>
 
                         <br>
                         <br>

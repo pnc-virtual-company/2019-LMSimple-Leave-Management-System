@@ -56,6 +56,7 @@
                   <p>Employees Profile</p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">       
+
                 <a class="dropdown-item" href="{{route('personal.create')}}">Personal Information</a>
                 <a class="dropdown-item" href="{{route('profile.index')}}">Profile picture</a>     
                 </div>
