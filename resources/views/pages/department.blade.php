@@ -34,7 +34,8 @@
                 </tr>
             </thead>
             <tbody>
-
+                @foreach ( $item as $items)
+                
                 <tr>
                     <td>
                         
