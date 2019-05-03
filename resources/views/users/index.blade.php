@@ -32,7 +32,7 @@
                                         <th>@lang('Roles')</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody> 
                                     @foreach ($users as $user)
                                     <tr data-id="{{ $user->id }}">
                                         <td>

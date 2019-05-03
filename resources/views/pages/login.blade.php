@@ -40,8 +40,8 @@
                         </div>
                         <div class="form-group clearfix">
                             <button type="submit" class="btn btn-primary"><i class="fa fa-user"></i> Login </button>
-                        <a href="{{route('users.create')}}" class="btn btn-primary"><i class="fa fa-envelope"></i> Register New User</a> 
-                        </div>        
+                        {{-- <a href="{{route('users.create')}}" class="btn btn-primary"><i class="fa fa-envelope"></i> Register New User</a>  --}}
+                        </div>         
                   </div>
                   <div class="col-6">
                       <img src="{{asset('images/pic.png')}}" alt="">

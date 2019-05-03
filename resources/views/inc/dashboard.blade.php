@@ -37,7 +37,7 @@
               <i class="material-icons text-white">dashboard</i>
               <p>Dashboard</p>
             </a>
-          </li>
+          </li> 
           <li class="nav-item dropdown" id="li">
                 <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">person</i>
@@ -49,7 +49,7 @@
                   <a class="dropdown-item" href="{{route('position.index')}}">Position</a>
                   <a class="dropdown-item" href="{{route('leave_type.index')}}">Leave type</a>
                 </div>
-          </li>
+          </li> 
           <li class="nav-item dropdown">
                 <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">people</i>
@@ -57,7 +57,7 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">       
 
-                <a class="dropdown-item" href="{{route('personal.create')}}">Personal Information</a>
+                <a class="dropdown-item" href="{{url('personal')}}">Personal Information</a>
                 <a class="dropdown-item" href="{{route('profile.index')}}">Profile picture</a>     
                 </div>
           </li>
