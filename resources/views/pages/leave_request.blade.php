@@ -39,7 +39,7 @@
             </thead>
             <tbody>
 
-                <tr>
+                {{-- <tr>
 
                     <td>
 
@@ -55,10 +55,10 @@
                     <td>Vacation</td>
                     <td>Planed</td>
 
-                </tr> 
+                </tr>  --}}
                 <tr>
 
-                    <td><a href="{{route('leave_request.create')}}">1013</a></td>         
+                    <td><a href="{{route('leave_request.create')}}">Sovannthai</a></td>         
 
 
                     <td>2011/12/12</td>
@@ -70,7 +70,7 @@
                 </tr>
                 <tr>
 
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
+                    <td><a href="{{route('leave_request.create')}}">Virak</a></td>
 
 
                     <td>2010/09/20</td>
@@ -82,7 +82,7 @@
                 </tr>
                 <tr>
 
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
+                    <td><a href="{{route('leave_request.create')}}">Kuthea</a></td>
 
 
                     <td>2009/10/09</td>
@@ -95,7 +95,7 @@
                 <tr>
 
 
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
+                    <td><a href="{{route('leave_request.create')}}">Sinat</a></td>
 
 
                     <td>2010/12/22</td>
@@ -107,7 +107,7 @@
                 </tr>
                 <tr>
 
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
+                    <td><a href="{{route('leave_request.create')}}"> Sreykhouch</a></td>
 
                     <td>2010/11/14</td>
                     <td>2009/06/25</td>
@@ -119,7 +119,7 @@
                 </tr>
                 <tr>
 
-                     <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
+                     <td><a href="{{route('leave_request.create')}}"> Phanna</a></td>
 
                     <td>2011/06/07</td>
                     <td>2009/06/25</td>
@@ -131,7 +131,7 @@
                 <tr>
 
 
-
+                    <td><a href="{{route('leave_request.create')}}"> Pharim</a></td>
                     <td>2019/05/23</td>
                     <td>2019/06/05</td>
                     <td>12</td>
@@ -139,7 +139,7 @@
                     <td>Planed</td>
                 </tr><tr>
 
-
+                    <td><a href="{{route('leave_request.create')}}"> Hony</a></td>
                     <td>2010/03/11</td>
                     <td>2009/06/25</td>
 
@@ -150,7 +150,7 @@
                 <tr>
 
 
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
+                    <td><a href="{{route('leave_request.create')}}"> Sokun</a></td>
 
                     <td>2011/05/03</td>
                     <td>2009/06/25</td>
@@ -251,13 +251,6 @@
     });
 </script>
 @endsection   
-
-
-
-
-
-@endsection   
-
 
 
 
