@@ -27,11 +27,6 @@ class LeaveTypeController extends Controller
     {
      $leave= Leave_type::all(); 
       return view('pages.leave_type');
-        return view ('pages.personal');
-
-     $leave= Leave_type::all(); 
-      return view('pages.leave_type');
-
     }
 
     /**
@@ -84,9 +79,9 @@ class LeaveTypeController extends Controller
     {
         
         $pages=Leave_type::findOrFail($id);
-        $pages->update($request->all());
+        $pages=$request->update($request->all());
 
-        return redirect('leave_type');
+        return redirect()->route('leave_type');
     }
 
     /**

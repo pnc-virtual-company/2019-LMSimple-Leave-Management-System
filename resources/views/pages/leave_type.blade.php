@@ -169,5 +169,5 @@
 
 
 
-</script>
+</script> 
 @endsection
