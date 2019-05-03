@@ -56,6 +56,7 @@
                 </tr>  --}}
                 <tr>
 
+
                 
                     <td><a href="{{route('leave_request.create')}}">Sovannthai</a></td>                 
                     <td>2011/12/12</td>
@@ -76,8 +77,10 @@
                 </tr>
                 <tr>
 
+
                    
                     <td><a href="{{route('leave_request.create')}}">Kuthea</a></td>
+
                     <td>2009/10/09</td>
                     <td>2009/06/25</td>
                     <td>23</td>
@@ -87,6 +90,7 @@
                 <tr>
 
                     <td><a href="{{route('leave_request.create')}}">Sinat</a></td>
+
                     <td>2010/12/22</td>
                     <td>2009/06/25</td>
                     <td>5</td>
@@ -94,9 +98,9 @@
                     <td>Planed</td>
                 </tr>
                 <tr>
-
                     
                     <td><a href="{{route('leave_request.create')}}"> Sreykhouch</a></td>
+
                     <td>2010/11/14</td>
                     <td>2009/06/25</td>
                     <td>6</td>
@@ -107,6 +111,7 @@
 
                    
                      <td><a href="{{route('leave_request.create')}}"> Phanna</a></td>
+
                     <td>2011/06/07</td>
                     <td>2009/06/25</td>
                     <td>6</td>
@@ -114,6 +119,7 @@
                     <td>Planed</td>
                 </tr>
                 <tr
+
 
                     <td><a href="{{route('leave_request.create')}}"> Pharim</a></td>
                     <td>2019/05/23</td>
@@ -131,6 +137,7 @@
                     <td>Planed</td>
                 </tr>
                 <tr>
+
 
                     
                     <td><a href="{{route('leave_request.create')}}"> Sokun</a></td>
@@ -231,6 +238,3 @@
     });
 </script>
 @endsection   
-
-
-
