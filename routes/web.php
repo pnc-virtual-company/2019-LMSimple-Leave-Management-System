@@ -65,11 +65,12 @@ Route::get('/',function(){
     return view('pages.login');
 });
  
-Route::resource('department','departmentController');
+Route::resource('department','departmentController'); 
 Route::resource('manager','ManagerController');
 Route::resource('leave_type','LeaveTypeController');
 Route::resource('leave_request','LeaveRequestController');
 Route::get('information','InfoController@create');
+Route::get('personal','InfoController@personal');
 
  
 Route::get('calendar', 'ExamplesController@calendar'); 
