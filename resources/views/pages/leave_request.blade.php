@@ -174,10 +174,10 @@
                     </div>
                     <div class="container mt-4">
                         <form action="#" method="post">
-                            <div class="form-group row">
+                            {{-- <div class="form-group row">
                                 <label class="col-4" for="firstname">ID</label>
                                 <p class="col-4">001</p>
-                            </div>
+                            </div> --}}
                             <div class="form-group row">
                                 <label class="col-4" for="firstname">Start Date</label>
                                 <input class="col-4" type="date" name="firstname" class="form-control"
@@ -223,8 +223,8 @@
                             <div class="form-group row">
                                 <label class="col-4" for="date">Comments</label>
 
-                                <textarea class="col-7" name="comment" id="" cols="5"
-                                    rows="5">comment somethings</textarea>
+                                <p><textarea class="col-7" name="comment" id="" cols="35"
+                                    rows="">comments....</textarea></p>
 
                             </div>
                         </form>
