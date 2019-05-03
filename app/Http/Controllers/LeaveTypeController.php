@@ -78,10 +78,10 @@ class LeaveTypeController extends Controller
     public function update(Request $request, $id)
     {
         
-        $pages=Leave_type::findOrFail($id);
-        $pages=$request->update($request->all());
+        $pages = Leave_type::find($id);
+        $pages->update($request->all());
 
-        return redirect()->route('leave_type');
+        return redirect('leave_type');
     }
 
     /**
