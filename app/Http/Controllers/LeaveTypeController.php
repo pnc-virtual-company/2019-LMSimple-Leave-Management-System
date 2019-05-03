@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
+use App\Leave_type;
 class LeaveTypeController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -13,8 +13,9 @@ class LeaveTypeController extends Controller
      */
     public function index()
     {
-        return view('pages.leave_type');
-
+        // $pages=Leave_type::orderBy('id','desc')->get();
+        $pages=Leave_type::all();
+        return view('pages.leave_type',compact('pages'));
     }
 
     /**
@@ -24,7 +25,10 @@ class LeaveTypeController extends Controller
      */
     public function create()
     {
-        return view ('pages.personal');
+
+     $leave= Leave_type::all(); 
+      return view('pages.leave_type');
+
     }
 
     /**
@@ -35,8 +39,12 @@ class LeaveTypeController extends Controller
      */
     public function store(Request $request)
     {
+        
+        $user = new Leave_type;
+        $user->leave_type=$request->input('create');
+        $user->save();
+        return redirect('leave_type');
 
-      
     }
 
     /**
@@ -47,7 +55,8 @@ class LeaveTypeController extends Controller
      */
     public function show($id)
     {
-        //
+        // $page=Leave_type::findOrFail($id);
+        // return view('pages.show_leaveType',compact('page',$page));
     }
 
     /**
@@ -58,7 +67,7 @@ class LeaveTypeController extends Controller
      */
     public function edit($id)
     {
-        //
+       
     }
 
     /**
@@ -70,7 +79,11 @@ class LeaveTypeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+        $pages=Leave_type::findOrFail($id);
+        $pages->update($request->all());
+
+        return redirect('leave_type');
     }
 
     /**
@@ -81,6 +94,9 @@ class LeaveTypeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $pages=Leave_type::findOrFail($id);
+        $pages->delete();
+         return redirect('leave_type');
     }
+    
 }

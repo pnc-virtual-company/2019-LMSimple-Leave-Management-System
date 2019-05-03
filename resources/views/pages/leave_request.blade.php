@@ -39,15 +39,13 @@
             </thead>
             <tbody>
 
-                <tr>
+                {{-- <tr>
 
                     <td>
-
                      <a href="#" data-toggle="modal" data-target="#delete"> 
                     <i class="material-icons text-danger">delete</i></a>
                     <a href="" data-toggle="modal" data-target="#edit"> 
                     <i class="material-icons text-info">edit</i></a>
-
                     </td>
                     <td>2019/05/25</td>
                     <td>2019/06/25</td>
@@ -55,59 +53,50 @@
                     <td>Vacation</td>
                     <td>Planed</td>
 
-                </tr> 
+                </tr>  --}}
                 <tr>
 
-                    <td><a href="{{route('leave_request.create')}}">1013</a></td>         
-
+                    <td><a href="{{route('leave_request.create')}}">Bro</a></td>         
 
                     <td>2011/12/12</td>
                     <td>2009/06/25</td>
                     <td>9</td>
                     <td>Vacation</td>
                     <td>Planed</td>
-
                 </tr>
                 <tr>
 
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
-
+                    <td><a href="{{route('leave_request.create')}}">Sis</a></td>
 
                     <td>2010/09/20</td>
                     <td>2009/06/25</td>
                     <td>7</td>
                     <td>Vacation</td>
                     <td>Planed</td>
-
                 </tr>
                 <tr>
 
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
-
+                    <td><a href="{{route('leave_request.create')}}">Brother</a></td>
 
                     <td>2009/10/09</td>
                     <td>2009/06/25</td>
                     <td>23</td>
                     <td>Vacation</td>
                     <td>Planed</td>
-
                 </tr>
                 <tr>
 
-
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
-
+                    <td><a href="{{route('leave_request.create')}}">Sister</a></td>
 
                     <td>2010/12/22</td>
                     <td>2009/06/25</td>
                     <td>5</td>
                     <td>Vacation</td>
                     <td>Planed</td>
-
                 </tr>
                 <tr>
 
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
+                    <td><a href="{{route('leave_request.create')}}">Mother</a></td>
 
                     <td>2010/11/14</td>
                     <td>2009/06/25</td>
@@ -115,11 +104,10 @@
 
                     <td>Vacation</td>
                     <td>Planed</td>
-
                 </tr>
                 <tr>
 
-                     <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
+                     <td><a href="{{route('leave_request.create')}}">Farther</a></td>
 
                     <td>2011/06/07</td>
                     <td>2009/06/25</td>
@@ -130,15 +118,7 @@
                 </tr>
                 <tr>
 
-
-
-                    <td>2019/05/23</td>
-                    <td>2019/06/05</td>
-                    <td>12</td>
-                    <td>Vacation</td> 
-                    <td>Planed</td>
-                </tr><tr>
-
+                    <td><a href="{{route('leave_request.create')}}">Teacher</a></td>
 
                     <td>2010/03/11</td>
                     <td>2009/06/25</td>
@@ -149,8 +129,7 @@
                 </tr>
                 <tr>
 
-
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
+                    <td><a href="{{route('leave_request.create')}}">Student</a></td>
 
                     <td>2011/05/03</td>
                     <td>2009/06/25</td>
@@ -161,10 +140,8 @@
 
             </tbody>
         </table>
-
         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal"
             data-whatever="@mdo"> <i class="material-icons flaot-left">add</i>Create Leave Request</button> 
-
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -174,10 +151,10 @@
                     </div>
                     <div class="container mt-4">
                         <form action="#" method="post">
-                            <div class="form-group row">
+                            {{-- <div class="form-group row">
                                 <label class="col-4" for="firstname">ID</label>
                                 <p class="col-4">001</p>
-                            </div>
+                            </div> --}}
                             <div class="form-group row">
                                 <label class="col-4" for="firstname">Start Date</label>
                                 <input class="col-4" type="date" name="firstname" class="form-control"
@@ -206,7 +183,8 @@
                             </div>
                             <div class="form-group row">
                                 <label class="col-4" for="date">Duration</label>
-                                <p class="col-4"> 3 Days</p>
+                                <input class="col-4" type="text" name="durations" class="form-control"
+                                    placeholder="Duration" required>
                             </div>
                             <div class="form-group row">
                                 <label class="col-4" for="leave">Leave Types</label>
@@ -222,8 +200,8 @@
                             <div class="form-group row">
                                 <label class="col-4" for="date">Comments</label>
 
-                                <textarea class="col-7" name="comment" id="" cols="5"
-                                    rows="5">comment somethings</textarea>
+                                <p><textarea class="col-7" name="comment" id="" cols="35"
+                                    rows="">comments....</textarea></p>
 
                             </div>
                         </form>
@@ -250,7 +228,3 @@
     });
 </script>
 @endsection   
-
-
-
-
