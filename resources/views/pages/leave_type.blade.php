@@ -24,12 +24,13 @@
         <table id="table" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>Name</th>
                     <th>Position</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
+
             @foreach ($pages as $item)
                 <tr>
                 <td>{{$item->id}}</td>
@@ -40,6 +41,7 @@
 
                         <a href="" data-toggle="modal" data-target="#editModal"  data-id="{{$item->id}}" data-leave_type="{{$item->leave_type}}">
                         <i class="material-icons text-info">edit</i></a>
+
                     </td>
                 </tr>
                

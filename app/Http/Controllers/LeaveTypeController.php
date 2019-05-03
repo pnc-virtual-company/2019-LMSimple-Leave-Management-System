@@ -25,8 +25,10 @@ class LeaveTypeController extends Controller
      */
     public function create()
     {
+
      $leave= Leave_type::all(); 
       return view('pages.leave_type');
+
     }
 
     /**
