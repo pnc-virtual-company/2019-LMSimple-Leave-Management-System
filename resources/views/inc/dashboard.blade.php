@@ -32,11 +32,9 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-
           <li class="nav-item active">
             <a class="nav-link bg-primary" href="{{route('home.create')}}">
               <i class="material-icons text-white">dashboard</i>
-
               <p>Dashboard</p>
             </a>
           </li>
@@ -58,23 +56,17 @@
                   <p>Employees Profile</p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">       
-                <a class="dropdown-item" href="{{route('leave_type.create')}}">Personal Information</a>
-                <a class="dropdown-item" href="{{route('profile.index')}}">Profile picture</a>
 
-                  
-                </div>
-          </li> 
-          <li class="nav-item dropdown">
-                <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="material-icons">content_paste</i>
-                  <p>Requests</p>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                   
-                  <a class="dropdown-item" href="{{route('leave_request.index')}}">Leave request</a>
+                <a class="dropdown-item" href="{{route('personal.create')}}">Personal Information</a>
+                <a class="dropdown-item" href="{{route('profile.index')}}">Profile picture</a>     
                 </div>
           </li>
-
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('leave_request.index')}}">
+              <i class="material-icons">content_paste</i>
+              <p>Leave Request</p>
+            </a>
+          </li>
           <li class="nav-item ">
           <a class="nav-link" href="{{url('calendar')}}">
               <i class="material-icons">date_range</i>

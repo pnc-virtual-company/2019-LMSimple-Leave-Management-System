@@ -13,7 +13,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
 <div class="container mt-5">
         <div class="login-form">
         <form method="POST" action="{{ route('login') }}">
@@ -37,13 +36,12 @@
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $errors->first('password') }}</strong>
                                 </span>
-                            @endif
+                            @endif 
                         </div>
                         <div class="form-group clearfix">
                             <button type="submit" class="btn btn-primary"><i class="fa fa-user"></i> Login </button>
-                            <a href="#" class="btn btn-primary"><i class="fa fa-envelope"></i> Register New User</a> 
-                        </div>
-                        <div></div>        
+                        <a href="{{route('users.create')}}" class="btn btn-primary"><i class="fa fa-envelope"></i> Register New User</a> 
+                        </div>        
                   </div>
                   <div class="col-6">
                       <img src="{{asset('images/pic.png')}}" alt="">

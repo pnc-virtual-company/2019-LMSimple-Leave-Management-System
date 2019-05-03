@@ -27,9 +27,9 @@ class CreateUsersTable extends Migration
         DB::table('users')->insert(
             array(
                 'id' => 1,
-                'name' => 'Administrator',
-                'email' => 'manager@example.com',
-                'password' => bcrypt('password'),
+                'name' => 'HR',
+                'email' => 'hr@gmail.com',
+                'password' => bcrypt('hr'),
                 'remember_token' => str_random(10)
             )
         );

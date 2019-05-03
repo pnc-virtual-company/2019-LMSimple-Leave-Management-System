@@ -64,7 +64,7 @@ Route::get('examples', 'ExamplesController@index')->name('examples');
 Route::get('/',function(){
     return view('pages.login');
 });
-
+ 
 Route::resource('department','departmentController');
 Route::resource('manager','ManagerController');
 Route::resource('leave_type','LeaveTypeController');

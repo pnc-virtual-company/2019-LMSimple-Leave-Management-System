@@ -219,7 +219,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
 
-                    <a href=""><button class="btn btn-info">OK</button></a>
+                    <a href="#"><button class="btn btn-info">OK</button></a>
 
                     </div>
                 </div>
@@ -237,4 +237,7 @@
         });
     });
 </script>
+
 @endsection   
+   
+
