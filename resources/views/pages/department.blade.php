@@ -35,9 +35,13 @@
             </thead>
             <tbody>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                @foreach ($item as $items)
 >>>>>>> 582f43adc0f26cfc02c7fba7ab349f2b9de13be0
+=======
+
+>>>>>>> 8de8893ebb5bb5ad962b449833a86576692fe2fa
                 <tr>
                     <td>
                         

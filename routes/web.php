@@ -76,6 +76,9 @@ Route::get('information','InfoController@create');
 
 Route::get('calendar', 'ExamplesController@calendar');
 Route::get('calendar', 'ExamplesController@calendar'); 
+
+Route::get('calendar', 'ExamplesController@calendar');
+
 Route::resource('home','pageController');
 Route::resource('position','PositionController');
 Route::resource('profile','PictureProfile');

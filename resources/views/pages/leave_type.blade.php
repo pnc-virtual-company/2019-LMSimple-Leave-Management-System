@@ -24,13 +24,12 @@
         <table id="table" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
-                    <th>Name</th>
+                    <th>ID</th>
                     <th>Position</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-
             @foreach ($pages as $item)
                 <tr>
                 <td>{{$item->id}}</td>
@@ -41,103 +40,6 @@
 
                         <a href="" data-toggle="modal" data-target="#editModal"  data-id="{{$item->id}}" data-leave_type="{{$item->leave_type}}">
                         <i class="material-icons text-info">edit</i></a>
-
-                {{-- @foreach ($leave as $type) --}}
-                <tr>
-
-                    <td>Riht</td>
-
-                    <td>Teacher</td>
-                    <td>
-                        <a href="" data-toggle="modal" data-target="#delete">
-                            <i class="material-icons text-danger">delete</i> </a>
-                        <a href="" data-toggle="modal" data-target="#edit">
-                            <i class="material-icons text-info">edit</i></a>
-                    </td>
-                </tr>
-                <tr>
-
-                    <td>Channak</td>
-
-                    <td>Teacher</td>
-                    <td>
-                        <a href="" data-toggle="modal" data-target="#delete">
-                            <i class="material-icons text-danger">delete</i> </a>
-                        <a href="" data-toggle="modal" data-target="#edit">
-                            <i class="material-icons text-info">edit</i></a>
-                    </td>
-                </tr>
-                <tr>
-
-                    <td>Rady</td>
-
-                    <td>Teacher</td>
-                    <td>
-                        <a href="" data-toggle="modal" data-target="#delete">
-                            <i class="material-icons text-danger">delete</i> </a>
-                        <a href="" data-toggle="modal" data-target="#edit">
-                            <i class="material-icons text-info">edit</i></a>
-                    </td>
-                </tr>
-                <tr>
-
-                    <td>Sreyme</td>
-
-                    <td>Hr Team</td>
-                    <td>
-                        <a href="" data-toggle="modal" data-target="#delete">
-                            <i class="material-icons text-danger">delete</i> </a>
-                        <a href="" data-toggle="modal" data-target="#edit">
-                            <i class="material-icons text-info">edit</i></a>
-                    </td>
-                </tr>
-                <tr>
-
-                    <td>Vothy</td>
-
-                    <td>SNA Godinator</td>
-                    <td>
-                        <a href="" data-toggle="modal" data-target="#delete">
-                            <i class="material-icons text-danger">delete</i> </a>
-                        <a href="" data-toggle="modal" data-target="#edit">
-                            <i class="material-icons text-info">edit</i></a>
-                    </td>
-                </tr>
-                <tr>
-
-                    <td>Sopheak</td>
-
-                    <td>Englisk Godinator</td>
-                    <td>
-                        <a href="" data-toggle="modal" data-target="#delete">
-                            <i class="material-icons text-danger">delete</i> </a>
-                        <a href="" data-toggle="modal" data-target="#edit">
-                            <i class="material-icons text-info">edit</i></a>
-                    </td>
-                </tr>
-                <tr>
-
-                    <td>Lavy</td>
-
-                    <td>Englist Trainer</td>
-                    <td>
-                        <a href="" data-toggle="modal" data-target="#delete">
-                            <i class="material-icons text-danger">delete</i> </a>
-                        <a href="" data-toggle="modal" data-target="#edit">
-                            <i class="material-icons text-info">edit</i></a>
-                    </td>
-                </tr>
-                <tr>
-
-                    <td>Davy</td>
-
-                    <td>Student</td>
-                    <td>
-                        <a href="" data-toggle="modal" data-target="#delete">
-                            <i class="material-icons text-danger">delete</i> </a>
-                        <a href="" data-toggle="modal" data-target="#edit">
-                            <i class="material-icons text-info">edit</i></a>
-
                     </td>
                 </tr>
                
@@ -187,24 +89,23 @@
                     </div>
                   
                     <div class="modal-body">
-                        <form action="" method='POST' id="mEdit">
+                        <form action="{{route('pages.update',$pages->id)}}" method='POST'>
                                     @csrf
                                     @method('PATCH')
                             <div class="form-group">
                                 <label for="">ID</label><br>
-                                <input type="text" class="form-control" placeholder="205" id="inputId" name="id" value=""  required>
+                                <input type="text" class="form-control" placeholder="205" required>
                             </div>
                             <div class="form-group">
                                 <label for="">Leave type</label><br>
-                                <input type="text" placeholder="edit" class="form-control" name="leave_type" id="inputLeave" value="" required>
+                                <input type="text" placeholder="edit" class="form-control" required>
                             </div>
-                        
+                        </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-info"  name="edit">Ok</button>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cencel</button></a>
+                        <button type="submit" class="btn btn-info" data-dismiss="modal" name="edit">Ok</button>
+                        <button type="button" class="btn btn-danger">Cencel</button></a>
                     </div>
-                </form>
                 </div>
             </div>
         </div>
@@ -258,15 +159,15 @@
 
   $('#editModal').on('show.bs.modal',function(event){
     var button = $(event.relatedTarget)
+    var postTitle = button.data('leave_type')
     var id = button.data('id')
-    var leave_type = button.data('leave_type')
     var modal= $(this)
-    modal.find('#inputId').attr('value',id)
-    modal.find('#inputLeave').attr('value',leave_type)
+    modal.find('#mPostTitle').text(postTitle)
     var url ="{{url('leave_type')}}/"+id;
-    $('#mEdit').attr('action',url);
+    $('#mDelete').attr('action',url);
   });
 
+
+
 </script>
- 
 @endsection

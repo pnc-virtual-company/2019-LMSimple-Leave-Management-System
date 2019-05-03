@@ -55,14 +55,9 @@
 
                 </tr>  --}}
                 <tr>
-<<<<<<< HEAD
-                    <td><a href="{{route('leave_request.create')}}">1013</a></td>         
-=======
 
-                    <td><a href="{{route('leave_request.create')}}">Sovannthai</a></td>         
-
-
->>>>>>> 582f43adc0f26cfc02c7fba7ab349f2b9de13be0
+                
+                    <td><a href="{{route('leave_request.create')}}">Sovannthai</a></td>                 
                     <td>2011/12/12</td>
                     <td>2009/06/25</td>
                     <td>9</td>
@@ -70,14 +65,9 @@
                     <td>Planed</td>
                 </tr>
                 <tr>
-<<<<<<< HEAD
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
-=======
 
+                
                     <td><a href="{{route('leave_request.create')}}">Virak</a></td>
-
-
->>>>>>> 582f43adc0f26cfc02c7fba7ab349f2b9de13be0
                     <td>2010/09/20</td>
                     <td>2009/06/25</td>
                     <td>7</td>
@@ -85,14 +75,9 @@
                     <td>Planed</td>
                 </tr>
                 <tr>
-<<<<<<< HEAD
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
-=======
 
+                   
                     <td><a href="{{route('leave_request.create')}}">Kuthea</a></td>
-
-
->>>>>>> 582f43adc0f26cfc02c7fba7ab349f2b9de13be0
                     <td>2009/10/09</td>
                     <td>2009/06/25</td>
                     <td>23</td>
@@ -100,15 +85,8 @@
                     <td>Planed</td>
                 </tr>
                 <tr>
-<<<<<<< HEAD
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
-=======
-
 
                     <td><a href="{{route('leave_request.create')}}">Sinat</a></td>
-
-
->>>>>>> 582f43adc0f26cfc02c7fba7ab349f2b9de13be0
                     <td>2010/12/22</td>
                     <td>2009/06/25</td>
                     <td>5</td>
@@ -116,40 +94,26 @@
                     <td>Planed</td>
                 </tr>
                 <tr>
-<<<<<<< HEAD
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
-=======
 
+                    
                     <td><a href="{{route('leave_request.create')}}"> Sreykhouch</a></td>
-
->>>>>>> 582f43adc0f26cfc02c7fba7ab349f2b9de13be0
                     <td>2010/11/14</td>
                     <td>2009/06/25</td>
                     <td>6</td>
-
                     <td>Vacation</td>
                     <td>Planed</td>
                 </tr>
                 <tr>
-<<<<<<< HEAD
-                     <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
-=======
 
+                   
                      <td><a href="{{route('leave_request.create')}}"> Phanna</a></td>
-
->>>>>>> 582f43adc0f26cfc02c7fba7ab349f2b9de13be0
                     <td>2011/06/07</td>
                     <td>2009/06/25</td>
                     <td>6</td>
-
                     <td>Vacation</td>
                     <td>Planed</td>
                 </tr>
-                <tr>
-<<<<<<< HEAD
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
-=======
-
+                <tr
 
                     <td><a href="{{route('leave_request.create')}}"> Pharim</a></td>
                     <td>2019/05/23</td>
@@ -160,23 +124,16 @@
                 </tr><tr>
 
                     <td><a href="{{route('leave_request.create')}}"> Hony</a></td>
->>>>>>> 582f43adc0f26cfc02c7fba7ab349f2b9de13be0
                     <td>2010/03/11</td>
                     <td>2009/06/25</td>
-
                     <td>6</td>
                     <td>Vacation</td>
                     <td>Planed</td>
                 </tr>
                 <tr>
-<<<<<<< HEAD
-                    <td><a href="{{route('leave_request.create')}}"> 1014</a></td>
-=======
 
-
+                    
                     <td><a href="{{route('leave_request.create')}}"> Sokun</a></td>
-
->>>>>>> 582f43adc0f26cfc02c7fba7ab349f2b9de13be0
                     <td>2011/05/03</td>
                     <td>2009/06/25</td>
                     <td>6</td>
