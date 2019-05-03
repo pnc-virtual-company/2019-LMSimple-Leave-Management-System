@@ -37,9 +37,9 @@
                 {{-- @foreach ($leave as $type) --}}
                 <tr>
 
-                    <td>01</td>
+                    <td>Riht</td>
 
-                    <td>teacher</td>
+                    <td>Teacher</td>
                     <td>
                         <a href="" data-toggle="modal" data-target="#delete">
                             <i class="material-icons text-danger">delete</i> </a>
@@ -49,9 +49,9 @@
                 </tr>
                 <tr>
 
-                    <td>01</td>
+                    <td>Channak</td>
 
-                    <td>teacher</td>
+                    <td>Teacher</td>
                     <td>
                         <a href="" data-toggle="modal" data-target="#delete">
                             <i class="material-icons text-danger">delete</i> </a>
@@ -61,9 +61,9 @@
                 </tr>
                 <tr>
 
-                    <td>01</td>
+                    <td>Rady</td>
 
-                    <td>teacher</td>
+                    <td>Teacher</td>
                     <td>
                         <a href="" data-toggle="modal" data-target="#delete">
                             <i class="material-icons text-danger">delete</i> </a>
@@ -73,9 +73,9 @@
                 </tr>
                 <tr>
 
-                    <td>01</td>
+                    <td>Sreyme</td>
 
-                    <td>teacher</td>
+                    <td>Hr Team</td>
                     <td>
                         <a href="" data-toggle="modal" data-target="#delete">
                             <i class="material-icons text-danger">delete</i> </a>
@@ -85,9 +85,9 @@
                 </tr>
                 <tr>
 
-                    <td>01</td>
+                    <td>Vothy</td>
 
-                    <td>teacher</td>
+                    <td>SNA Godinator</td>
                     <td>
                         <a href="" data-toggle="modal" data-target="#delete">
                             <i class="material-icons text-danger">delete</i> </a>
@@ -97,9 +97,9 @@
                 </tr>
                 <tr>
 
-                    <td>01</td>
+                    <td>Sopheak</td>
 
-                    <td>teacher</td>
+                    <td>Englisk Godinator</td>
                     <td>
                         <a href="" data-toggle="modal" data-target="#delete">
                             <i class="material-icons text-danger">delete</i> </a>
@@ -109,9 +109,9 @@
                 </tr>
                 <tr>
 
-                    <td>01</td>
+                    <td>Lavy</td>
 
-                    <td>teacher</td>
+                    <td>Englist Trainer</td>
                     <td>
                         <a href="" data-toggle="modal" data-target="#delete">
                             <i class="material-icons text-danger">delete</i> </a>
@@ -121,9 +121,9 @@
                 </tr>
                 <tr>
 
-                    <td>03</td>
+                    <td>Davy</td>
 
-                    <td>student</td>
+                    <td>Student</td>
                     <td>
                         <a href="" data-toggle="modal" data-target="#delete">
                             <i class="material-icons text-danger">delete</i> </a>
