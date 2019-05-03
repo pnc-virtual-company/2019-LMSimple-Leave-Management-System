@@ -34,7 +34,7 @@
                             <label for="roles[]">Roles</label>
                             <select class="form-control" id="roles" name="roles[]" multiple size="5">
                             @foreach ($roles as $role)
-                                <option value="{{ $role->id }}" @if (!empty(old('roles'))) @if(in_array($role->id, old('roles'))) selected @endif @endif>{!! $role->name !!}</option>
+                                <option value="{{$role->id }}" @if (!empty(old('roles'))) @if(in_array($role->id, old('roles'))) selected @endif @endif>{!! $role->name !!}</option>
                             @endforeach
                             </select>
                         </div>

@@ -24,12 +24,13 @@
         <table id="table" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>Name</th>
                     <th>Position</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
+
             @foreach ($pages as $item)
                 <tr>
                 <td>{{$item->id}}</td>
@@ -40,6 +41,103 @@
 
                         <a href="" data-toggle="modal" data-target="#editModal"  data-id="{{$item->id}}" data-leave_type="{{$item->leave_type}}">
                         <i class="material-icons text-info">edit</i></a>
+
+                {{-- @foreach ($leave as $type) --}}
+                <tr>
+
+                    <td>Riht</td>
+
+                    <td>Teacher</td>
+                    <td>
+                        <a href="" data-toggle="modal" data-target="#delete">
+                            <i class="material-icons text-danger">delete</i> </a>
+                        <a href="" data-toggle="modal" data-target="#edit">
+                            <i class="material-icons text-info">edit</i></a>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>Channak</td>
+
+                    <td>Teacher</td>
+                    <td>
+                        <a href="" data-toggle="modal" data-target="#delete">
+                            <i class="material-icons text-danger">delete</i> </a>
+                        <a href="" data-toggle="modal" data-target="#edit">
+                            <i class="material-icons text-info">edit</i></a>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>Rady</td>
+
+                    <td>Teacher</td>
+                    <td>
+                        <a href="" data-toggle="modal" data-target="#delete">
+                            <i class="material-icons text-danger">delete</i> </a>
+                        <a href="" data-toggle="modal" data-target="#edit">
+                            <i class="material-icons text-info">edit</i></a>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>Sreyme</td>
+
+                    <td>Hr Team</td>
+                    <td>
+                        <a href="" data-toggle="modal" data-target="#delete">
+                            <i class="material-icons text-danger">delete</i> </a>
+                        <a href="" data-toggle="modal" data-target="#edit">
+                            <i class="material-icons text-info">edit</i></a>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>Vothy</td>
+
+                    <td>SNA Godinator</td>
+                    <td>
+                        <a href="" data-toggle="modal" data-target="#delete">
+                            <i class="material-icons text-danger">delete</i> </a>
+                        <a href="" data-toggle="modal" data-target="#edit">
+                            <i class="material-icons text-info">edit</i></a>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>Sopheak</td>
+
+                    <td>Englisk Godinator</td>
+                    <td>
+                        <a href="" data-toggle="modal" data-target="#delete">
+                            <i class="material-icons text-danger">delete</i> </a>
+                        <a href="" data-toggle="modal" data-target="#edit">
+                            <i class="material-icons text-info">edit</i></a>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>Lavy</td>
+
+                    <td>Englist Trainer</td>
+                    <td>
+                        <a href="" data-toggle="modal" data-target="#delete">
+                            <i class="material-icons text-danger">delete</i> </a>
+                        <a href="" data-toggle="modal" data-target="#edit">
+                            <i class="material-icons text-info">edit</i></a>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>Davy</td>
+
+                    <td>Student</td>
+                    <td>
+                        <a href="" data-toggle="modal" data-target="#delete">
+                            <i class="material-icons text-danger">delete</i> </a>
+                        <a href="" data-toggle="modal" data-target="#edit">
+                            <i class="material-icons text-info">edit</i></a>
+
                     </td>
                 </tr>
                

@@ -27,6 +27,7 @@ class LeaveTypeController extends Controller
     {
      $leave= Leave_type::all(); 
       return view('pages.leave_type');
+        return view ('pages.personal');
     }
 
     /**
