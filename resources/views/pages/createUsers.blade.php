@@ -1,16 +1,17 @@
-@extends('layouts.app')
+{{-- @extends('layout.app')
 
-@section('content')
-
+@section('content') --}}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 @include('validation-errors')
 
-<div class="container">
+<div class="container mt-4">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
             <div class="card">
-                <div class="card-header">@lang('Create a new user')</div>
+                <div class="card-header bg-warning">@lang('Create a new user')</div>
 
-                <div class="card-body">
+                <div class="card-body bg-primary">
 
                     <form action="{{ route('users.store') }}" method="POST" enctype="multipart/form-data">
                         {{ csrf_field() }}
@@ -39,15 +40,16 @@
                             </select>
                         </div>
 
-                        <input type="submit" class="btn btn-primary" value="Save" />
+                        <input type="submit" class="btn btn-warning" value="Save" />
                     </form>
-                </div>
+                </div> 
             </div>
+            <div class="col-md-4"></div>
         </div>
     </div>
 </div>
 
-@endsection
+{{-- @endsection --}}
 
 @push('scripts')
 <script type="text/javascript">
