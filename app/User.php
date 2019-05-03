@@ -52,7 +52,7 @@ class User extends Authenticatable
     }
 
     /**
-    * Check multiple roles
+    * Check multiple roles 
     * @param array $roles
     */
     public function hasAnyRole($roles)

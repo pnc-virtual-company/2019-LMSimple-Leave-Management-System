@@ -35,22 +35,21 @@
                 </tr>
             </thead>
             <tbody>
-               
-                    
-                
+               @foreach ($item as $items)
                 <tr>
                     <td>
                         
-                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
+                    <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger" data-department="{{$items->department}}" data-id="{{$items->id}}"><i
                                         class="far fa-trash-alt"></i></a>
-                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info"><i
-                                        class="fas fa-pencil-alt"></i></a>
+                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info" data-department="{{$items->department}}" data-id="{{$items->id}}"><i
+                                        class="fas fa-pencil-alt" ></i></a>
+                      
                     </td>
-                   <td>1</td>
-                    <td>Trianing&Education Team</td>
+                   <td>{{$items->id}}</td>
+                    <td>{{$items->department}}</td>
                    
                 </tr>
-               
+                @endforeach
              
             </tbody>
         </table>
@@ -61,18 +60,25 @@
              <div class="modal-content">
                  <div class="modal-header">
                      <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
-                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                         <span aria-hidden="true">&times;</span>
-                     </button>
                  </div>
+                 
                  <div class="modal-body">
-                     Are you sure that you want to delete this department?
+                     
+                     <p>Are you sour to delete this department?</p>
+                     <small id="mPostTitle"></small>
                  </div>
+                 <form action="" method="POST" id="mDelete">
+                    @csrf
+                    @method('DELETE')
                  <div class="modal-footer">
                      <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">No</button>
-                     <button type="button" class="btn btn-info btn-sm">Yes</button>
+
+                     <button type="submit" class="btn btn-info btn-sm">Yes</button>
+
                  </div>
+                </form>
              </div>
+            
          </div>
      </div>
      <!-- modal create department -->
@@ -86,21 +92,29 @@
                          <span aria-hidden="true">&times;</span>
                      </button>
                  </div>
+                 
+                    <form action="{{action('departmentController@store')}}" method="POST"> 
+                    @csrf
+                    
                  <div class="modal-body">
-                     <form>
-                         <div class="form-group row">
+                     
+                         <div class="form-group">
                              <label for="inputPassword" class="col-sm-2 col-form-label">Department</label>
-                             <div class="col-sm-10">
+                             <div class=" form-group">
                                  <input type="text" class="form-control" id="createInput"
-                                     placeholder="Training & Education Team">
+                                      name="department">
                              </div>
                          </div>
-                     </form>
+                    
                  </div>
+                
                  <div class="modal-footer">
-                     <button type="button" class="btn btn-info" data-dismiss="modal">Ok</button>
-                     <button type="button" class="btn btn-danger">Cancel</button>
+
+                     <button type="submit" class="btn btn-info" >Ok</button>
+                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+
                  </div>
+                </form>
              </div>
          </div>
      </div>
@@ -115,31 +129,39 @@
                          <span aria-hidden="true">&times;</span>
                      </button>
                  </div>
+                 <form action="" method="POST" id="mEdit">
+                   @csrf
+                   @method('PATCH')
                  <div class="modal-body">
-                     <form>
-                         <div class="form-group row">
+                     <div class="form-group ">
                              <label for="input" class="col-sm-2 col-form-label">ID</label>
-                             <div class="col-sm-10">
-                                 <input type="text" readonly class="form-control-plaintext" id="input"
-                                     placeholder="1">
+                             <div class="form-group">
+                                <input type="text" name="id" id="inputId" value="" class="form-control">
+                                
                              </div>
                          </div>
-                         <div class="form-group row">
+                         <div class="form-group ">
                              <label for="input" class="col-sm-2 col-form-label">Department</label>
-                             <div class="col-sm-10">
-                                 <input type="text" class="form-control" id="input" placeholder="Training & Education Team">
+                             <div class="form-group ">
+                                 <input type="text" class="form-control" id="input" name="department" placeholder="Training & Education Team"  value="">
                              </div>
                          </div>
-                     </form>
+                   
                  </div>
+                
                  <div class="modal-footer">
-                     <button type="button" class="btn btn-info" data-dismiss="modal">Ok</button>
-                     <button type="button" class="btn btn-danger">Cancel</button>
+
+                     <button type="submit" class="btn btn-info" >Ok</button>
+                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+
                  </div>
+                </form>
              </div>
          </div>
      </div>
-     <a href="" class="btn btn-info" data-toggle="modal" data-target="#createModal"><i
+
+     <a href="#" class="btn btn-info" data-toggle="modal" data-target="#createModal"><i
+
              class="fas fa-plus-circle"></i> Create Department</a>
  </div>
 
@@ -151,6 +173,31 @@
         });
     });
 </script> 
+<script src="{{asset('js/app.js')}}"></script>
+    <script>
+        $('#deleteModal').on('show.bs.modal',function(event){
+          var button = $(event.relatedTarget)
+          var postTitle = button.data('department')
+          var id = button.data('id')
+          var modal= $(this)
+          modal.find('#mPostTitle').text(postTitle)
+          var url ="{{url('department')}}/"+id;
+          $('#mDelete').attr('action',url);
+        })
+
+        $('#editModal').on('show.bs.modal',function(event){
+          var button = $(event.relatedTarget)
+          var department = button.data('department')
+          var id = button.data('id')
+          var modal= $(this)
+          modal.find('#inputId').attr('value',id)
+          modal.find('#input').attr('value',department)
+          var url ="{{url('department')}}/"+id;
+          $('#mEdit').attr('action',url);
+        })
+    </script>
+
+
 @endsection 
 
 

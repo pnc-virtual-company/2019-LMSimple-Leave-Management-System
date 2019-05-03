@@ -32,9 +32,11 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item">
-          <a class="nav-link bg-info active" href="{{route('home.create')}}">
-              <i class="material-icons">dashboard</i>
+
+          <li class="nav-item active">
+            <a class="nav-link bg-primary" href="{{route('home.create')}}">
+              <i class="material-icons text-white">dashboard</i>
+
               <p>Dashboard</p>
             </a>
           </li>
@@ -58,14 +60,21 @@
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">       
                 <a class="dropdown-item" href="{{route('personal.create')}}">Personal Information</a>
                 <a class="dropdown-item" href="{{route('profile.index')}}">Profile picture</a>
+
+                  
+                </div>
+          </li> 
+          <li class="nav-item dropdown">
+                <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="material-icons">content_paste</i>
+                  <p>Requests</p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                   
+                  <a class="dropdown-item" href="{{route('leave_request.index')}}">Leave request</a>
                 </div>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="{{route('leave_request.index')}}">
-                <i class="material-icons">content_paste</i>
-                <p>Leave Request</p>
-            </a>
-          </li> 
+
           <li class="nav-item ">
           <a class="nav-link" href="{{url('calendar')}}">
               <i class="material-icons">date_range</i>
@@ -123,7 +132,16 @@
                   <a class="dropdown-item" href="#">Profile</a>
                   <a class="dropdown-item" href="#">Settings</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Log out</a>
+                  <a class="dropdown-item" href="{{ route('logout') }}"
+                      onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                      {{ __('Logout') }}
+                  </a>
+
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                      @csrf
+                  </form>
+                  
                 </div>
               </li>
             </ul>
