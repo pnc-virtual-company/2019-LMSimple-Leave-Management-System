@@ -52,7 +52,7 @@
         </table>
     </div>
     <div>
-        <a href="" class="btn btn-info" data-toggle="modal" data-target="#createModal"><i
+        <a href="" class="btn bg-primary" data-toggle="modal" data-target="#createModal"><i
                 class="fas fa-plus-circle"></i> Create position</a>
     </div>
     <!-- modal delete  -->
@@ -72,7 +72,7 @@
                         @method('DELETE')
                         @csrf
                         <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">No</button>
-                        <button type="submit" class="btn btn-info btn-sm" name="btn-delete">Yes</button>
+                        <button type="submit" class="btn bg-primary btn-sm" name="btn-delete">Yes</button>
                     </div>
                 </form>
             </div>
@@ -98,7 +98,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-info btn-sm">Ok</button>
+                        <button type="submit" class="btn bg-primary btn-sm">Ok</button>
                         <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancel</button></a>
                     </div>
                 </form>
@@ -132,7 +132,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" name="btn-edit" class="btn btn-info btn-sm">Ok</button>
+                        <button type="submit" name="btn-edit" class="btn bg-primary btn-sm">Ok</button>
                         <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancel</button>
                     </div>
                 </form>

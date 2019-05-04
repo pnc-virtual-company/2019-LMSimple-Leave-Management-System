@@ -118,16 +118,7 @@
                     <td>Vacation</td>
                     <td>Planed</td>
                 </tr>
-                <tr
-
-
-                    <td><a href="{{route('leave_request.create')}}"> Pharim</a></td>
-                    <td>2019/05/23</td>
-                    <td>2019/06/05</td>
-                    <td>12</td>
-                    <td>Vacation</td> 
-                    <td>Planed</td>
-                </tr><tr>
+                <tr>
 
                     <td><a href="{{route('leave_request.create')}}"> Hony</a></td>
                     <td>2010/03/11</td>
@@ -150,7 +141,7 @@
 
             </tbody>
         </table>
-        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal"
+        <button type="button" class=" btn bg-primary" data-toggle="modal" data-target="#exampleModal"
             data-whatever="@mdo"> <i class="material-icons flaot-left">add</i>Create Leave Request</button> 
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
@@ -219,7 +210,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
 
-                    <a href="#"><button class="btn btn-info">OK</button></a>
+                    <a href="#"><button class="btn bg-primary">OK</button></a>
 
                     </div>
                 </div>
