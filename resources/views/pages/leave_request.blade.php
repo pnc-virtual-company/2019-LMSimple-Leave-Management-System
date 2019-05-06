@@ -118,7 +118,7 @@
                     <td>Vacation</td>
                     <td>Planed</td>
                 </tr>
-                <tr
+                <tr>
 
 
                     <td><a href="{{route('leave_request.create')}}"> Pharim</a></td>

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layout.app')
 
 @section('content')
 
@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">@lang('Create a new user')</div>
+                <div class="card-header text-center bg-info">@lang('Create a new user')</div>
 
                 <div class="card-body">
 
@@ -37,7 +37,7 @@
                                 @foreach ($roles as $role)
                                     <option value="{{ $role->id }}" @if (!empty(old('roles'))) @if(in_array($role->id, old('roles'))) selected @endif @endif>{!! $role->name !!}</option>
                                 @endforeach
-
+ 
                             </select>
                         </div>
 
