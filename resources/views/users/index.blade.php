@@ -1,21 +1,17 @@
-@extends('layouts.app')
-
+@extends('layout.app')
 @section('content')
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-
             @include('session-flash')
-
             <div class="card">
-                <div class="card-header bg-info">@lang('List of users')</div>
-
+                <div class="card-header text-center bg-info">@lang('List of users')</div>
                 <div class="card-body">
-
                     <div class="row">
                         <div class="col-md-12">
-                            <a class="btn btn-secondary" href="{{url('users/create')}}">@lang('Add a new user')</a>
-                            <a class="btn btn-secondary" href="{{url('users/export')}}" download>@lang('Export to Excel')</a>
+                            <a class="btn btn-info" href="{{url('users/create')}}">@lang('Add a new user')</a>
+                            {{-- <a class="btn btn-secondary" href="{{url('users/export')}}" download>@lang('Export to Excel')</a> --}}
                         </div>
                     </div>
  
@@ -32,19 +28,19 @@
                                         <th>@lang('Roles')</th>
                                     </tr>
                                 </thead>
-                                <tbody> 
+                                <tbody>
                                     @foreach ($users as $user)
                                     <tr data-id="{{ $user->id }}">
                                         <td>
-                                            <i class="mdi mdi-delete clickable delete-icon" data-id="{{ $user->id }}" title="@lang('delete the user')"></i>
-                                            <a href="{{url('users')}}/{{ $user->id }}/edit" title="@lang('edit')"><i class="mdi mdi-pencil clickable"></i></a>
-                                            <a href="{{url('users')}}/{{ $user->id }}" title="@lang('view')"><i class="mdi mdi-eye clickable"></i></a>
+                                            <a href="#"><i class="material-icons clickable text-danger" data-id="{{ $user->id }}" title="@lang('delete the user')">delete</i></a>
+                                            <a href="{{url('users')}}/{{ $user->id }}/edit" title="@lang('edit')"><i class="material-icons clickable text-success">create</i></a>
+                                            <a href="{{url('users')}}/{{ $user->id }}" title="@lang('view')"><i class="material-icons clickable text-info">visibility</i></a>
                                             <span>{{ $user->id }}</span>
                                         </td>
-                                        <td>
+                                        <td> 
                                             <span>{!! $user->name !!}</span>
-                                        </td>
-                                        <td>
+                                        </td> 
+                                        <td> 
                                             <span>{!! $user->email !!}</span>
                                         </td>
                                         <td>
@@ -57,7 +53,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

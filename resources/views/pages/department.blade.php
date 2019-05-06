@@ -21,7 +21,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 </head>
-
+ 
 <body>
     <h1 class="text-center">List Department</h1><br>
     <div class="container">
@@ -35,8 +35,6 @@
             </thead>
             <tbody>
                 @foreach ( $item as $items)
-                
-
                 <tr>
                     <td>
                         
