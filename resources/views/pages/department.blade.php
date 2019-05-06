@@ -72,7 +72,7 @@
                  <div class="modal-footer">
                      <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">No</button>
 
-                     <button type="submit" class="btn btn-info btn-sm">Yes</button>
+                     <button type="submit" class="btn bg-primary btn-sm">Yes</button>
 
                  </div>
                 </form>
@@ -101,7 +101,7 @@
                              <label for="inputPassword" class="col-sm-2 col-form-label">Department</label>
                              <div class=" form-group">
                                  <input type="text" class="form-control" id="createInput"
-                                      name="department">
+                                      name="department" required>
                              </div>
                          </div>
                     
@@ -109,7 +109,7 @@
                 
                  <div class="modal-footer">
 
-                     <button type="submit" class="btn btn-info" >Ok</button>
+                     <button type="submit" class="btn bg-primary" >Ok</button>
                      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
 
                  </div>
@@ -150,7 +150,7 @@
                 
                  <div class="modal-footer">
 
-                     <button type="submit" class="btn btn-info" >Ok</button>
+                     <button type="submit" class="btn bg-primary" >Ok</button>
                      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
 
                  </div>
@@ -159,7 +159,7 @@
          </div>
      </div>
 
-     <a href="#" class="btn btn-info" data-toggle="modal" data-target="#createModal"><i
+     <a href="#" class="btn bg-primary" data-toggle="modal" data-target="#createModal"><i
 
              class="fas fa-plus-circle"></i> Create Department</a>
  </div>
