@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layout.app')
 
 @section('content')
 
@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">@lang('Create a new user')</div>
+                <div class="card-header text-center bg-info">@lang('Create a new user')</div>
 
                 <div class="card-body">
 
@@ -29,13 +29,15 @@
                             <label for="txtPassword">@lang('Password')</label>
                             <input type="password" class="form-control" id="password" name="password">
                         </div>
-
+ 
                         <div class="form-group">
                             <label for="roles[]">Roles</label>
                             <select class="form-control" id="roles" name="roles[]" multiple size="5">
-                            @foreach ($roles as $role)
-                                <option value="{{$role->id }}" @if (!empty(old('roles'))) @if(in_array($role->id, old('roles'))) selected @endif @endif>{!! $role->name !!}</option>
-                            @endforeach
+
+                                @foreach ($roles as $role)
+                                    <option value="{{ $role->id }}" @if (!empty(old('roles'))) @if(in_array($role->id, old('roles'))) selected @endif @endif>{!! $role->name !!}</option>
+                                @endforeach
+ 
                             </select>
                         </div>
 

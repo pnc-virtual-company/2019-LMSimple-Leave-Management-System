@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="{{asset('css/app.css')}}">
   <link rel="stylesheet" href="{{asset('css/jquery.dataTables.min.css')}}">
   <link rel="stylesheet" href="{{asset('css/profile.css')}}">
-  
+  <link rel="stylesheet" href="{{ asset('css/materialdesignicons.min.css') }}" />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
@@ -22,8 +22,8 @@
   <link href="{{asset('css/material-dashboard.css')}}" rel="stylesheet"/>
 </head>
 
-<body class="">
-  <div class="wrapper">
+<body>
+  <div class="wrapper"> 
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
       <div class="logo">
         <a href="#" class="simple-text logo-normal">
@@ -32,26 +32,26 @@
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-
           <li class="nav-item active">
             <a class="nav-link bg-primary" href="{{route('home.create')}}">
               <i class="material-icons text-white">dashboard</i>
-
               <p>Dashboard</p>
             </a>
-          </li>
+          </li> 
           <li class="nav-item dropdown" id="li">
                 <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">person</i>
                   <p>HR</p>
-                </a>
+                </a> 
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
                   <a class="dropdown-item" href="{{route('manager.index')}}">List Employees</a>
                   <a class="dropdown-item" href="{{route('department.index')}}">Department</a>
                   <a class="dropdown-item" href="{{route('position.index')}}">Position</a>
                   <a class="dropdown-item" href="{{route('leave_type.index')}}">Leave type</a>
+                  <a class="dropdown-item" href="{{url('personal')}}">Personal Information</a>
                 </div>
           </li>
+<<<<<<< HEAD
           <li class="nav-item dropdown">
                 <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">people</i>
@@ -73,8 +73,20 @@
                    
                   <a class="dropdown-item" href="{{route('leave_request.index')}}">Leave request</a>
                 </div>
+=======
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('users.index')}}">
+              <i class="material-icons">people</i>
+              <p>User</p>
+            </a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('leave_request.index')}}">
+              <i class="material-icons">content_paste</i>
+              <p>Leave Request</p>
+            </a>
+>>>>>>> 9b8348a65dab1a2720c8180d4befd9ba99099667
           </li>
-
           <li class="nav-item ">
           <a class="nav-link" href="{{url('calendar')}}">
               <i class="material-icons">date_range</i>
@@ -95,6 +107,7 @@
             <span class="navbar-toggler-icon icon-bar"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end">
+<<<<<<< HEAD
             {{-- <form class="navbar-form">
               <div class="input-group no-border">
                 <input type="text" value="" class="form-control" placeholder="Search...">
@@ -121,6 +134,12 @@
                   <a class="dropdown-item" href="#">Another One</a>
                 </div>
               </li> --}}
+=======
+            <ul class="navbar-nav">
+              <li class="nav-item">
+              <a href="#" class="nav-link">{{ Auth::user()->name }}</a>
+            </li>
+>>>>>>> 9b8348a65dab1a2720c8180d4befd9ba99099667
               <li class="nav-item dropdown"> 
                 <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">person</i>
@@ -129,15 +148,14 @@
                   </p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="#">Profile</a>
+                  <a class="dropdown-item" href="{{route('profile.index')}}">Profile</a>
                   <a class="dropdown-item" href="#">Settings</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="{{ route('logout') }}"
                       onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
                       {{ __('Logout') }}
-                  </a>
-
+                </a>
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                       @csrf
                   </form>
@@ -155,9 +173,7 @@
       <script src="{{asset('js/jquery.min.js')}}"></script>
       <script src="{{asset('js/jquery-3.2.1.slim.min.js')}}"></script>
       <script src="{{asset('js/popper.min.js')}}"></script>
-      {{-- <script src="{{asset('js/jquery.dataTables.min.js')}}"></script> --}}
       <script src="{{asset('js/position.js')}}"></script> 
-
       <script src="{{asset('js/bootstrap-material-design.min.js')}}"></script>
       <script src="{{asset('js/perfect-scrollbar.jquery.min.js')}}"></script>
       <script src="{{asset('js/moment.min.js')}}"></script>
@@ -175,11 +191,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
       <script src="{{asset('/js/arrive.min.js')}}"></script>
       <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-      {{-- <script src="{{asset('js/plugins/chartist.min.js')}}"></script> --}}
-      {{-- <script src="{{asset('js/plugins/bootstrap-notify.js')}}"></script> --}}
       <script src="{{asset('js/material-dashboard.js?v=2.1.1')}}" type="text/javascript"></script>
-
-      {{-- <script src="{{asset('js/bootstrap.min.js')}}"></script> --}}
       <script>
         $(document).ready(function() {
           $().ready(function() {

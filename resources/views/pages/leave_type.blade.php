@@ -24,8 +24,8 @@
         <table id="table" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Position</th>
+                    <th>ID</th>
+                    <th>Leav Type</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -49,7 +49,7 @@
             </tbody>
         </table>
 
-    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalCenter">
+    <button type="button" class="btn bg-primary" data-toggle="modal" data-target="#exampleModalCenter">
             <i class="material-icons flaot-left">add</i>Create type Request</a>
      </button>
 
@@ -71,7 +71,7 @@
                                 @method('DELETE')
                                 @csrf
                         <div class="modal-footer">
-                          <button type="submit" class="btn btn-info" name="position">Ok</button>
+                          <button type="submit" class="btn bg-primary" name="position">Ok</button>
                           <button type="submit" class="btn btn-danger"  data-dismiss="modal">No</button>
                         </div>
                     </form>
@@ -105,7 +105,7 @@
                         
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-info"  name="edit">Ok</button>
+                        <button type="submit" class="btn bg-primary"  name="edit">Ok</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cencel</button></a>
                     </div>
                 </form>
@@ -131,7 +131,7 @@
                     <input type="text" placeholder="Create Position" name="create" class="form-control" required></div>    
             </div>
             <div class="modal-footer">
-              <button type="submit" class="btn btn-info">Ok</button>
+              <button type="submit" class="btn bg-primary">Ok</button>
               <button type="button" class="btn btn-danger data-dismiss="modal"">Cencel</button>
             </div>
         </form>

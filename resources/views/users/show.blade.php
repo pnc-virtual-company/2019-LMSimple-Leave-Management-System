@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layout.app')
 
 @section('content')
 
@@ -8,13 +8,13 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">@lang('User details')</div>
+                <div class="card-header text-center">@lang('User details')</div>
 
                 <div class="card-body">
 
                     <div class="row">
                             <div class="col-md-12">
-                                <a class="btn btn-secondary" href="{{url('users')}}">@lang('Back to list')</a>
+                                <a class="btn btn-info" href="{{url('users')}}">@lang('Back to list')</a>
                             </div>
                         </div>
 
