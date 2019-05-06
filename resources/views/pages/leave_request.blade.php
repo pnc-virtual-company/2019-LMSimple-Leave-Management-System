@@ -221,7 +221,7 @@
 <script>
     $(document).ready(function () {
         $('#example').DataTable({
-            "scrollY": "300px",
+            "scrollY": 300,
             "scrollCollapse": true,
 
         });

@@ -71,6 +71,7 @@ Route::resource('leave_type','LeaveTypeController');
 // Route::resource('leave_type','LeaveTypeController');
 Route::resource('leave_request','LeaveRequestController');
 Route::get('information','InfoController@create');
+Route::get('personal','InfoController@personal');
 
  
 

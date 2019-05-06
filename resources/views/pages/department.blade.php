@@ -102,7 +102,7 @@
                              <label for="inputPassword" class="col-sm-2 col-form-label">Department</label>
                              <div class=" form-group">
                                  <input type="text" class="form-control" id="createInput"
-                                      name="department">
+                                      name="department" required>
                              </div>
                          </div>
                     

@@ -10,6 +10,10 @@ class InfoController extends Controller
     {
         return view('pages.information');
     }
+    public function personal()
+    {
+        return view('pages.personal');
+    }
 
 }
 
