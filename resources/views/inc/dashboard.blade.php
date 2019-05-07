@@ -30,7 +30,7 @@
         <img src="{{asset('images/logo.png')}}" style="width: 300px">
         </a>
       </div>
-      <div class="sidebar-wrapper">
+      <div class="sidebar-wrapper" id="myDiv">
         <ul class="nav">
 
           <li class="nav-item active">
@@ -40,7 +40,7 @@
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item dropdown" id="li">
+          <li class="nav-item dropdown " id="li">
                 <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">person</i>
                   <p>HR</p>
@@ -52,22 +52,22 @@
                   <a class="dropdown-item" href="{{route('leave_type.index')}}">Leave type</a>
                 </div>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown ">
                 <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">people</i>
-                  <p>Employees Profile</p>
+                  <p class="">Employees Profile</p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">       
-                <a class="dropdown-item" href="{{route('leave_type.create')}}">Personal Information</a>
+                <a class="dropdown-item" href="{{url('personal')}}">Personal Information</a>
                 <a class="dropdown-item" href="{{route('profile.index')}}">Profile picture</a>
 
                   
                 </div>
           </li> 
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown ">
                 <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">content_paste</i>
-                  <p>Requests</p>
+                  <p class="">Requests</p>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
                    
@@ -76,9 +76,9 @@
           </li>
 
           <li class="nav-item ">
-          <a class="nav-link" href="{{url('calendar')}}">
+          <a class="nav-link " href="{{url('calendar')}}">
               <i class="material-icons">date_range</i>
-              <p>Calendar</p>
+              <p >Calendar</p>
             </a>
           </li>
         </ul>
@@ -151,7 +151,7 @@
       <!-- End Navbar -->
       <div class="content">
         <div class="container-fluid">
-    </div>
+    
       <script src="{{asset('js/jquery.min.js')}}"></script>
       <script src="{{asset('js/jquery-3.2.1.slim.min.js')}}"></script>
       <script src="{{asset('js/popper.min.js')}}"></script>
@@ -357,6 +357,12 @@
           md.initDashboardPageCharts();
     
         });
+        
+    });
+    // Add active class to the current button (highlight it)
+  
+}
+</scr
       </script>
 </body>
 
