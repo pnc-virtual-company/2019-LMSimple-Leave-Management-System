@@ -50,7 +50,7 @@
             <footer>
                 <div class="row">
                     <div class="col text-center">
-                        <a href="{{url('/information')}}" class="btn btn-info flaot-right"><i
+                        <a href="{{url('/information')}}" class="btn bg-primary flaot-right"><i
                                 class="material-icons flaot-left">check</i>Submit Leave Request</a>
                         <button type="button" class="btn btn-danger btn-center"> <i
                                 class="material-icons flaot-left">close</i>Cencel Leave Request</button>

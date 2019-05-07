@@ -25,10 +25,8 @@ class LeaveTypeController extends Controller
      */
     public function create()
     {
-
      $leave= Leave_type::all(); 
       return view('pages.leave_type');
-
     }
 
     /**
@@ -80,7 +78,7 @@ class LeaveTypeController extends Controller
     public function update(Request $request, $id)
     {
         
-        $pages=Leave_type::findOrFail($id);
+        $pages = Leave_type::find($id);
         $pages->update($request->all());
 
         return redirect('leave_type');

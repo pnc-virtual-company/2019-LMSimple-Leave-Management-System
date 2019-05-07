@@ -39,14 +39,14 @@ class UserController extends Controller
     }
 
     /**
-     * Display a listing of the users.
+     * Display a listing of the users. 
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
     {
-        $request->user()->authorizeRoles(['Administrator']);
+        $request->user()->authorizeRoles(['HR']);
         $users = User::with('roles')->get();
         return view('users.index', ['users' => $users]);
     }
@@ -59,7 +59,7 @@ class UserController extends Controller
      */
     public function create(Request $request)
     {
-        $request->user()->authorizeRoles(['Administrator']);
+        $request->user()->authorizeRoles(['HR']);
         $roles = Role::all();
         return view('users.create', ['roles' => $roles]);
     }
@@ -73,7 +73,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $request->user()->authorizeRoles(['Administrator']);
+        $request->user()->authorizeRoles(['HR']);
         // validate
         // read more on validation at http://laravel.com/docs/validation
         $rules = array(
@@ -114,7 +114,7 @@ class UserController extends Controller
      */
     public function show(Request $request, $id) 
     {
-        $request->user()->authorizeRoles(['Administrator']);
+        $request->user()->authorizeRoles(['HR']);
         $user = User::find($id);
         $user->roleIds = $user->roles->pluck('id')->toArray();
         $roles = Role::all();
@@ -130,7 +130,7 @@ class UserController extends Controller
      */
     public function edit(Request $request, $id)
     {
-        $request->user()->authorizeRoles(['Administrator']);
+        $request->user()->authorizeRoles(['HR']);
         $user = User::find($id);
         $user->roleIds = $user->roles->pluck('id')->toArray();
         $roles = Role::all();
@@ -146,7 +146,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->user()->authorizeRoles(['Administrator']);
+        $request->user()->authorizeRoles(['HR']);
         // validate
         $rules = array(
             'name'  => 'required',
@@ -182,7 +182,7 @@ class UserController extends Controller
      */
     public function destroy(Request $request, $id)
     { 
-        $request->user()->authorizeRoles(['Administrator']);
+        $request->user()->authorizeRoles(['HR']);
         $user = User::find($id);
         $user->delete();
     }
