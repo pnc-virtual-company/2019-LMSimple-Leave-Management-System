@@ -38,107 +38,21 @@
                 </tr>
             </thead>
             <tbody>
+                   
+             @foreach ( $item as $items)
 
-                {{-- <tr>
-
-                    <td>
-                     <a href="#" data-toggle="modal" data-target="#delete"> 
-                    <i class="material-icons text-danger">delete</i></a>
-                    <a href="" data-toggle="modal" data-target="#edit"> 
-                    <i class="material-icons text-info">edit</i></a>
-                    </td>
-                    <td>2019/05/25</td>
-                    <td>2019/06/25</td>
-                    <td>6</td>
-                    <td>Vacation</td>
-                    <td>Planed</td>
-
-                </tr>  --}}
                 <tr>
 
-
-                
                     <td><a href="{{route('leave_request.create')}}">Sovannthai</a></td>                 
-                    <td>2011/12/12</td>
-                    <td>2009/06/25</td>
-                    <td>9</td>
-                    <td>Vacation</td>
-                    <td>Planed</td>
-                </tr>
-                <tr>
-
-                
-                    <td><a href="{{route('leave_request.create')}}">Virak</a></td>
-                    <td>2010/09/20</td>
-                    <td>2009/06/25</td>
-                    <td>7</td>
-                    <td>Vacation</td>
-                    <td>Planed</td>
-                </tr>
-                <tr>
-
-
-                   
-                    <td><a href="{{route('leave_request.create')}}">Kuthea</a></td>
-
-                    <td>2009/10/09</td>
-                    <td>2009/06/25</td>
-                    <td>23</td>
-                    <td>Vacation</td>
-                    <td>Planed</td>
-                </tr>
-                <tr>
-
-                    <td><a href="{{route('leave_request.create')}}">Sinat</a></td>
-
-                    <td>2010/12/22</td>
-                    <td>2009/06/25</td>
-                    <td>5</td>
-                    <td>Vacation</td>
-                    <td>Planed</td>
-                </tr>
-                <tr>
-                    
-                    <td><a href="{{route('leave_request.create')}}"> Sreykhouch</a></td>
-
-                    <td>2010/11/14</td>
-                    <td>2009/06/25</td>
-                    <td>6</td>
-                    <td>Vacation</td>
-                    <td>Planed</td>
-                </tr>
-                <tr>
-
-                   
-                     <td><a href="{{route('leave_request.create')}}"> Phanna</a></td>
-
-                    <td>2011/06/07</td>
-                    <td>2009/06/25</td>
-                    <td>6</td>
-                    <td>Vacation</td>
-                    <td>Planed</td>
-                </tr>
-                <tr>
-
-                    <td><a href="{{route('leave_request.create')}}"> Hony</a></td>
-                    <td>2010/03/11</td>
-                    <td>2009/06/25</td>
-                    <td>6</td>
-                    <td>Vacation</td>
-                    <td>Planed</td>
-                </tr>
-                <tr>
-
-
-                    
-                    <td><a href="{{route('leave_request.create')}}"> Sokun</a></td>
-                    <td>2011/05/03</td>
-                    <td>2009/06/25</td>
-                    <td>6</td>
-                    <td>Vacation</td>
-                    <td>Planed</td>
+                    <td>{{$items->start}}</td>
+                    <td>{{$items->end}}</td>
+                    <td>{{$items->duration}}</td>
+                    <td>{{$items->vocation}}</td>
+                    <td>{{$items->plan}}</td>
                 </tr>
 
+              @endforeach
+              
             </tbody>
         </table>
         <button type="button" class=" btn bg-primary" data-toggle="modal" data-target="#exampleModal"
@@ -151,11 +65,9 @@
                         <h5 class="modal-title" id="exampleModalLabel">Create Leave Request</h5>
                     </div>
                     <div class="container mt-4">
-                        <form action="#" method="post">
-                            {{-- <div class="form-group row">
-                                <label class="col-4" for="firstname">ID</label>
-                                <p class="col-4">001</p>
-                            </div> --}}
+                       <form action="{{url('LeaveRequestController@store')}}" method="POST"> 
+                          @csrf
+
                             <div class="form-group row">
                                 <label class="col-4" for="firstname">Start Date</label>
                                 <input class="col-4" type="date" name="firstname" class="form-control"
@@ -202,7 +114,7 @@
                                 <label class="col-4" for="date">Comments</label>
 
                                 <p><textarea class="col-7" name="comment" id="" cols="35"
-                                    rows="">comments....</textarea></p>
+                                    rows="" class="form-control" >comments....</textarea></p>
 
                             </div>
                         </form>
@@ -210,7 +122,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
 
-                    <a href="#"><button class="btn bg-primary">OK</button></a>
+                    <a href=""><button type="submit" class="btn bg-primary">OK</button></a>
 
                     </div>
                 </div>

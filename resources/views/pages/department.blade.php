@@ -42,7 +42,7 @@
                         
                     <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger" data-department="{{$items->department}}" data-id="{{$items->id}}"><i
                                         class="far fa-trash-alt"></i></a>
-                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info" data-department="{{$items->department}}" data-id="{{$items->id}}"><i
+                    <a href="" data-toggle="modal" data-target="#editModal" class="text-info" data-department="{{$items->department}}" data-id="{{$items->id}}"><i
                                         class="fas fa-pencil-alt" ></i></a>
                       
                     </td>

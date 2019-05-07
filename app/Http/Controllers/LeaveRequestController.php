@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
- 
-use Illuminate\Http\Request;
 
+use Illuminate\Http\Request;
+use App\Leave_request;
 class LeaveRequestController extends Controller
 {
     /**
@@ -13,7 +13,7 @@ class LeaveRequestController extends Controller
      */
     public function index()
     {
-      return view('pages.leave_request');
+      return view('pages.leave_request',compact('item'));
     }
     /**
      * Show the form for creating a new resource.
@@ -34,6 +34,10 @@ class LeaveRequestController extends Controller
     public function store(Request $request)
     {
        
+        $item = new LeaveRequest;
+        $item->LeaveRequest= $request->input('leave_request');
+        $item->save();
+        return redirect('leave_request');
     }
 
     /**
