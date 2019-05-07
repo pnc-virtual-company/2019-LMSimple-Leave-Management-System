@@ -34,7 +34,11 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ( $item as $items)
+
+                @foreach ($item as $items)
+                    
+              
+
                 <tr>
                     <td>
                         
@@ -134,13 +138,10 @@
                  <div class="modal-body">
                      <div class="form-group ">
                              <label for="input" class="col-sm-2 col-form-label">ID</label>
-                             <div class="form-group">
-                                <input type="text" name="id" id="inputId" value="" class="form-control">
-                                
-                             </div>
-                         </div>
+                             <small id="inputId"></small>
+                     </div>
                          <div class="form-group ">
-                             <label for="input" class="col-sm-2 col-form-label">Department</label>
+                             <label >Department</label>
                              <div class="form-group ">
                                  <input type="text" class="form-control" id="input" name="department" placeholder="Training & Education Team"  value="">
                              </div>
@@ -189,7 +190,7 @@
           var department = button.data('department')
           var id = button.data('id')
           var modal= $(this)
-          modal.find('#inputId').attr('value',id)
+          modal.find('#inputId').text(id)
           modal.find('#input').attr('value',department)
           var url ="{{url('department')}}/"+id;
           $('#mEdit').attr('action',url);
