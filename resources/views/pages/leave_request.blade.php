@@ -26,7 +26,7 @@
 </head>
 <body>
     <div class="container mt-4">
-        <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <table id="request" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -39,16 +39,18 @@
             </thead>
             <tbody>
                    
-             @foreach ( $item as $items)
+             @foreach ( $reqest as $items)
 
                 <tr>
-
-                    <td><a href="{{route('leave_request.create')}}">Sovannthai</a></td>                 
-                    <td>{{$items->start}}</td>
-                    <td>{{$items->end}}</td>
+                {{-- <td>{{$items->id}}</td> --}}
+                
+                <td><a href="{{route('leave_request.create')}}">{{$items->employee->firstname}}{{$items->employee->lastname}}</a></td>                 
+                    
+                <td>{{$items->startdate}}</td>
+                    <td>{{$items->enddate}}</td>
                     <td>{{$items->duration}}</td>
-                    <td>{{$items->vocation}}</td>
-                    <td>{{$items->plan}}</td>
+                    <td>{{$items->leave_type->leave_type}}</td>
+                    <td>{{$items->comment}}</td>
                 </tr>
 
               @endforeach
@@ -65,15 +67,15 @@
                         <h5 class="modal-title" id="exampleModalLabel">Create Leave Request</h5>
                     </div>
                     <div class="container mt-4">
-                       <form action="{{url('LeaveRequestController@store')}}" method="POST"> 
+                       <form action="{{action('LeaveRequestController@store')}}" method="POST"> 
                           @csrf
 
                             <div class="form-group row">
-                                <label class="col-4" for="firstname">Start Date</label>
-                                <input class="col-4" type="date" name="firstname" class="form-control"
+                                <label class="col-4" for="firstname" >Start Date</label>
+                                <input class="col-4" type="date" name="startdate"  data-date-format="DD-YY-MM" class="form-control"
                                     placeholder="start date" required>
                                 <div class="col-4" class="input-group">
-                                    <select class="custom-select" id="inputGroupSelect04">
+                                    <select class="custom-select" id="inputGroupSelect04" name="leave_type_id">
                                         <option selected>The Morning</option>
                                         <option value="1">Afternoon</option>
                                         <option value="2">Everning</option>
@@ -81,13 +83,13 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-4" for="firstname">End Date</label>
+                                <label class="col-4" for="enddate">End Date</label>
 
-                                <input class="col-4" type="date" name="firstname" class="form-control"
+                                <input class="col-4" type="date" data-date="" data-date-format="DD-MM-YY" name="enddate" class="form-control"
 
                                     placeholder="end date" required>
                                 <div class="col-4" class="input-group">
-                                    <select class="custom-select" id="inputGroupSelect04">
+                                    <select class="custom-select" id="inputGroupSelect04" name="leave_type_id">
                                         <option selected>The Morning</option>
                                         <option value="1">Afternoon</option>
                                         <option value="2">Everning</option>
@@ -96,13 +98,13 @@
                             </div>
                             <div class="form-group row">
                                 <label class="col-4" for="date">Duration</label>
-                                <input class="col-4" type="text" name="durations" class="form-control"
+                                <input class="col-4" type="text" name="duration" class="form-control"
                                     placeholder="Duration" required>
                             </div>
                             <div class="form-group row">
                                 <label class="col-4" for="leave">Leave Types</label>
                                 <div class="col-5" class="input-group">
-                                    <select class="custom-select" id="inputGroupSelect04s">
+                                    <select class="custom-select" id="inputGroupSelect04s" name="vocation">
                                         <option selected>Vocation</option>
                                         <option value="1">Training</option>
                                         <option value="2">Sick Leave</option>
@@ -111,20 +113,28 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-4" for="date">Comments</label>
-
-                                <p><textarea class="col-7" name="comment" id="" cols="35"
-                                    rows="" class="form-control" >comments....</textarea></p>
+                                    <div class="col-5" class="input-group">
+                                       
+                                            
+                                        
+                                            <select class="custom-select" id="inputGroupSelect04s" name="employee_id">
+                                                    @foreach ($employee as $item)
+                                                <option value="{{$item->id}}" selected>{{$item->firstname}} {{$item->lastname}}</option>
+                                                @endforeach
+                                            </select>
+                                            
+                                        </div>
 
                             </div>
-                        </form>
+                        
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
 
-                    <a href=""><button type="submit" class="btn bg-primary">OK</button></a>
+                    <button type="submit" class="btn bg-primary">OK</button>
 
                     </div>
+                </form>
                 </div>
             </div>
         </div>
@@ -133,8 +143,8 @@
 
 <script>
     $(document).ready(function () {
-        $('#example').DataTable({
-            "scrollY": "300px",
+        $('#request').DataTable({
+            "scrollY": 300,
             "scrollCollapse": true,
 
         });

@@ -10,7 +10,7 @@
         <div class="modal-body">
             <p>@lang('Are you sure that you want to delete this object?')</p>
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer"> 
             <button id="cmdDeleteConfirmation" type="button" class="btn btn-danger">@lang('Yes')</button>
             <button id="cmdDeleteCancellation" type="button" class="btn btn-primary" data-dismiss="modal">@lang('No')</button>
         </div>

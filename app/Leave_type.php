@@ -10,7 +10,7 @@ class Leave_type extends Model
         'leave_type'
     ];
 
-    public function leave_request(){
-        return $this->belongsTo(Leave_reqest::class);
+    public function leave_reqests(){
+        return $this->hasMany(Leave_reqest::class);
     }
 }

@@ -39,8 +39,8 @@ class UserController extends Controller
     }
 
     /**
-     * Display a listing of the users.
-     *
+     * Display a listing of the users. 
+     * 
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
@@ -61,7 +61,7 @@ class UserController extends Controller
     {
         $request->user()->authorizeRoles(['HR']);
         $roles = Role::all();
-        return view('pages.createUsers', ['roles' => $roles]);
+        return view('users.create', ['roles' => $roles]);
     }
 
     /**
@@ -101,7 +101,7 @@ class UserController extends Controller
             // redirect
             Session::flash('message.level', 'success');
             Session::flash('message.content', __('The user was successfully created'));
-            return Redirect::to('login');
+            return Redirect::to('users');
         }
     }
 
