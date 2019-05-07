@@ -8,6 +8,6 @@ class Position extends Model
 {
     protected $fillable=['position'];
     public function employees(){
-        return $this->belongsTo(Employee::class);
+        return $this->hasMany(Employee::class);
     }
 }

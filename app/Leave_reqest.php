@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Leave_reqest extends Model
 {
     public function leave_type(){
-        return $this->hasMany(leave_type::class);
+        return $this->belongsTo(leave_type::class);
     }
 }
