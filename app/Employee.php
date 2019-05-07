@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Employee extends Model
 {
-    protected $fillable=['firstname','lastname'];
+    protected $fillable=['firstname','lastname','startdate','department_id','position_id'];
     public function department(){
-        return $this->hasMany(Department::class);
+        return $this->belongsTo(Department::class);
     }
     public function position(){
-        return $this->hasMany(Position::class);
+        return $this->belongsTo(Position::class);
     }
 }
