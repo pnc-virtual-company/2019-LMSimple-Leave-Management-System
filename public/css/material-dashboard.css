@@ -563,7 +563,7 @@ sup {
 }
 
 a {
-  color: #9c27b0;
+  color: #0a6ebd;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
@@ -624,7 +624,7 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  color: #6c757d;
+  color: #0a6ebd;
   text-align: left;
   caption-side: bottom;
 }
@@ -3527,7 +3527,7 @@ tbody.collapse.show {
 
 .dropdown-item:hover,
 .dropdown-item:focus {
-  color: #16181b;
+  color: #0a6ebd;
   text-decoration: none;
   background-color: #f8f9fa;
 }

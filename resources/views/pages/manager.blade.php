@@ -55,6 +55,7 @@
             </tbody>
         </table> 
         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal"
+
             data-whatever="@mdo"><i class="fas fa-plus-circle"></i> Create News</button>
 
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -132,6 +133,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
                         <button type="submit" class="btn btn-info">OK</button>
+
                     </div>
                 </form>
                 </div>
@@ -214,7 +216,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
-                    <a href="index.html"><button class="btn btn-info">OK</button></a>
+                    <a href="index.html"><button class="btn bg-primary">OK</button></a>
                 </div>
             </div>
         </div>
