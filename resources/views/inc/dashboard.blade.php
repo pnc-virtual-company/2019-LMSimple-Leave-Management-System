@@ -51,29 +51,6 @@
                   <a class="dropdown-item" href="{{url('personal')}}">Personal Information</a>
                 </div>
           </li>
-<<<<<<< HEAD
-          <li class="nav-item dropdown">
-                <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="material-icons">people</i>
-                  <p>Employees Profile</p>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">       
-                <a class="dropdown-item" href="{{url('personal')}}">Personal Information</a>
-                <a class="dropdown-item" href="{{route('profile.index')}}">Profile picture</a>
-
-                  
-                </div>
-          </li>  
-          <li class="nav-item dropdown">
-                <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="material-icons">content_paste</i>
-                  <p>Requests</p>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                   
-                  <a class="dropdown-item" href="{{route('leave_request.index')}}">Leave request</a>
-                </div>
-=======
           <li class="nav-item">
             <a class="nav-link" href="{{route('users.index')}}">
               <i class="material-icons">people</i>
@@ -85,7 +62,6 @@
               <i class="material-icons">content_paste</i>
               <p>Leave Request</p>
             </a>
->>>>>>> 9b8348a65dab1a2720c8180d4befd9ba99099667
           </li>
           <li class="nav-item ">
           <a class="nav-link" href="{{url('calendar')}}">
@@ -107,39 +83,10 @@
             <span class="navbar-toggler-icon icon-bar"></span>
           </button>
           <div class="collapse navbar-collapse justify-content-end">
-<<<<<<< HEAD
-            {{-- <form class="navbar-form">
-              <div class="input-group no-border">
-                <input type="text" value="" class="form-control" placeholder="Search...">
-                <button type="submit" class="btn btn-white btn-round btn-just-icon">
-                  <i class="material-icons">search</i>
-                  <div class="ripple-container"></div>
-                </button>
-              </div>
-            </form> --}}
-            <ul class="navbar-nav">
-              {{-- <li class="nav-item dropdown">
-                <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="material-icons">notifications</i>
-                  <span class="notification">5</span>
-                  <p class="d-lg-none d-md-block">
-                    Some Actions
-                  </p>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Mike John responded to your email</a>
-                  <a class="dropdown-item" href="#">You have 5 new tasks</a>
-                  <a class="dropdown-item" href="#">You're now friend with Andrew</a>
-                  <a class="dropdown-item" href="#">Another Notification</a>
-                  <a class="dropdown-item" href="#">Another One</a>
-                </div>
-              </li> --}}
-=======
             <ul class="navbar-nav">
               <li class="nav-item">
               <a href="#" class="nav-link">{{ Auth::user()->name }}</a>
             </li>
->>>>>>> 9b8348a65dab1a2720c8180d4befd9ba99099667
               <li class="nav-item dropdown"> 
                 <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">person</i>
