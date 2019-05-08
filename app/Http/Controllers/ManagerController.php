@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+// use App\Employee;
 use Illuminate\Http\Request;
 
 class ManagerController extends Controller
@@ -13,9 +13,12 @@ class ManagerController extends Controller
      */
     public function index()
     {
-        return view('pages.manager');
+        $employees= \App\Employee::all();
+        $position= \App\Position::all();
+        $department= \App\Department::all();
+        return view('pages.manager',compact('employees','position','department'));
     }
-
+ 
     /**
      * Show the form for creating a new resource.
      *
@@ -34,7 +37,8 @@ class ManagerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       $employee=\App\Employee::create($request->all());
+        return redirect('manager');
     }
 
     /**
