@@ -15,13 +15,18 @@ class CreateLeaveReqestsTable extends Migration
     {
         Schema::create('leave_reqests', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('startdate');
-            $table->string('enddate');
+            $table->date('startdate');
+            $table->date('enddate');
             $table->integer('duration');
             $table->integer('leave_type_id')->unsigned();
             $table->foreign('leave_type_id')
                   ->references('id')
                   ->on('leave_types')
+                  ->onDelete('cascade');
+                  $table->integer('employee_id')->unsigned();
+            $table->foreign('employee_id')
+                  ->references('id')
+                  ->on('employees')
                   ->onDelete('cascade');
             $table->timestamps();
         });

@@ -26,7 +26,7 @@
 </head>
 <body>
     <div class="container mt-4">
-        <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <table id="request" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -38,116 +38,23 @@
                 </tr>
             </thead>
             <tbody>
-
-                {{-- <tr>
-
-                    <td>
-                     <a href="#" data-toggle="modal" data-target="#delete"> 
-                    <i class="material-icons text-danger">delete</i></a>
-                    <a href="" data-toggle="modal" data-target="#edit"> 
-                    <i class="material-icons text-info">edit</i></a>
-                    </td>
-                    <td>2019/05/25</td>
-                    <td>2019/06/25</td>
-                    <td>6</td>
-                    <td>Vacation</td>
-                    <td>Planed</td>
-
-                </tr>  --}}
-                <tr>
-
-
-                
-                    <td><a href="{{route('leave_request.create')}}">Sovannthai</a></td>                 
-                    <td>2011/12/12</td>
-                    <td>2009/06/25</td>
-                    <td>9</td>
-                    <td>Vacation</td>
-                    <td>Planed</td>
-                </tr>
-                <tr>
-
-                
-                    <td><a href="{{route('leave_request.create')}}">Virak</a></td>
-                    <td>2010/09/20</td>
-                    <td>2009/06/25</td>
-                    <td>7</td>
-                    <td>Vacation</td>
-                    <td>Planed</td>
-                </tr>
-                <tr>
-
-
                    
-                    <td><a href="{{route('leave_request.create')}}">Kuthea</a></td>
+             @foreach ( $reqest as $items)
 
-                    <td>2009/10/09</td>
-                    <td>2009/06/25</td>
-                    <td>23</td>
-                    <td>Vacation</td>
-                    <td>Planed</td>
-                </tr>
                 <tr>
-
-                    <td><a href="{{route('leave_request.create')}}">Sinat</a></td>
-
-                    <td>2010/12/22</td>
-                    <td>2009/06/25</td>
-                    <td>5</td>
-                    <td>Vacation</td>
-                    <td>Planed</td>
-                </tr>
-                <tr>
+                {{-- <td>{{$items->id}}</td> --}}
+                
+                <td><a href="{{route('leave_request.create')}}">{{$items->employee->firstname}}{{$items->employee->lastname}}</a></td>                 
                     
-                    <td><a href="{{route('leave_request.create')}}"> Sreykhouch</a></td>
-
-                    <td>2010/11/14</td>
-                    <td>2009/06/25</td>
-                    <td>6</td>
-                    <td>Vacation</td>
-                    <td>Planed</td>
-                </tr>
-                <tr>
-
-                   
-                     <td><a href="{{route('leave_request.create')}}"> Phanna</a></td>
-
-                    <td>2011/06/07</td>
-                    <td>2009/06/25</td>
-                    <td>6</td>
-                    <td>Vacation</td>
-                    <td>Planed</td>
-                </tr>
-                <tr>
-
-
-                    <td><a href="{{route('leave_request.create')}}"> Pharim</a></td>
-                    <td>2019/05/23</td>
-                    <td>2019/06/05</td>
-                    <td>12</td>
-                    <td>Vacation</td> 
-                    <td>Planed</td>
-                </tr><tr>
-
-                    <td><a href="{{route('leave_request.create')}}"> Hony</a></td>
-                    <td>2010/03/11</td>
-                    <td>2009/06/25</td>
-                    <td>6</td>
-                    <td>Vacation</td>
-                    <td>Planed</td>
-                </tr>
-                <tr>
-
-
-                    
-                    <td><a href="{{route('leave_request.create')}}"> Sokun</a></td>
-                    <td>2011/05/03</td>
-                    <td>2009/06/25</td>
-                    <td>6</td>
-                    <td>Vacation</td>
-                    <td>Planed</td>
+                <td>{{$items->startdate}}</td>
+                    <td>{{$items->enddate}}</td>
+                    <td>{{$items->duration}}</td>
+                    <td>{{$items->leave_type->leave_type}}</td>
+                    <td>{{$items->comment}}</td>
                 </tr>
 
+              @endforeach
+              
             </tbody>
         </table>
         <button type="button" class=" btn bg-primary" data-toggle="modal" data-target="#exampleModal"
@@ -160,17 +67,15 @@
                         <h5 class="modal-title" id="exampleModalLabel">Create Leave Request</h5>
                     </div>
                     <div class="container mt-4">
-                        <form action="#" method="post">
-                            {{-- <div class="form-group row">
-                                <label class="col-4" for="firstname">ID</label>
-                                <p class="col-4">001</p>
-                            </div> --}}
+                       <form action="{{action('LeaveRequestController@store')}}" method="POST"> 
+                          @csrf
+
                             <div class="form-group row">
-                                <label class="col-4" for="firstname">Start Date</label>
-                                <input class="col-4" type="date" name="firstname" class="form-control"
+                                <label class="col-4" for="firstname" >Start Date</label>
+                                <input class="col-4" type="date" name="startdate"  data-date-format="DD-YY-MM" class="form-control"
                                     placeholder="start date" required>
                                 <div class="col-4" class="input-group">
-                                    <select class="custom-select" id="inputGroupSelect04">
+                                    <select class="custom-select" id="inputGroupSelect04" name="leave_type_id">
                                         <option selected>The Morning</option>
                                         <option value="1">Afternoon</option>
                                         <option value="2">Everning</option>
@@ -178,13 +83,13 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-4" for="firstname">End Date</label>
+                                <label class="col-4" for="enddate">End Date</label>
 
-                                <input class="col-4" type="date" name="firstname" class="form-control"
+                                <input class="col-4" type="date" data-date="" data-date-format="DD-MM-YY" name="enddate" class="form-control"
 
                                     placeholder="end date" required>
                                 <div class="col-4" class="input-group">
-                                    <select class="custom-select" id="inputGroupSelect04">
+                                    <select class="custom-select" id="inputGroupSelect04" name="leave_type_id">
                                         <option selected>The Morning</option>
                                         <option value="1">Afternoon</option>
                                         <option value="2">Everning</option>
@@ -193,13 +98,13 @@
                             </div>
                             <div class="form-group row">
                                 <label class="col-4" for="date">Duration</label>
-                                <input class="col-4" type="text" name="durations" class="form-control"
+                                <input class="col-4" type="text" name="duration" class="form-control"
                                     placeholder="Duration" required>
                             </div>
                             <div class="form-group row">
                                 <label class="col-4" for="leave">Leave Types</label>
                                 <div class="col-5" class="input-group">
-                                    <select class="custom-select" id="inputGroupSelect04s">
+                                    <select class="custom-select" id="inputGroupSelect04s" name="vocation">
                                         <option selected>Vocation</option>
                                         <option value="1">Training</option>
                                         <option value="2">Sick Leave</option>
@@ -208,20 +113,28 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-4" for="date">Comments</label>
-
-                                <p><textarea class="col-7" name="comment" id="" cols="35"
-                                    rows="">comments....</textarea></p>
+                                    <div class="col-5" class="input-group">
+                                       
+                                            
+                                        
+                                            <select class="custom-select" id="inputGroupSelect04s" name="employee_id">
+                                                    @foreach ($employee as $item)
+                                                <option value="{{$item->id}}" selected>{{$item->firstname}} {{$item->lastname}}</option>
+                                                @endforeach
+                                            </select>
+                                            
+                                        </div>
 
                             </div>
-                        </form>
+                        
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
 
-                    <a href="#"><button class="btn bg-primary">OK</button></a>
+                    <button type="submit" class="btn bg-primary">OK</button>
 
                     </div>
+                </form>
                 </div>
             </div>
         </div>
@@ -230,7 +143,7 @@
 
 <script>
     $(document).ready(function () {
-        $('#example').DataTable({
+        $('#request').DataTable({
             "scrollY": 300,
             "scrollCollapse": true,
 
