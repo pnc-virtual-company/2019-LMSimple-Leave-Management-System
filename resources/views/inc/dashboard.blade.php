@@ -22,7 +22,7 @@
 
 <body>
   <div class="wrapper"> 
-    <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
+    <div class="sidebar" data-color="purple" data-background-color="white" data-image="#">
       <div class="logo">
         <a href="#" class="simple-text logo-normal">
         <img src="{{asset('images/logo.png')}}" style="width: 300px">
@@ -31,7 +31,7 @@
       <div class="sidebar-wrapper" id="myDiv">
         <ul class="nav">
           <li class="nav-item active">
-            <a class="nav-link bg-primary" href="{{route('home.create')}}">
+            <a class="nav-link bg-primary" href="{{route('home.index')}}">
               <i class="material-icons text-white">dashboard</i>
               <p>Dashboard</p>
             </a>
@@ -51,30 +51,18 @@
                   <a class="dropdown-item" href="{{url('personal')}}">Personal Information</a>
                 </div>
           </li>
-
-          <li class="nav-item dropdown ">
-                <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="material-icons">people</i>
-                  <p class="">Employees Profile</p>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">       
-                <a class="dropdown-item" href="{{url('personal')}}">Personal Information</a>
-                <a class="dropdown-item" href="{{route('profile.index')}}">Profile picture</a>
-
-                  
-                </div>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('users.index')}}">
+              <i class="material-icons">people</i>
+              <p>User</p>
+            </a>
           </li> 
-          <li class="nav-item dropdown ">
-                <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="material-icons">content_paste</i>
-                  <p class="">Requests</p>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                   
-                  <a class="dropdown-item" href="{{route('leave_request.index')}}">Leave request</a>
-                </div>
-
-          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('leave_request.index')}}">
+              <i class="material-icons">content_paste</i>
+              <p>Leave Request</p>
+            </a>
+          </li> 
           <li class="nav-item ">
           <a class="nav-link " href="{{url('calendar')}}">
               <i class="material-icons">date_range</i>
@@ -82,7 +70,7 @@
             </a>
           </li>
         </ul>
-      </div>
+      </div> 
     </div>
     <div class="main-panel">
       <!-- Navbar -->
@@ -108,7 +96,6 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
                   <a class="dropdown-item" href="{{route('profile.index')}}">Profile</a>
-                  <a class="dropdown-item" href="#">Settings</a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="{{ route('logout') }}"
                       onclick="event.preventDefault();

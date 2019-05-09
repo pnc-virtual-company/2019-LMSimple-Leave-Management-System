@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class ManagerController extends Controller
 {
-    /**
+    /** 
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -72,7 +72,9 @@ class ManagerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $employee = \App\Employee::find($id);
+        $employee->update($request->all());
+        return redirect('manager');
     }
 
     /**

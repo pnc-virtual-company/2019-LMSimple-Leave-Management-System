@@ -39,14 +39,14 @@
             </thead>
             <tbody>
                 @foreach ($employees as $item)
-                    <tr>
+                    <tr> 
                         <td>
                             <i class="fas fa-trash-alt text-danger"></i>
-                            <a href="" data-toggle="modal" data-target="#Edit" data-whatever="@mdo"><i
-                                    class=" fas fa-pencil-alt text-info"></i></a>
-                            {{$item->id}}</td>
+                            <a href="" data-toggle="modal" data-target="#Edit" data-id={{$item->id}} data-firstname={{$item->firstname}} data-lastname={{$item->lastname}} data-startdate={{$item->startdate}} data-department_id={{$item->department_id}} data-position_id={{$item->position_id}} data-whatever="@mdo">
+                                <i class=" fas fa-pencil-alt text-info"></i></a>
+                            {{$item->id}}</td> 
                         <td>{{$item->firstname}}</td>
-                        <td>{{$item->lastname}}</td>
+                        <td>{{$item->lastname}}</td> 
                         <td>{{$item->department->department}}</td>
                         <td>{{$item->position->position}}</td>
                         <td>{{$item->startdate}}</td>
@@ -75,10 +75,6 @@
                     <div class="container mt-4">
                     <form action="{{action('ManagerController@store')}}" method="post">
                         @csrf
-                            {{-- <div class="form-group row">
-                                <label class="col-4" for="firstname">ID</label>
-                                <p class="col-4">001</p>
-                            </div> --}}
                             <div class="form-group row">
                                 <label class="col-4" for="firstname">First Name</label>
                                 <input class="col-7" type="text" name="firstname" class="form-control"
@@ -116,7 +112,7 @@
                                 <input class="col-7" type="date" name="startdate" class="form-control"
                                     placeholder="start-date" required>
                             </div>
-                            <div class="form-group row">
+                            {{-- <div class="form-group row">
                                 <label class="col-4" for="manager">Manager</label>
                                 <div class="col-8" class="input-group">
                                     <select class="custom-select" id="inputGroupSelect04">
@@ -127,7 +123,7 @@
                                     </select>
 
                                 </div>
-                            </div>
+                            </div> --}}
                         
                     </div>
                     <div class="modal-footer">
@@ -157,51 +153,51 @@
                     </div>
                 </div>    
                 <div class="container mt-4">
-                    <form action="#" method="post">
-                        <div class="form-group row">
+                    <form action="" method="post" id="modalEdit">
+                        @csrf
+                        @method('PATCH')
+                        {{-- <div class="form-group row">
                              <label class="col-4" for="firstname">ID</label>
-                             <p class="col-4">001</p>   
+                             <p class="col-4"></p>   
 
-                        </div>
+                        </div> --}}
                         <div class="form-group row">
                             <label class="col-4" for="firstname">First Name</label>
-                            <input class="col-7" type="text" name="firstname" class="form-control"
+                            <input class="col-7" type="text" id="firstname" name="firstname" class="form-control"
                                 placeholder="First Name" required>
                         </div>
                         <div class="form-group row">
                             <label class="col-4" for="lastname">Last Name</label>
-                            <input class="col-7" type="text" name="lastname" class="form-control"
+                            <input class="col-7" type="text" id="lastname" name="lastname" class="form-control"
                                 placeholder="Last Name" required>
                         </div>
                         <div class="form-group row">
                             <label class="col-4" for="department">Department</label>
                             <div class="col-8" class="input-group">
-                                <select class="custom-select" id="inputGroupSelect04">
-                                    <option selected>WEB Trainer</option>
-                                    <option value="1">ERO Team</option>
-                                    <option value="2">HR</option>
-                                    <option value="3">SNA Triner</option>
+                                <select class="custom-select" id="department_id">
+                                    @foreach ($department as $departments)                                        
+                                    <option value="{{$departments ->id}}">{{$departments->department}}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-4" for="firstname">Position</label>
                             <div class="col-8" class="input-group">
-                                <select class="custom-select" id="inputGroupSelect04">
-                                    <option selected>Englist Teacher</option>
-                                    <option value="1">Professional</option>
-                                    <option value="2">WEB Teacher</option>
-                                    <option value="3">SNA Teacher</option>
+                                <select class="custom-select" id="position_id">
+                                        @foreach ($position as $positions)                                        
+                                        <option value="{{$positions ->id}}">{{$positions->position}}</option>
+                                        @endforeach
                                 </select>
 
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-4" for="date">Start Date</label>
-                            <input class="col-7" type="date" name="start-date" class="form-control"
+                            <input class="col-7" type="date" id="startdate" name="startdate" class="form-control"
                                 placeholder="start-date" required>
                         </div>
-                        <div class="form-group row">
+                        {{-- <div class="form-group row">
                             <label class="col-4" for="manager">Manager</label>
                             <div class="col-8" class="input-group">
                                 <select class="custom-select" id="inputGroupSelect04">
@@ -211,12 +207,12 @@
                                     <option value="3">Vothy</option>
                                 </select>
                             </div>
+                        </div> --}}
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
+                            <button type="submit" class="btn bg-primary">OK</button>
                         </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
-                    <a href="index.html"><button class="btn bg-primary">OK</button></a>
                 </div>
             </div>
         </div>
@@ -230,5 +226,25 @@
             "scrollX": true
         });
     });
+</script>
+<script src="{{asset('js/app.js')}}"></script>
+<script>
+    $('#Edit').on('show.bs.modal',function(event){
+          var button = $(event.relatedTarget)
+          var firstname = button.data('firstname')
+          var lastname = button.data('lastname')
+          var startdate = button.data('startdate')
+          var department = button.data('department_id')
+          var position = button.data('position_id')
+          var id = button.data('id')
+          var modal= $(this)
+          modal.find('#firstname').attr('value',firstname)
+          modal.find('#lastname').attr('value',lastname)
+          modal.find('#startdate').attr('value',startdate)
+          modal.find('#department_id').attr('value',department_id)
+          modal.find('#position_id').attr('value',position_id)
+          var url ="{{url('manager')}}/"+id;
+          $('#modalEdit').attr('action',url);
+        })
 </script>
 @endsection
