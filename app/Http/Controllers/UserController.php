@@ -48,7 +48,7 @@ class UserController extends Controller
     {
         $request->user()->authorizeRoles(['HR']);
         $users = User::with('roles')->get();
-        return view('users.index', ['users' => $users]);
+        return view('users.index', ['users' => $users]); 
     }
 
     /**
@@ -79,7 +79,7 @@ class UserController extends Controller
         $rules = array(
             'name'  => 'required',
             'email' => 'required|email',
-            'password' => 'required',
+            'password' => 'required', 
             'roles' => 'required'
         );
         $validator = Validator::make(Input::all(), $rules);

@@ -13,7 +13,7 @@ class pageController extends Controller
      */
     public function index()
     {
-       return view('pages.home');
+       return view('pages.dashboard');
     }
 
     /**
@@ -23,7 +23,7 @@ class pageController extends Controller
      */
     public function create()
     {
-        return view('pages.dashboard');
+    //
     }
 
     /**

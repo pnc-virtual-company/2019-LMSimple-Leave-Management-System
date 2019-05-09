@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 class Employee extends Model
-{
+{ 
     protected $fillable=['firstname','lastname','startdate','department_id','position_id'];
 
     public function departments(){

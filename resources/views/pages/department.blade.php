@@ -38,7 +38,7 @@
                 @foreach ( $item as $items)
                 <tr>
                     <td>
-                        
+                         
                     <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger" data-department="{{$items->department}}" data-id="{{$items->id}}"><i
                                         class="far fa-trash-alt"></i></a>
                     <a href="" data-toggle="modal" data-target="#editModal" class="text-info" data-department="{{$items->department}}" data-id="{{$items->id}}"><i
@@ -142,17 +142,15 @@
                          <div class="form-group ">
                              <label >Department</label>
                              <div class="form-group ">
-                                 <input type="text" class="form-control" id="input" name="department" placeholder="Training & Education Team"  value="">
+                                 <input type="text" class="form-control" id="input" name="department" placeholder="Please put your department!">
                              </div>
                          </div>
                    
                  </div>
                 
                  <div class="modal-footer">
-
                      <button type="submit" class="btn bg-primary" >Ok</button>
                      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-
                  </div>
                 </form>
              </div>
@@ -195,8 +193,6 @@
           $('#mEdit').attr('action',url);
         })
     </script>
-
-
 @endsection 
 
 

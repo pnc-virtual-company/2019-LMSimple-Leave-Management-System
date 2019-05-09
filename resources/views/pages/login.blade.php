@@ -28,7 +28,7 @@
                                     <strong>{{ $errors->first('email') }}</strong>
                                 </span>
                             @endif
-                        </div>
+                        </div> 
                         <div class="form-group">
                             <label>Password</label>
                             <input type="password" class="form-control {{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
@@ -40,16 +40,13 @@
                         </div>
                         <div class="form-group clearfix">
                             <button type="submit" class="btn btn-primary"><i class="fa fa-user"></i> Login </button>
-                        {{-- <a href="{{route('users.create')}}" class="btn btn-primary"><i class="fa fa-envelope"></i> Register New User</a>  --}}
                         </div>         
                   </div>
                   <div class="col-6">
                       <img src="{{asset('images/pic.png')}}" alt="">
                       <h2>Leave Management System</h2>
-                     
                   </div>
                 </div>
-    
               </form>
             </div>
 </div> 
