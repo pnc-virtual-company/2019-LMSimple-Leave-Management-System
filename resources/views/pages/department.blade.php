@@ -174,10 +174,10 @@
     <script>
         $('#deleteModal').on('show.bs.modal',function(event){
           var button = $(event.relatedTarget)
-          var postTitle = button.data('department')
+         
           var id = button.data('id')
           var modal= $(this)
-          modal.find('#mPostTitle').text(postTitle)
+         
           var url ="{{url('department')}}/"+id;
           $('#mDelete').attr('action',url);
         })
