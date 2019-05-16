@@ -71,8 +71,8 @@
                     <div class="modal-footer">
                         @method('DELETE')
                         @csrf
-                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">No</button>
-                        <button type="submit" class="btn bg-primary btn-sm" name="btn-delete">Yes</button>
+                        <button type="button" class="btn btn-danger " data-dismiss="modal">No</button>
+                        <button type="submit" class="btn bg-primary " name="btn-delete">Yes</button>
                     </div>
                 </form>
             </div>
@@ -91,15 +91,15 @@
                     <div class="modal-body">
                         <div class="form-group row">
                             <label for="inputPassword" class="col-sm-2 col-form-label">Position</label>
-                            <div class="col-sm-10">
-                                <input type="text" id="createInput" placeholder="Communication officer" name="position"
+                            <div class="col-sm-10  ">
+                                <input type="text" id="createInput" placeholder="Communication officer" name="position" class="form-control"
                                     required>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn bg-primary btn-sm">Ok</button>
-                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancel</button></a>
+                        <button type="submit" class="btn bg-primary ">Ok</button>
+                        <button type="button" class="btn btn-danger " data-dismiss="modal">Cancel</button></a>
                     </div>
                 </form>
             </div>
@@ -117,23 +117,19 @@
                     @csrf
                     @method('PATCH')
                     <div class="modal-body">
+                       
                         <div class="form-group row">
-                            <label for="input" class="col-sm-2 col-form-label">ID</label>
-                            <div class="col-sm-10">
-                                <input type="text" value="" class="form-control-plaintext" id="inputId"
-                                    placeholder="12">
-                            </div>
+                             <label class="col-4">ID</label>
+                             <small id="inputId" class="col-7" value=""></small>
                         </div>
                         <div class="form-group row">
-                            <label for="input" class="col-sm-2 col-form-label">Position</label>
-                            <div class="col-sm-10">
-                                <input type="text" value="" id="input" name="position" placeholder="IT Admin">
-                            </div>
+                            <label class="col-4" for="lastname">Position</label>
+                             <input class="col-7 " type="text"  id="input" name="position" required>
                         </div>
-                    </div>
+                
                     <div class="modal-footer">
-                        <button type="submit" name="btn-edit" class="btn bg-primary btn-sm">Ok</button>
-                        <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Cancel</button>
+                        <button type="submit" name="btn-edit" class="btn bg-primary ">Ok</button>
+                        <button type="button" class="btn btn-danger " data-dismiss="modal">Cancel</button>
                     </div>
                 </form>
             </div>
@@ -148,10 +144,8 @@
         });
         $('#deleteModal').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget)
-            var position = button.data('position')
             var id = button.data('id')
             var modal = $(this)
-            modal.find('#mPostTitle').text(position)
             var url = "{{url('position')}}/" + id;
             $('#deleteposition').attr('action', url);
         })

@@ -18,6 +18,7 @@ class CreateEmployeesTable extends Migration
             $table->string('firstname');
             $table->string('lastname');
             $table->string('startdate');
+            $table->timestamps();
             $table->integer('department_id')->unsigned();
             $table->foreign('department_id')
                   ->references('id')
@@ -28,7 +29,8 @@ class CreateEmployeesTable extends Migration
                   ->references('id')
                   ->on('positions')
                   ->onDelete('cascade');
-            $table->timestamps();
+            
+            
         });
     }
 

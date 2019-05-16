@@ -40,7 +40,7 @@ class UserController extends Controller
 
     /**
      * Display a listing of the users. 
-     *
+     * 
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */

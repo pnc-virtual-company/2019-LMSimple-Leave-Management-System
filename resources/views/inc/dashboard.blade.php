@@ -28,10 +28,11 @@
         <img src="{{asset('images/logo.png')}}" style="width: 300px">
         </a>
       </div>
-      <div class="sidebar-wrapper" id="myDiv">
+      <div class="sidebar-wrapper" >
         <ul class="nav">
           <li class="nav-item active">
             <a class="nav-link bg-primary" href="{{url('/')}}">
+
               <i class="material-icons text-white">dashboard</i>
               <p>Dashboard</p>
             </a>
@@ -52,21 +53,23 @@
                   <a class="dropdown-item" href="{{url('personal')}}">Personal Information</a>
                 </div>
           </li>
-          <li class="nav-item">
+          <li class="nav-item ">
             <a class="nav-link" href="{{route('users.index')}}">
               <i class="material-icons">people</i>
               <p>User</p>
             </a>
           </li> 
+
           @endauth
           @endif
           <li class="nav-item">
+
             <a class="nav-link" href="{{route('leave_request.index')}}">
               <i class="material-icons">content_paste</i>
               <p>Leave Request</p>
             </a>
           </li> 
-          <li class="nav-item ">
+          <li class="nav-item  ">
           <a class="nav-link " href="{{url('calendar')}}">
               <i class="material-icons">date_range</i>
               <p >Calendar</p>
@@ -116,9 +119,11 @@
         </div>
       </nav>
       <!-- End Navbar -->
+
       <div class="content">
         <div class="container-fluid">
-    
+   
+   
       <script src="{{asset('js/jquery.min.js')}}"></script>
       <script src="{{asset('js/jquery-3.2.1.slim.min.js')}}"></script>
       <script src="{{asset('js/popper.min.js')}}"></script>

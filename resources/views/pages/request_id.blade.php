@@ -26,12 +26,20 @@
                         <p>Duration</p>
                         <p>Leave type</p>
                     </div>
+
+                   
                     <div class="col-3">
-                        <p>15/05/2019(morning)</p>
-                        <p>17/05/2019(afternoon)</p>
-                        <p>3 days</p>
-                        <p>Vacation</p>
+                    @foreach ( $requestid as $datas)
+
+                        <p>{{$datas->startdate}}(morning)</p>
+                        <p>{{$datas->enddate}}(afternoon)</p>
+                        <p>{{$datas->duration}}</p>
+                        <p>{{$datas->leave_type->leave_type}}</p>
+
+                    @endforeach 
+                    
                     </div>
+                  
                     <div class="col-3">
                         <p>Comment</p>
                         <br><br><br><br>

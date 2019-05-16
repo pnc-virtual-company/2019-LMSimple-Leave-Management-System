@@ -41,7 +41,7 @@
                          
                     <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger" data-department="{{$items->department}}" data-id="{{$items->id}}"><i
                                         class="far fa-trash-alt"></i></a>
-                        <a href="" data-toggle="modal" data-target="#editModal" class="text-info" data-department="{{$items->department}}" data-id="{{$items->id}}"><i
+                    <a href="" data-toggle="modal" data-target="#editModal" class="text-info" data-department="{{$items->department}}" data-id="{{$items->id}}"><i
                                         class="fas fa-pencil-alt" ></i></a>
                       
                     </td>
@@ -135,17 +135,17 @@
                    @csrf
                    @method('PATCH')
                  <div class="modal-body">
-                     <div class="form-group ">
-                             <label for="input" class="col-sm-2 col-form-label">ID</label>
-                             <small id="inputId"></small>
-                     </div>
-                         <div class="form-group ">
-                             <label >Department</label>
-                             <div class="form-group ">
-                                 <input type="text" class="form-control" id="input" name="department" placeholder="Please put your department!">
-                             </div>
-                         </div>
-                   
+                 <form>
+                      <div class="form-group row">
+                            <label class="col-4" for="firstname">ID</label>
+                             <small id="inputId" class="col-7" value=""></small>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-4" for="lastname">Department</label>
+                             <input class="col-7 form-control" type="text"  id="input" name="department" 
+                                 required>
+                        </div>
+                   </from>
                  </div>
                 
                  <div class="modal-footer">
@@ -174,10 +174,10 @@
     <script>
         $('#deleteModal').on('show.bs.modal',function(event){
           var button = $(event.relatedTarget)
-          var postTitle = button.data('department')
+         
           var id = button.data('id')
           var modal= $(this)
-          modal.find('#mPostTitle').text(postTitle)
+         
           var url ="{{url('department')}}/"+id;
           $('#mDelete').attr('action',url);
         })

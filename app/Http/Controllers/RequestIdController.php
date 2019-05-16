@@ -3,30 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Leave_reqest;
-class LeaveRequestController extends Controller
+
+class RequestIdController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-    public function __construct()
-    {
-        //Only authenticated users may access to the pages of this controller
-        $this->middleware('auth');
-    }
-    
     public function index()
     {
-    
-      $reqest = \App\Leave_reqest::all();
-      $employee = \App\Employee::all();
-      $type = \App\Leave_type::all();
+        // $requestid = \App\Leave_reqest::all();
+        // $employee = \App\Employee::all();
+        // $type = \App\Leave_type::all();
 
-      return view('pages.leave_request',compact('reqest','employee','type'));
+        // return view('pages.request_id',compact('requestid'));
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -34,9 +27,7 @@ class LeaveRequestController extends Controller
      */
     public function create()
     {
-
-      //return view('pages.request_id',compact('datas'));
-        // return view('pages.request_id');
+        //
     }
 
     /**
@@ -47,9 +38,7 @@ class LeaveRequestController extends Controller
      */
     public function store(Request $request)
     {
-       
-        $reqest = \App\Leave_reqest::create($request->all());
-        return redirect('leave_request');
+        //
     }
 
     /**
