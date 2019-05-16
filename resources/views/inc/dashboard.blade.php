@@ -28,7 +28,7 @@
         <img src="{{asset('images/logo.png')}}" style="width: 300px">
         </a>
       </div>
-      <div class="sidebar-wrapper" id="myDiv">
+      <div class="sidebar-wrapper" >
         <ul class="nav">
           <li class="nav-item active bt">
             <a class="nav-link bg-primary" href="{{route('home.index')}}">
@@ -37,7 +37,7 @@
             </a>
 
           </li>
-          <li class="nav-item dropdown bt" id="li">
+          <li class="nav-item dropdown " id="li">
 
                 <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">person</i>
@@ -51,19 +51,19 @@
                   <a class="dropdown-item" href="{{url('personal')}}">Personal Information</a>
                 </div>
           </li>
-          <li class="nav-item bt">
+          <li class="nav-item ">
             <a class="nav-link" href="{{route('users.index')}}">
               <i class="material-icons">people</i>
               <p>User</p>
             </a>
           </li> 
-          <li class="nav-item bt">
+          <li class="nav-item ">
             <a class="nav-link" href="{{route('leave_request.index')}}">
               <i class="material-icons">content_paste</i>
               <p>Leave Request</p>
             </a>
           </li> 
-          <li class="nav-item bt ">
+          <li class="nav-item  ">
           <a class="nav-link " href="{{url('calendar')}}">
               <i class="material-icons">date_range</i>
               <p >Calendar</p>
@@ -116,17 +116,8 @@
 
       <div class="content">
         <div class="container-fluid">
-    <script>
-      var header = document.getElementById("myDiv");
-      var btns = header.getElementsByClassName("bt");
-      for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function() {
-      var current = document.getElementsByClassName("active");
-      current[0].className = current[0].className.replace(" active", "");
-      this.className += " active";
-    });
-}
-    </script>
+   
+   
       <script src="{{asset('js/jquery.min.js')}}"></script>
       <script src="{{asset('js/jquery-3.2.1.slim.min.js')}}"></script>
       <script src="{{asset('js/popper.min.js')}}"></script>

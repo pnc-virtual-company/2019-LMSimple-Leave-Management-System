@@ -1,116 +1,71 @@
 @extends('layout.app')
 @section('content')
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            @include('session-flash')
-            <div class="card">
-                <div class="card-header text-center bg-info">@lang('List of users')</div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <a class="btn btn-info" href="{{url('users/create')}}">@lang('Add a new user')</a>
-                            {{-- <a class="btn btn-secondary" href="{{url('users/export')}}" download>@lang('Export to Excel')</a> --}}
-                        </div>
-                    </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Employee Manager</title>
+    <link rel="stylesheet" href="{{asset('css/manager.css')}}">
+    <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset('css/dataTables.bootstrap4.min.css')}}">
+    {{-- <script src="{{asset('js/jquery-3.3.1.js')}}"></script> --}}
+    <script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('js/dataTables.bootstrap4.min.js')}}"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</head>
  
-                    <div class="row"><div class="col-md-12">&nbsp;</div></div>
+<body>
+    <h1 class="text-center">List User</h1><br>
+    <div class="container">
+        <table id="table" class="table table-bordered">
+            <thead>
+                <tr>
+                   <th>@lang('ID')</th>
+                   <th>@lang('Name')</th>
+                   <th>@lang('Email')</th>
+                   <th>@lang('Roles')</th>
+                </tr>
+            </thead>
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <table class="table table-bordered" id="users">
-                                <thead>
-                                    <tr>
-                                        <th>@lang('ID')</th>
-                                        <th>@lang('Name')</th>
-                                        <th>@lang('Email')</th>
-                                        <th>@lang('Roles')</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($users as $user)
-                                    <tr data-id="{{ $user->id }}">
-                                        <td>
-                                            <a href="#"><i class="material-icons clickable text-danger" data-id="{{ $user->id }}" title="@lang('delete the user')">delete</i></a>
-                                            <a href="{{url('users')}}/{{ $user->id }}/edit" title="@lang('edit')"><i class="material-icons clickable text-success">create</i></a>
-                                            <a href="{{url('users')}}/{{ $user->id }}" title="@lang('view')"><i class="material-icons clickable text-info">visibility</i></a>
-                                            <span>{{ $user->id }}</span>
-                                        </td>
-                                        <td> 
-                                            <span>{!! $user->name !!}</span>
-                                        </td> 
-                                        <td> 
-                                            <span>{!! $user->email !!}</span>
-                                        </td>
-                                        <td>
-                                            <span>{{ $user->roles->pluck('name')->implode(', ') }}</span>
-                                        </td>
-                                    </tr>
-                                @endforeach
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Include the modal //-->
-@include('modal-confirm-delete')
-@include('modal-alert')
-@include('modal-wait')
-
-@endsection
-
-@push('scripts')
-<script type="text/javascript">
-var table = null;
-
-//On document ready, 
-$(function() {
-
-    //Transform the table into a richer widget
-    var table = $("#users").DataTable();
-    
-    //On click on delete, pass the object id to the confirmation modal
-    $('#users').on("click", ".delete-icon", function() {
-        $('#frmModalDeleteConfirmation').data("id", $(this).data("id"));
-        $('#frmModalDeleteConfirmation').modal('show');
-    });
-    
-    //On click on edit, fill the input modal
-    $('#users').on("click", ".edit-icon", function() {
-        $('#frmModalEditUser').modal('show');
-    });
-
-    //Delete the row from the DataTable if button OK or press Enter
-    $("#cmdDeleteConfirmation").click(function(e){
-        $('#frmModalWait').modal('show');
-        var id = $('#frmModalDeleteConfirmation').data("id");
-        $.ajax({
-            url: '{{url('users')}}/' + id,
-            type: 'DELETE',
-            data: {
-                id: id,
-                _method: 'DELETE',
-                _token: $('meta[name="csrf-token"]').attr('content')
-            },
-            success: function() {
-                table.rows('tr[data-id="' + id + '"]').remove().draw();
-                $('#frmModalWait').modal('hide');
-                $('#frmModalDeleteConfirmation').modal('hide');
-            },
-            error:
-            function(result) {
-                $('#frmModalWait').modal('hide');
-                $('#frmModalDeleteConfirmation').modal('hide');                
-                $('#frmModalAlert').modal('show');
-            },
+            <tbody> 
+                  @foreach ($users as $user)
+                        <tr data-id="{{ $user->id }}">
+                            <td>
+                                <a href="#"><i class="material-icons clickable text-danger" data-id="{{ $user->id }}" title="@lang('delete the user')">delete</i></a>
+                                <a href="{{url('users')}}/{{ $user->id }}/edit" title="@lang('edit')"><i class="material-icons clickable text-success">create</i></a>
+                                <a href="{{url('users')}}/{{ $user->id }}" title="@lang('view')"><i class="material-icons clickable text-info">visibility</i></a>
+                                    <span>{{ $user->id }}</span>
+                            </td>
+                            <td> 
+                                    <span>{!! $user->name !!}</span>
+                            </td> 
+                            <td> 
+                                    <span>{!! $user->email !!}</span>
+                            </td>
+                            <td>
+                                    <span>{{ $user->roles->pluck('name')->implode(', ') }}</span>
+                            </td>
+                        </tr>
+                    @endforeach
+             
+            </tbody>
+            <script>
+    $(document).ready(function () {
+        $('#table').DataTable({
+            
         });
     });
-});
 </script>
-@endpush
+        </table>
+         
+@endsection 
+
+
