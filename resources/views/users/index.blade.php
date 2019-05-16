@@ -57,14 +57,17 @@
                     @endforeach
              
             </tbody>
-            <script>
-    $(document).ready(function () {
+             
+    
+        </table>
+    <script>
+        $(document).ready(function () {
         $('#table').DataTable({
             
         });
     });
 </script>
-        </table>
+         <a href="{{url('users/create')}}"  class="btn btn-info"> <i class="fas fa-plus-circle"></i>@lang('Add a new user')</a>
          
 @endsection 
 
