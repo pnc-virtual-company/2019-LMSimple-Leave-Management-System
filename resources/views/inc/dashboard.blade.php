@@ -30,15 +30,17 @@
       </div>
       <div class="sidebar-wrapper" >
         <ul class="nav">
-          <li class="nav-item active bt">
-            <a class="nav-link bg-primary" href="{{route('home.index')}}">
+          <li class="nav-item active">
+            <a class="nav-link bg-primary" href="{{url('/')}}">
+
               <i class="material-icons text-white">dashboard</i>
               <p>Dashboard</p>
             </a>
 
           </li>
+          @auth
+          @if(Auth::user()->roles->pluck('name')->implode(', ')=="HR")
           <li class="nav-item dropdown " id="li">
-
                 <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">person</i>
                   <p>HR</p>
@@ -57,7 +59,11 @@
               <p>User</p>
             </a>
           </li> 
-          <li class="nav-item ">
+
+          @endauth
+          @endif
+          <li class="nav-item">
+
             <a class="nav-link" href="{{route('leave_request.index')}}">
               <i class="material-icons">content_paste</i>
               <p>Leave Request</p>
