@@ -22,9 +22,8 @@
         crossorigin="anonymous"></script>
 
 </head>
-
 <body>
-    <h1> All Employee</h1><br>
+    <h1 class="text-center">List of Employee</h1><br>
     <div class="container">
         <table id="table" class="table table-striped table-bordered" style="width:100%">
             <thead>
@@ -62,19 +61,20 @@
             aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="col-12">
-                        <div>
-                            <img src="{{asset('images/examples/images.png')}}" class="imge" alt="images" style="border:1px solid black;">
-                        </div>
-                        <div class="icons">
-                            <a href=""><i class="fas fa-plus text-success"></i></a>
-                            <a href=""> <i class="fas fa-pencil-alt text-info"></i></a>
-                            <a href=""> <i class="far fa-trash-alt text-danger"></i></a>
-                        </div>
-                    </div>    
                     <div class="container mt-4">
-                    <form action="{{action('ManagerController@store')}}" method="post">
-                        @csrf
+                        <form action="{{action('ManagerController@store')}}" method="post" enctype="multipart/form-data">
+                                @csrf
+                                <div class="col-12">
+                                    <div>
+                                    <img src="{{asset('images/wedding.jpg')}}" alt="wedding" style="border:1px solid black; width:150px;heigh:200px">
+                                    </div>
+                                    <input type="file" name="profile" class="form-control-file">
+                                    {{-- <div class="icons">
+                                        <a href=""><i class="fas fa-plus text-success"></i></a>
+                                        <a href=""> <i class="fas fa-pencil-alt text-info"></i></a>
+                                        <a href=""> <i class="far fa-trash-alt text-danger"></i></a>
+                                    </div> --}}
+                                </div>    
                             <div class="form-group row">
                                 <label class="col-4" for="firstname">First Name</label>
                                 <input class="col-7" type="text" name="firstname" class="form-control"
@@ -89,7 +89,6 @@
                                 <label class="col-4" for="department">Department</label>
                                 <div class="col-8" class="input-group">
                                     <select class="custom-select" name="department_id">
-
                                     @foreach ($department as $items)
                                     <option value="{{$items->id}}">{{$items->department}}</option>    
                                     @endforeach
@@ -142,16 +141,16 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
 
-                <div class="col-12">
+                {{-- <div class="col-12">
                     <div>
-                        <img src="{{asset('images/examples/images.png')}}" class="imge" alt="images" style="border:1px solid black;">
-                    </div>
-                    <div class="icons">
+                        <img src="{{url('storage/img'.)}}" class="imge" alt="images" style="border:1px solid black;">
+                    </div> --}}
+                    {{-- <div class="icons">
                         <a href=""><i class="fas fa-plus text-success"></i></a>
                         <a href=""> <i class="fas fa-pencil-alt text-info"></i></a>
                         <a href=""> <i class="far fa-trash-alt text-danger"></i></a>
-                    </div>
-                </div>    
+                    </div> --}}
+                {{-- </div>     --}}
                 <div class="container mt-4">
                     <form action="" method="post" id="modalEdit">
                         @csrf
@@ -161,6 +160,17 @@
                              <p class="col-4"></p>   
 
                         </div> --}}
+                        {{-- <div class="col-12"> --}}
+                                {{-- <div>
+                                <img src="" class="imge" alt="images" name="profile" id="profile" style="border:1px solid black;">
+                                </div> --}}
+                                {{-- <div class="icons">
+                                    <a href=""><i class="fas fa-plus text-success"></i></a>
+                                    <a href=""> <i class="fas fa-pencil-alt text-info"></i></a>
+                                    <a href=""> <i class="far fa-trash-alt text-danger"></i></a>
+                                </div> --}}
+                        {{-- </div>     --}}
+
                         <div class="form-group row">
                             <label class="col-4" for="firstname">First Name</label>
                             <input class="col-7" type="text" id="firstname" name="firstname" class="form-control"

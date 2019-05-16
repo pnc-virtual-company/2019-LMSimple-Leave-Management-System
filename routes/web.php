@@ -61,9 +61,9 @@ Route::get('examples/pdf/downloadPDF', 'ExamplesController@downloadPDF');
 Route::get('examples', 'ExamplesController@index')->name('examples');
 /*
 =============================================================================*/
-Route::get('/',function(){
-    return view('pages.login');
-});
+// Route::get('/',function(){
+//     return view('pages.login');
+// });
  
 Route::resource('department','departmentController'); 
 Route::resource('manager','ManagerController');
@@ -74,10 +74,10 @@ Route::get('personal','InfoController@personal');
 
  
 Route::get('calendar', 'ExamplesController@calendar'); 
-Route::resource('home','pageController');
+Route::resource('/','pageController');
 Route::resource('position','PositionController');
 Route::resource('profile','PictureProfile');
-Route::resource('/home','pageController');
+// Route::resource('/home','pageController');
 Route::resource('/department','departmentController');
 Route::resource('/manager','ManagerController');
 

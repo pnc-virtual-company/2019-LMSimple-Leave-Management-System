@@ -12,6 +12,12 @@ class PositionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        //Only authenticated users may access to the pages of this controller
+        $this->middleware('auth');
+    }
     public function index()
     {
         $position=Position::all();

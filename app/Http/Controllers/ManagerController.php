@@ -11,6 +11,13 @@ class ManagerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        //Only authenticated users may access to the pages of this controller
+        $this->middleware('auth');
+    }
+    
     public function index()
     {
         $employees= \App\Employee::all();
@@ -37,7 +44,12 @@ class ManagerController extends Controller
      */
     public function store(Request $request)
     {
-       $employee=\App\Employee::create($request->all());
+        // $fileName="";
+        // if( $request->hasFile('profile')){
+        //     $fileName=$request->file('profile')->getClientOriginalName();
+        //     $request->file('profile')->storeAs('/public/img',$fileName);
+        // }
+        $employee=\App\Employee::create($request->all());
         return redirect('manager');
     }
 
@@ -60,7 +72,8 @@ class ManagerController extends Controller
      */
     public function edit($id)
     {
-        //
+        // $employ = \App\Employee::find($id);
+        // return redirect('manager',compact('employ'));
     }
 
     /**
