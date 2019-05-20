@@ -132,7 +132,7 @@
                     </div>
                 </form>
                 </div>
-            </div>
+            </div> 
         </div>
     </div>
     <!-- Alert Edit -->
@@ -186,7 +186,7 @@
                             <div class="col-8" class="input-group">
                                 <select class="custom-select" id="department_id">
                                     @foreach ($department as $departments)                                        
-                                    <option value="{{$departments ->id}}">{{$departments->department}}</option>
+                                        <option value="{{$departments ->id}}">{{$departments->department}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -196,7 +196,7 @@
                             <div class="col-8" class="input-group">
                                 <select class="custom-select" id="position_id">
                                         @foreach ($position as $positions)                                        
-                                        <option value="{{$positions ->id}}">{{$positions->position}}</option>
+                                            <option value="{{$positions ->id}}">{{$positions->position}}</option>
                                         @endforeach
                                 </select>
 
