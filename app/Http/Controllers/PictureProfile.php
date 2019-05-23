@@ -19,7 +19,8 @@ class PictureProfile extends Controller
     }
     public function index()
     {
-        return view('pages.pictureprofile');
+        $employees= \App\Employee::all();
+        return view('pages.pictureprofile',compact('employees'));
 
     }
 

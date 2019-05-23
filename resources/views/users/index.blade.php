@@ -23,10 +23,10 @@
 </head>
  
 <body>
-    <h1 class="text-center">List User</h1><br>
+    <h1 class="text-center">LIST OF USERS</h1><br>
     <div class="container">
         <table id="table" class="table table-bordered">
-            <thead>
+            <thead class="text-center">
                 <tr>
                    <th>@lang('ID')</th>
                    <th>@lang('Name')</th>
@@ -35,13 +35,13 @@
                 </tr>
             </thead>
 
-            <tbody> 
+            <tbody class="text-center"> 
                   @foreach ($users as $user)
                         <tr data-id="{{ $user->id }}">
                             <td>
                                 <a href="#"><i class="material-icons clickable text-danger" data-id="{{ $user->id }}" title="@lang('delete the user')">delete</i></a>
-                                <a href="{{url('users')}}/{{ $user->id }}/edit" title="@lang('edit')"><i class="material-icons clickable text-success">create</i></a>
-                                <a href="{{url('users')}}/{{ $user->id }}" title="@lang('view')"><i class="material-icons clickable text-info">visibility</i></a>
+                                <a href="{{url('users')}}/{{ $user->id }}/edit" title="@lang('edit')"><i class="material-icons clickable text-primary">create</i></a>
+                                <a href="{{url('users')}}/{{ $user->id }}" title="@lang('view')"><i class="material-icons clickable text-primary">visibility</i></a>
                                     <span>{{ $user->id }}</span>
                             </td>
                             <td> 
@@ -67,7 +67,11 @@
         });
     });
 </script>
-         <a href="{{url('users/create')}}"  class="btn btn-info"> <i class="fas fa-plus-circle"></i>@lang('Add a new user')</a>
+         <!-- <a href=""  class="btn btn-info"> <i class="fas fa-plus-circle"></i>@lang('create user')</a> -->
+         <div>
+        <a href="{{url('users/create')}}" class="btn bg-primary"><i
+                class="fas fa-plus-circle"></i> create user</a>
+    </div>
          
 @endsection 
 

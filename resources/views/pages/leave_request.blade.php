@@ -16,7 +16,9 @@
     <script src="{{asset('jquery.min.js')}}"></script>
     <script src="{{asset('jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('dataTables.bootstrap4.min.js')}}"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
@@ -25,9 +27,10 @@
     <link rel="stylesheet" href="{{asset('request_id')}}">
 </head>
 <body>
+<h1 class="text-center">LIST OF LEAVE REQUESTS</h1>
     <div class="container mt-4">
         <table id="request" class="table table-striped table-bordered" style="width:100%">
-            <thead>
+            <thead class="text-center">
                 <tr>
                     <th>Name</th>
                     <th>Start Date</th>
@@ -37,8 +40,7 @@
                     <th>Status</th>
                 </tr>
             </thead>
-            <tbody>
-                   
+            <tbody class="text-center">
              @foreach ( $reqest as $items)
 
                 <tr>
@@ -57,8 +59,13 @@
               
             </tbody>
         </table>
-        <button type="button" class=" btn bg-primary" data-toggle="modal" data-target="#exampleModal"
-            data-whatever="@mdo"> <i class="material-icons flaot-left">add</i>Create Leave Request</button> 
+        <!-- <button type="button" class=" btn bg-primary" data-toggle="modal" data-target="#exampleModal"
+            data-whatever="@mdo"> <i class="fas fa-plus-circle"></i>Create Leave Request</button> 
+            <div> -->
+            <div>
+        <a href="" class="btn bg-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"><i
+                class="fas fa-plus-circle"></i> Create position</a>
+    </div>
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">

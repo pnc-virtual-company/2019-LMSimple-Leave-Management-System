@@ -20,28 +20,32 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-
+        <script>
+            $(document).ready(function(){
+                $('[data-toggle="tooltip"]').tooltip();  
+            });
+        </script>
 </head>
 
 <body>
-    <h1>List of position</h1><br>
+    <h1 class="text-center">LIST OF POSITIONS</h1><br>
     <div class="container">
         <table id="table" class="table ttable-striped table-bordered" style="width:100%">
             <thead class="text-center">
                 <tr>
                     <th>ID</th>
-                    <th>Position</th>
+                    <th>Positions</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="text-center">
                     @foreach ( $position as $positions)
                 <tr>
                     <td>
-                        <a href="" data-toggle="modal" data-position="{{$positions->position}}"
-                            data-id="{{$positions->id}}" data-target="#deleteModal" class="text-danger"><i
-                                class="far fa-trash-alt"></i></a>
-                        <a href="" data-toggle="modal" data-target="#editModal" data-position="{{$positions->position}}"
-                            data-id="{{$positions->id}}" class="text-info"><i class="fas fa-pencil-alt"></i></a>
+                        <a href="#"  data-position="{{$positions->position}}"
+                            data-id="{{$positions->id}}" data-target="#deleteModal"  data-toggle="modal" class="text-danger"><i
+                                class="material-icons"  data-toggle="tooltip" data-placement="left" title="delete!" >delete</i></a>
+                        <a href="#"  data-target="#editModal" data-toggle="modal" data-position="{{$positions->position}}"
+                            data-id="{{$positions->id}}" class="text-primary"><i class="material-icons"  data-toggle="tooltip" data-placement="right" title="edit!">edit</i></a>
                         {{$positions->id}}
                     </td>
                     <td>{{$positions->position}}</td>
@@ -118,7 +122,7 @@
                     @method('PATCH')
                     <div class="modal-body">
                        
-                        <div class="form-group row">
+                        <div class="form-group">
                              <label class="col-4">ID</label>
                              <small id="inputId" class="col-7" value=""></small>
                         </div>
@@ -138,9 +142,10 @@
 </body>
 <script>
     $(document).ready(function () {
+        
         $('#table').DataTable({
-            "scrollY":150,
-            "scrollX": true
+            "scrollY":300,
+            "scrollCollapse": true,
         });
         $('#deleteModal').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget)
@@ -155,11 +160,13 @@
             var position = button.data('position')
             var id = button.data('id')
             var modal = $(this)
-            modal.find('#inputId').attr('value', id)
+            modal.find('#inputId').text(id)
             modal.find('#input').attr('value', position)
             var url = "{{url('position')}}/" + id;
             $('#mEdit').attr('action', url);
         })
+         
+      
     });
 </script>
 @endsection

@@ -23,10 +23,10 @@
 
 </head>
 <body>
-    <h1 class="text-center">List of Employee</h1><br>
+    <h1 class="text-center">LIST OF EMPLOYEES</h1><br>
     <div class="container">
         <table id="table" class="table table-striped table-bordered" style="width:100%">
-            <thead>
+            <thead class="text-center">
                 <tr>
                     <th>ID</th>
                     <th>First Name</th>
@@ -36,13 +36,14 @@
                     <th>Start date</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="text-center">
                 @foreach ($employees as $item)
                     <tr> 
                         <td>
-                            <i class="fas fa-trash-alt text-danger"></i>
-                            <a href="" data-toggle="modal" data-target="#Edit" data-id={{$item->id}} data-firstname={{$item->firstname}} data-lastname={{$item->lastname}} data-startdate={{$item->startdate}} data-department_id={{$item->department_id}} data-position_id={{$item->position_id}} data-whatever="@mdo">
-                                <i class=" fas fa-pencil-alt text-info"></i></a>
+                        <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger"><i
+                                        class="material-icons">delete</i></a>
+                            <a href="" data-toggle="modal" data-target="#Edit" data-id="{{$item->id}} data-firstname={{$item->firstname}} data-lastname={{$item->lastname}}" data-startdate="{{$item->startdate}} data-department_id={{$item->department_id}}" data-position_id="{{$item->position_id}}" data-whatever="@mdo">
+                                <i class="material-icons text-primary">edit</i></a>
                             {{$item->id}}</td> 
                         <td>{{$item->firstname}}</td>
                         <td>{{$item->lastname}}</td> 
@@ -53,9 +54,9 @@
                 @endforeach
             </tbody>
         </table> 
-        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal"
+        <button type="submit" class="btn bg-primary" data-toggle="modal" data-target="#exampleModal"
 
-            data-whatever="@mdo"><i class="fas fa-plus-circle"></i> Create News</button>
+            data-whatever="@mdo"><i class="fas fa-plus-circle"></i> Create Employee</button>
 
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
@@ -232,8 +233,8 @@
 <script>
     $(document).ready(function () {
         $('#table').DataTable({
-            "scrollY": 300,
-            "scrollX": true
+            "scrollY":150,
+            "scrollCollapse": true,
         });
     });
 </script>

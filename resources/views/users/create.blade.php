@@ -7,6 +7,9 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
+            <a class="btn btn-info" href="{{url('users')}}">@lang('Back to list')</a>
+        </div>
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header text-center bg-info">@lang('Create a new user')</div>
 
