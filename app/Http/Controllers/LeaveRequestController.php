@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Leave_reqest;
 class LeaveRequestController extends Controller
 {
     /**
@@ -22,10 +21,9 @@ class LeaveRequestController extends Controller
     {
      
       $reqest = \App\Leave_reqest::all();
-      $employee = \App\Employee::all();
+      $user = \App\User::all();
       $leave_type = \App\Leave_type::all();
-
-      return view('pages.leave_request',compact('reqest','employee','leave_type'));
+      return view('pages.leave_request',compact('reqest','user','leave_type'));
     }
     /**
      * Show the form for creating a new resource.
