@@ -116,7 +116,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Create Position</h5>
+              <h5 class="modal-title" id="exampleModalLongTitle">Create Leave Type</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -126,11 +126,11 @@
             <div class="modal-body">
                  <div class="form-group">
                     <label for="">Position</label><br>
-                    <input type="text" placeholder="Create Position" name="create" class="form-control" required></div>    
+                    <input type="text" placeholder="Create Leave Type" name="create" class="form-control" required></div>    
             </div>
             <div class="modal-footer">
               <button type="submit" class="btn bg-primary">Ok</button>
-              <button type="button" class="btn btn-danger data-dismiss="modal"">Cencel</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cencel</button>
             </div>
         </form>
           </div>
@@ -143,8 +143,7 @@
 <script>
     $(document).ready(function () {
         $('#table').DataTable({
-            "scrollY": 300,
-            "scrollCollapse": true,
+          
         });
     });
 

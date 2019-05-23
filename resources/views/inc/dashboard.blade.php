@@ -46,11 +46,9 @@
                   <p>HR</p>
                 </a> 
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                  <a class="dropdown-item" href="{{route('manager.index')}}">List Employees</a>
                   <a class="dropdown-item" href="{{route('department.index')}}">Department</a>
                   <a class="dropdown-item" href="{{route('position.index')}}">Position</a>
                   <a class="dropdown-item" href="{{route('leave_type.index')}}">Leave type</a>
-                  <a class="dropdown-item" href="{{url('personal')}}">Personal Information</a>
                 </div>
           </li>
           <li class="nav-item ">

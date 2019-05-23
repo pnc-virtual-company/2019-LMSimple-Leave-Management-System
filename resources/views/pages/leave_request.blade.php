@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Leave Request</title>
-     
+
 
     <link rel="stylesheet" href="{{asset('css/leave_request.css')}}">
     <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
@@ -24,7 +24,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{{asset('request_id')}}">
+    <link rel="stylesheet" href="{{asset('request_id')}}"> 
 </head>
 <body>
 <h1 class="text-center">LIST OF LEAVE REQUESTS</h1>
@@ -32,23 +32,23 @@
         <table id="request" class="table table-striped table-bordered" style="width:100%">
             <thead class="text-center">
                 <tr>
+                    <th hidden>ID</th>
                     <th>Name</th>
                     <th>Start Date</th>
                     <th>End Date</th>
-                    <th>Duration (Days)</th>
+                    <th>Duration (Days)</th> 
                     <th>Type</th>
                     <th>Status</th>
                 </tr>
             </thead>
-            <tbody class="text-center">
-             @foreach ( $reqest as $items)
+            <tbody>
+
+             @foreach ($reqest as $items)
 
                 <tr>
-                {{-- <td>{{$items->id}}</td> --}}
-                
-                <td><a href="{{route('leave_request.create')}}">{{$items->employee->firstname}}{{$items->employee->lastname}}</a></td>                 
-                    
-                <td>{{$items->startdate}}</td>
+                    <td hidden>{{$items->id}}</td>
+                    <td><a href="{{route('leave_request.create')}}">{{$items->user->name}}</a></td>
+                    <td>{{$items->startdate}}</td>
                     <td>{{$items->enddate}}</td>
                     <td>{{$items->duration}}</td>
                     <td>{{$items->leave_type->leave_type}}</td>
@@ -56,16 +56,11 @@
                 </tr>
 
               @endforeach
-              
+
             </tbody>
         </table>
-        <!-- <button type="button" class=" btn bg-primary" data-toggle="modal" data-target="#exampleModal"
-            data-whatever="@mdo"> <i class="fas fa-plus-circle"></i>Create Leave Request</button> 
-            <div> -->
-            <div>
-        <a href="" class="btn bg-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"><i
-                class="fas fa-plus-circle"></i> Create position</a>
-    </div>
+        <button type="button" class=" btn bg-primary" data-toggle="modal" data-target="#exampleModal"
+            data-whatever="@mdo"> <i class="material-icons flaot-left">add</i>Create Leave Request</button>
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -74,20 +69,29 @@
                         <h5 class="modal-title" id="exampleModalLabel">Create Leave Request</h5>
                     </div>
                     <div class="container mt-4">
-                       <form action="{{action('LeaveRequestController@store')}}" method="POST"> 
+                       <form action="{{action('LeaveRequestController@store')}}" method="POST">
                           @csrf
-
+                          <div class="form-group row">
+                                    <label class="col-4" for="leave">Employee Name</label>
+                                    <div class="col-5" class="input-group">
+                                            <select class="custom-select" name="user_id">
+                                                @foreach ($user as $item)   
+                                                    <option value="{{$item->id}}" selected>{{$item->name}}</option>
+                                                @endforeach
+                                            </select>
+                                     </div>
+                            </div>
                             <div class="form-group row">
                                 <label class="col-4" for="firstname" >Start Date</label>
-                                <input class="col-4" type="date" name="startdate"  data-date-format="DD-YY-MM" class="form-control"
+                                <input class="col-4" type="date" data-date=""  data-date-format="DD-YY-MM" name="startdate"  class="form-control"
                                     placeholder="start date" required>
-                                <div class="col-4" class="input-group">
+                                <!-- <div class="col-4" class="input-group">
                                     <select class="custom-select" id="inputGroupSelect04" name="leave_type_id">
                                         <option selected>The Morning</option>
                                         <option value="1">Afternoon</option>
                                         <option value="2">Everning</option>
                                     </select>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="form-group row">
                                 <label class="col-4" for="enddate">End Date</label>
@@ -95,13 +99,13 @@
                                 <input class="col-4" type="date" data-date="" data-date-format="DD-MM-YY" name="enddate" class="form-control"
 
                                     placeholder="end date" required>
-                                <div class="col-4" class="input-group">
+                                <!-- <div class="col-4" class="input-group">
                                     <select class="custom-select" id="inputGroupSelect04" name="leave_type_id">
                                         <option selected>The Morning</option>
                                         <option value="1">Afternoon</option>
                                         <option value="2">Everning</option>
                                     </select>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="form-group row">
                                 <label class="col-4" for="date">Duration</label>
@@ -111,34 +115,17 @@
                             <div class="form-group row">
                                 <label class="col-4" for="leave">Leave Types</label>
                                 <div class="col-5" class="input-group">
-                                    <select class="custom-select" id="inputGroupSelect04s" name="vocation">
-                                        <option selected>Vocation</option>
-                                        <option value="1">Training</option>
-                                        <option value="2">Sick Leave</option>
-                                        <option value="3">Accross The Rever</option>
-                                    </select>
+                                <select class="custom-select" id="inputGroupSelect04s" name="leave_type_id">
+                                    @foreach ($leave_type as $reqest)
+                                    <option value="{{$reqest->id}}">{{$reqest->leave_type}}</option>
+                                    @endforeach
+                                </select>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                    <div class="col-5" class="input-group">
-                                       
-                                            
-                                        
-                                            <select class="custom-select" id="inputGroupSelect04s" name="employee_id">
-                                                    @foreach ($employee as $item)
-                                                <option value="{{$item->id}}" selected>{{$item->firstname}} {{$item->lastname}}</option>
-                                                @endforeach
-                                            </select>
-                                            
-                                        </div>
-
-                            </div>
-                        
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
-
-                    <button type="submit" class="btn bg-primary">OK</button>
+                       <button type="submit" class="btn bg-primary">Create</button>
+                       <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
 
                     </div>
                 </form>
@@ -151,13 +138,9 @@
 <script>
     $(document).ready(function () {
         $('#request').DataTable({
-            "scrollY": 300,
-            "scrollCollapse": true,
 
         });
     });
 </script>
 
-@endsection   
-   
-
+@endsection

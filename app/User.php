@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable; 
 
     /**
      * The attributes that are mass assignable.
@@ -34,10 +34,18 @@ class User extends Authenticatable
      * @return array
      */
     public function roles()
-    {
+    { 
       return $this->belongsToMany(Role::class);
     }
-
+    public function department(){
+        return $this->belongsTo(Department::class);
+    }  
+    public function position(){
+        return $this->belongsTo(Position::class);
+    }
+    public function leave_reqest(){ 
+        return $this->belongsTo(Leave_reqest::class);
+    }
     /**
     * @param string|array $roles
     */
@@ -68,4 +76,4 @@ class User extends Authenticatable
     {
         return null !== $this->roles()->where('name', $role)->first();
     }
-}
+} 
