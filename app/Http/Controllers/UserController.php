@@ -48,7 +48,10 @@ class UserController extends Controller
     {
         $request->user()->authorizeRoles(['HR']);
         $users = User::with('roles')->get();
-        return view('users.index', ['users' => $users]); 
+        $department= \App\Department::all();
+        $position= \App\Position::all();
+        $roles = Role::all();
+        return view('users.index', ['users' => $users, 'roles'=> $roles],compact('department','position')); 
     }
 
     /**
@@ -59,9 +62,9 @@ class UserController extends Controller
      */
     public function create(Request $request)
     {
-        $request->user()->authorizeRoles(['HR']);
-        $roles = Role::all();
-        return view('users.create', ['roles' => $roles]);
+        // $request->user()->authorizeRoles(['HR']);
+        // $roles = Role::all();
+        // return view('users.create', ['roles' => $roles]);
     }
 
     /**
@@ -80,29 +83,36 @@ class UserController extends Controller
             'name'  => 'required',
             'email' => 'required|email',
             'password' => 'required', 
+            'startdate' => 'required',
+            'department_id' => 'required',
+            'position_id' => 'required',
             'roles' => 'required'
         );
         $validator = Validator::make(Input::all(), $rules);
 
+      
+
         // process the validation of fields
-        if ($validator->fails()) {
-            return Redirect::to('users/create')
-                ->withErrors($validator)
-                ->withInput(Input::except('password'));
-        } else {
+        // if ($validator->fails()) {
+        //     return Redirect::to('users/create')
+        //         ->withErrors($validator)
+        //         ->withInput(Input::except('password'));
+        // } else {
             // store the new user and attach roles to it
             $user = new User;
             $user->name = Input::get('name');
             $user->email = Input::get('email');
+            $user->startdate = Input::get('startdate');
+            $user->department_id = Input::get('department_id');
+            $user->position_id = Input::get('position_id');       
             $user->password = bcrypt(Input::get('password'));
             $user->save();
+
             $user->roles()->attach(Input::get('roles'));
             
             // redirect
-            Session::flash('message.level', 'success');
-            Session::flash('message.content', __('The user was successfully created'));
             return Redirect::to('users');
-        }
+        
     }
 
     /**
@@ -130,11 +140,6 @@ class UserController extends Controller
      */
     public function edit(Request $request, $id)
     {
-        $request->user()->authorizeRoles(['HR']);
-        $user = User::find($id);
-        $user->roleIds = $user->roles->pluck('id')->toArray();
-        $roles = Role::all();
-        return view('users.edit', ['user' => $user, 'roles' => $roles]);
     }
 
     /**
@@ -148,30 +153,38 @@ class UserController extends Controller
     {
         $request->user()->authorizeRoles(['HR']);
         // validate
-        $rules = array(
+        $rules = array( 
             'name'  => 'required',
             'email' => 'required|email',
+            'password' => 'required', 
+            'startdate' => 'required',
+            'department_id' => 'required',
+            'position_id' => 'required',
             'roles' => 'required'
         );
         $validator = Validator::make(Input::all(), $rules);
 
         // process the validation of fields
-        if ($validator->fails()) {
-            return Redirect::to('users/' . $id .  '/edit')
-                ->withErrors($validator);
-        } else {
+        // if ($validator->fails()) {
+        //     return Redirect::to('users')->with('error','cannot update')
+        //         ->withErrors($validator);
+        // } else {
             // update user and synchronize the roles
             $user = User::find($id);
             $user->name = Input::get('name');
             $user->email = Input::get('email');
+            $user->startdate = Input::get('startdate');
+            $user->department_id = Input::get('department_id');
+            $user->position_id = Input::get('position_id');
             $user->save();
+
+            // $user = User::find($id);
+            // $user->update($request->all());
             $user->roles()->sync(Input::get('roles'));
              
             // redirect
-            Session::flash('message.level', 'success');
-            Session::flash('message.content', __('The user was successfully updated'));
             return Redirect::to('users');
-        }
+        // }
     }
 
     /**

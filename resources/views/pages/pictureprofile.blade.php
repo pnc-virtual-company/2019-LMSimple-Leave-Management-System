@@ -16,42 +16,39 @@
 
 <body>
     <div class="container containern mt-4">
-        <h1>My personal information</h1>
-        <div>
-            <a href="" class=" text-info"><i class="fas fa-sign-out-alt fa-2x"></i></a>
-        </div>
+        <h1 class="text-center">My personal information</h1>
         <div class="row border border-dark rows">
             <div class="col-2 ">
                 <p>ID</p>
                 <p>First Name</p>
-                <p>Last Name</p>
                 <p>Department</p>
                 <p>Position</p>
-                <p>Store data</p>
+                <p>Start Date</p>
             </div>
             <div class="col-3">
-                <p>108</p>
-                <p>Lina</p>
-                <p>Jacks</p>
-                <p>External Relations Team</p>
-                <p>ERO Manager</p>
-                <p>15/05/2018</p>
+                <p>{{Auth::user()->id}}</p>
+                <p>{{Auth::user()->name}}</p>
+                <p>{{Auth::user()->department->department}}</p>
+                <p>{{Auth::user()->position->position}}</p>
+                <p>{{Auth::user()->startdate}}</p>
             </div>
             <div class="col-7 text-center">
                 <div>
-                    <img src="{{asset('images/examples/images.png')}}" class="imge" alt="images"
+                    <img src="{{url('storage/img/'.\Auth::user()->profile)}}" class="imge" alt="images"
                         style="border:1px solid black;">
                 </div>
-                <div class="icons">
-                    <a href=""><i class="fas fa-plus text-info"></i></a>
-                    <a href=""> <i class="fas fa-pencil-alt text-info"></i></a>
-                    <a href=""> <i class="far fa-trash-alt text-danger"></i></a>
+                <div>
+                <form action="{{url('/pf')}}" method="post" enctype="multipart/form-data">
+                @csrf
+                 <div>
+                    <input type="file" name="inputFile" style="margin-left:260px">
+                </div>
+                <button type="submit"  class="btn btn-primary ml-auto">Save</button>
+                </form>
                 </div>
             </div>
             <p class="text">If you need to update information; please contact HR officer.</p>
         </div>
-
-
     </div>
 </body>
 

@@ -18,6 +18,12 @@ class CreatePositionsTable extends Migration
             $table->string('position');
             $table->timestamps();
         });
+        DB::table('positions')->insert(
+            array(
+                'id' => 1,
+                'position' => 'Human Resource'
+            )
+        );
     }
 
     /**
