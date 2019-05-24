@@ -40,9 +40,8 @@
                   @foreach ($users as $user)
                         <tr data-id="{{ $user->id }}">
                             <td>
-                                <!-- <a href="#"><i class="material-icons clickable text-danger" data-id="{{ $user->id }}" title="@lang('delete the user')">delete</i></a> -->
+                            <a href="#deleteModal" data-toggle="modal" data-name="{{$user->name}}" data-id="{{$user->id}}" data-target="#deleteModal"><i class="material-icons text-danger">delete</i></a>
                                 <a href="" data-toggle="modal" data-target="#Edit" data-id={{$user->id}} data-name={{$user->name}} data-email={{$user->email}} data-department_id={{$user->department_id}} data-position_id={{$user->position_id}} data-roles={{$user->roles}} data-startdate={{$user->startdate}}> <i class="material-icons text-success">create</i></a>
-                                <a href=""><i class="material-icons clickable text-info">visibility</i></a>
                                     <span>{{ $user->id }}</span>
                             </td>
                             <td> 
@@ -205,6 +204,34 @@
             </div> 
         </div>
 
+    <!-- delete modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Delete User</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure to delete this user?</p>
+          <small id="text"></small>
+        </div>
+        <div class="modal-footer">
+        <form id="Delete" action="" method="post">
+            @method('delete')
+            @csrf
+          <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Delete</button>
+        </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
     </div>
     <script>
         $(document).ready(function () {
@@ -231,7 +258,19 @@
           modal.find('#position_id').attr('value',position_id)
           var url ="{{url('users')}}/"+id;
           $('#modalEdit').attr('action',url);
-        })
+        });
+
+        // delete modal
+
+        $('#deleteModal').on('show.bs.modal',function(event){
+        var button =$(event.relatedTarget)
+        var name= button.data('name')
+        var id= button.data('id')
+        var modal =$(this)
+        modal.find('#text').text(name)
+        var url ="{{url('users')}}/"+id;
+        $('#Delete').attr('action',url)
+    })
 </script> 
 @endsection 
 
