@@ -14,7 +14,6 @@
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-
 <body>
     <div>
         <div class="container mt-5 cont">
@@ -27,31 +26,29 @@
                         <p>Leave type</p>
                     </div>
 
-                   
                     <div class="col-3">
-                    @foreach ( $requestid as $datas)
 
-                        <p>{{$datas->startdate}}(morning)</p>
-                        <p>{{$datas->enddate}}(afternoon)</p>
-                        <p>{{$datas->duration}}</p>
-                        <p>{{$datas->leave_type->leave_type}}</p>
-
-                    @endforeach 
+                    @foreach ($reqest as $items)
                     
+                        <p>{{$items->startdate}}</p>
+                        <p>{{$items->enddate}}</p>
+                        <p>{{$items->duration}}</p>
+                        <p>{{$items->leave_type->leave_type}}</p>
+
+                    @endforeach
+
                     </div>
-                  
+        
                     <div class="col-3">
+
                         <p>Comment</p>
-                        <br><br><br><br>
+                        <br><br><br>
                         <p>Status</p>
+
                     </div>
                     <div class="col-3">
-
-                        <p> <textarea name="" id="" cols="21" rows="3">OFF</textarea></p>
-
-                        <br>
-                        <br>
-                        <p>Phaned</p>
+                        <p> <textarea name="comment" id="" cols="22" rows="">somethings....</textarea></p><br>
+                        <p> <textarea name="status" id="" cols="22" rows="">somethings....</textarea></p><br>
                     </div>
                 </div>
             </div>

@@ -34,9 +34,9 @@ class LeaveRequestController extends Controller
      */
     public function create()
     {
-
-    //   return view('pages.request_id',compact('datas'));
-    //     return view('pages.request_id');
+        $reqest = \App\Leave_reqest::all();
+        return view('pages.request_id',compact('reqest'));
+    
     }
 
     /**

@@ -22,18 +22,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{{asset('request_id')}}">
+    <link rel="stylesheet" href="{{asset('request_id')}}"> 
 </head>
 <body>
     <div class="container mt-4">
         <table id="request" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
-                    <th hidden>ID</th>
+                    <!-- <th hidden>ID</th> -->
                     <th>Name</th>
                     <th>Start Date</th>
                     <th>End Date</th>
-                    <th>Duration (Days)</th>
+                    <th>Duration (Days)</th> 
                     <th>Type</th>
                     <th>Status</th>
                 </tr>
@@ -43,8 +43,8 @@
              @foreach ($reqest as $items)
 
                 <tr>
-                    <td hidden>{{$items->id}}</td>
-                    <td><a href="{{route('leave_request.create')}}">{{$items->employee->firstname}}{{$items->employee->lastname}}</a></td>
+                    <!-- <td hidden>{{$items->id}}</td> -->
+                    <td><a href="{{url('/request_id')}}"</a></td>
                     <td>{{$items->startdate}}</td>
                     <td>{{$items->enddate}}</td>
                     <td>{{$items->duration}}</td>
@@ -68,9 +68,18 @@
                     <div class="container mt-4">
                        <form action="{{action('LeaveRequestController@store')}}" method="POST">
                           @csrf
-
+                          <div class="form-group row">
+                                    <label class="col-4" for="employee name">Employee Name</label>
+                                    <div class="col-5" class="input-group">
+                                            <select class="custom-select" id="inputGroupSelect04s" name="user_id">
+                                                @foreach ($user as $item)   
+                                                    <option value="{{$item->id}}" selected>{{$item->name}}</option>
+                                                @endforeach
+                                            </select>
+                                     </div>
+                            </div>
                             <div class="form-group row">
-                                <label class="col-4" for="firstname" >Start Date</label>
+                                <label class="col-4" for="startdate" >Start Date</label>
                                 <input class="col-4" type="date" data-date=""  data-date-format="DD-YY-MM" name="startdate"  class="form-control"
                                     placeholder="start date" required>
                                 <!-- <div class="col-4" class="input-group">
@@ -101,7 +110,7 @@
                                     placeholder="Duration" required>
                             </div>
                             <div class="form-group row">
-                                <label class="col-4" for="leave">Leave Types</label>
+                                <label class="col-4" for="leave type">Leave Types</label>
                                 <div class="col-5" class="input-group">
                                 <select class="custom-select" id="inputGroupSelect04s" name="leave_type_id">
                                     @foreach ($leave_type as $reqest)
@@ -110,22 +119,10 @@
                                 </select>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                    <label class="col-4" for="leave">Employee Name</label>
-                                    <div class="col-5" class="input-group">
-                                            <select class="custom-select" id="inputGroupSelect04s" name="employee_id">
-                                                    @foreach ($employee as $item)
-                                                <option value="{{$item->id}}" selected>{{$item->firstname}} {{$item->lastname}}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-
-                            </div>
-
                     </div>
                     <div class="modal-footer">
-                       <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
-                       <button type="submit" class="btn bg-primary">OK</button>
+                       <button type="submit" class="btn bg-primary">Create</button>
+                       <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
 
                     </div>
                 </form>
@@ -138,8 +135,6 @@
 <script>
     $(document).ready(function () {
         $('#request').DataTable({
-            "scrollY": 300,
-            "scrollCollapse": true,
 
         });
     });
