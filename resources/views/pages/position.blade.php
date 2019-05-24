@@ -20,11 +20,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-        <script>
-            $(document).ready(function(){
-                $('[data-toggle="tooltip"]').tooltip();  
-            });
-        </script>
+        
 </head>
 
 <body>
@@ -41,11 +37,11 @@
                     @foreach ( $position as $positions)
                 <tr>
                     <td>
-                        <a href="#"  data-position="{{$positions->position}}"
-                            data-id="{{$positions->id}}" data-target="#deleteModal"  data-toggle="modal" class="text-danger"><i
-                                class="material-icons"  data-toggle="tooltip" data-placement="left" title="delete!" >delete</i></a>
-                        <a href="#"  data-target="#editModal" data-toggle="modal" data-position="{{$positions->position}}"
-                            data-id="{{$positions->id}}" class="text-primary"><i class="material-icons"  data-toggle="tooltip" data-placement="right" title="edit!">edit</i></a>
+                        <a href="#"  data-toggle="modal" data-position="{{$positions->position}}"
+                            data-id="{{$positions->id}}" data-target="#deleteModal" class="text-danger"><i
+                                class="material-icons">delete</i></a>
+                        <a href="#" data-toggle="modal" data-target="#editModal" data-position="{{$positions->position}}"
+                            data-id="{{$positions->id}}" class="text-primary"><i class="material-icons">edit</i></a>
                         {{$positions->id}}
                     </td>
                     <td>{{$positions->position}}</td>
@@ -147,6 +143,7 @@
             "scrollY":300,
             "scrollCollapse": true,
         });
+        // delete position
         $('#deleteModal').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget)
             var id = button.data('id')
@@ -165,8 +162,8 @@
             var url = "{{url('position')}}/" + id;
             $('#mEdit').attr('action', url);
         })
-         
-      
+        //  tooltips 
+        $('[data-toggle="modal"]').tooltip(); 
     });
 </script>
 @endsection

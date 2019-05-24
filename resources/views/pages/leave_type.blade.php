@@ -33,10 +33,10 @@
             @foreach ($pages as $item)
                 <tr>
                 <td>
-                        <a href="" data-toggle="modal" data-target="#deleteModal"  data-id="{{$item->id}}" data-leave_type="{{$item->leave_type}}">
+                        <a href="" data-toggle="modal" data-placement="left" title="delete!" data-target="#deleteModal"  data-id="{{$item->id}}" data-leave_type="{{$item->leave_type}}">
                         <i class="material-icons text-danger">delete</i> </a>
 
-                        <a href="" data-toggle="modal" data-target="#editModal"  data-id="{{$item->id}}" data-leave_type="{{$item->leave_type}}">
+                        <a href="" data-toggle="modal" data-placement="right" title="edit!" data-target="#editModal"  data-id="{{$item->id}}" data-leave_type="{{$item->leave_type}}">
                         <i class="material-icons text-primary">edit</i></a>
                 {{$item->id}}
                 </td>
@@ -167,6 +167,7 @@
     var url ="{{url('leave_type')}}/"+id;
     $('#mEdit').attr('action',url);
   });
+  $('[data-toggle="modal"]').tooltip();
 
 </script>
  

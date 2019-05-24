@@ -25,7 +25,6 @@
                 <p>Position</p>
                 <p>Start Date</p>
             </div>
-            @foreach ($employees as $employee)
             <div class="col-3">
                 <p>{{Auth::user()->id}}</p>
                 <p>{{Auth::user()->name}}</p>
@@ -33,7 +32,6 @@
                 <p>{{Auth::user()->position->position}}</p>
                 <p>{{Auth::user()->startdate}}</p>
             </div>
-            @endforeach
             <div class="col-7 text-center">
                 <div>
                     <img src="{{url('storage/img/'.\Auth::user()->profile)}}" class="imge" alt="images"
@@ -45,7 +43,7 @@
                  <div>
                     <input type="file" name="inputFile" style="margin-left:260px">
                 </div>
-                <button type="submit"  class="btn btn-primary ml-auto">Save</button>
+                <button type="submit"  class="btn btn-info ml-auto">Save</button>
                 </form>
                 </div>
             </div>

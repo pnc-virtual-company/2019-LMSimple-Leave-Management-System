@@ -324,8 +324,8 @@
     // Add active class to the current button (highlight it)
   
 }
-</scr
-      </script>
+</script>
+     
 </body>
 
 </html>

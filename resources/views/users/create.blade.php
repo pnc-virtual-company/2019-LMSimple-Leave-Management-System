@@ -11,7 +11,7 @@
         </div>
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header text-center bg-info">@lang('Create a new user')</div>
+                <div class="card-header text-center bg-primary">@lang('Create a new user')</div>
 
                 <div class="card-body">
 

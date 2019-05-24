@@ -78,7 +78,6 @@ Route::get('calendar', 'ExamplesController@calendar');
 Route::resource('/','pageController');
 Route::resource('position','PositionController');
 Route::resource('profile','PictureProfile');
-// Route::resource('/home','pageController');
 Route::resource('/department','departmentController');
 Route::resource('/manager','ManagerController');
 

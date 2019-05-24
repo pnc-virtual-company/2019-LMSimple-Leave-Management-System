@@ -109,7 +109,7 @@
                  <div class="modal-footer">
 
 
-                     <button type="submit" class="btn btn-info">Ok</button>
+                     <button type="submit" class="btn bg-primary">Ok</button>
 
                      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
 
@@ -164,7 +164,8 @@
 <script>
     $(document).ready(function () {
         $('#table').DataTable({
-            
+            "scrollY":300,
+            "scrollCollapse": true,
         });
     });
 </script> 
@@ -190,6 +191,7 @@
           var url ="{{url('department')}}/"+id;
           $('#mEdit').attr('action',url);
         })
+        // $('[data-toggle="modal"]').tooltip();
     </script>
 @endsection 
 

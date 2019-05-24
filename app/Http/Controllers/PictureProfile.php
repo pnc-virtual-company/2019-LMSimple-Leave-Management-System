@@ -11,17 +11,9 @@ class PictureProfile extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
-    public function __construct()
-    {
-        //Only authenticated users may access to the pages of this controller
-        $this->middleware('auth');
-    }
     public function index()
     {
-        $employees= \App\Employee::all();
-        return view('pages.pictureprofile',compact('employees'));
-
+        return view('pages.pictureprofile');
     }
 
     /**

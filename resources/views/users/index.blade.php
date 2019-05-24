@@ -41,8 +41,8 @@
                         <tr data-id="{{ $user->id }}">
                             <td>
                                 <!-- <a href="#"><i class="material-icons clickable text-danger" data-id="{{ $user->id }}" title="@lang('delete the user')">delete</i></a> -->
-                                <a href="" data-toggle="modal" data-target="#Edit" data-id={{$user->id}} data-name={{$user->name}} data-email={{$user->email}} data-department_id={{$user->department_id}} data-position_id={{$user->position_id}} data-roles={{$user->roles}} data-startdate={{$user->startdate}}> <i class="material-icons text-success">create</i></a>
-                                <a href=""><i class="material-icons clickable text-info">visibility</i></a>
+                                <a href="" data-toggle="modal" data-placement="left" title="edit!" data-toggle="modal" data-target="#Edit" data-id="{{$user->id}} data-name={{$user->name}} data-email={{$user->email}}" data-department_id="{{$user->department_id}}" data-position_id="{{$user->position_id}} data-roles={{$user->roles}}" data-startdate="{{$user->startdate}}"> <i class="material-icons text-primary">create</i></a>
+                                <a href="" data-toggle="modal" data-placement="right" title="detail!"><i class="material-icons clickable text-primary">visibility</i></a>
                                     <span>{{ $user->id }}</span>
                             </td>
                             <td> 
@@ -68,7 +68,7 @@
              
             </tbody>
         </table>
-        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal"
+        <button type="button" class="btn bg-primary" data-toggle="modal" data-target="#exampleModal"
             data-whatever="@mdo"><i class="fas fa-plus-circle"></i> Create New User</button> 
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
@@ -131,7 +131,7 @@
                         
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-info">Create</button>
+                        <button type="submit" class="btn bg-primary">Create</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
 
                     </div>
@@ -197,7 +197,7 @@
                         
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-info">Update</button>
+                        <button type="submit" class="btn bg-primary">Update</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
                     </div>
                 </form>
@@ -232,6 +232,7 @@
           var url ="{{url('users')}}/"+id;
           $('#modalEdit').attr('action',url);
         })
+        $('[data-toggle="modal"]').tooltip();
 </script> 
 @endsection 
 
