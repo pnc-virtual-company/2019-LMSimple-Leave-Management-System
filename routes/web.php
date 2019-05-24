@@ -73,6 +73,8 @@ Route::resource('leave_request','LeaveRequestController');
 Route::get('information','InfoController@create');
 Route::get('personal','InfoController@personal');
 
+// Route::get('request_id','RequestIdController');
+
  
 Route::get('calendar', 'ExamplesController@calendar'); 
 Route::resource('/','pageController');

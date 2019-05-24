@@ -32,9 +32,11 @@ class LeaveRequestController extends Controller
      */
     public function create()
     {
-
-    //   return view('pages.request_id',compact('datas'));
-    //     return view('pages.request_id');
+       //   $user = \App\User::all();
+      $reqest = \App\Leave_reqest::all();
+      return view('pages.request_id',compact('reqest'));
+        // return view('pages.request_id');
+    
     }
 
     /**
@@ -58,7 +60,10 @@ class LeaveRequestController extends Controller
      */
     public function show($id)
     {
-        //
+        // dd($id);
+        $request_show = \App\Leave_reqest::find($id);
+        // dd($request_show);
+        return view('pages.request_id', compact('request_show'));
     }
 
     /**

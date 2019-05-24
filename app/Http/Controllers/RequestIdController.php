@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\request_id;
 
 class RequestIdController extends Controller
 {
@@ -13,11 +14,11 @@ class RequestIdController extends Controller
      */
     public function index()
     {
-        // $requestid = \App\Leave_reqest::all();
-        // $employee = \App\Employee::all();
-        // $type = \App\Leave_type::all();
+        $requestid = \App\Leave_reqest::all();
+        $employee = \App\Employee::all();
+        $type = \App\Leave_type::all();
 
-        // return view('pages.request_id',compact('requestid'));
+        return view('pages.request_id',compact('requestid'));
     }
 
     /**
@@ -27,7 +28,9 @@ class RequestIdController extends Controller
      */
     public function create()
     {
-        //
+        
+         return view('pages.request_id',compact('requestid'));
+    //    return view('pages.request_id');
     }
 
     /**

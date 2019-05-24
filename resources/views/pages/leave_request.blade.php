@@ -29,7 +29,7 @@
         <table id="request" class="table table-striped table-bordered" style="width:100%">
             <thead>
                 <tr>
-                    <th hidden>ID</th>
+                    <!-- <th hidden>ID</th> -->
                     <th>Name</th>
                     <th>Start Date</th>
                     <th>End Date</th>
@@ -43,8 +43,8 @@
              @foreach ($reqest as $items)
 
                 <tr>
-                    <td hidden>{{$items->id}}</td>
-                    <td><a href="{{route('leave_request.create')}}">{{$items->user->name}}</a></td>
+                    <!-- <td hidden>{{$items->id}}</td> -->
+                    <td><a href="{{route('leave_request.show',$items->id)}}">{{$items->user->name}}</a></td>
                     <td>{{$items->startdate}}</td>
                     <td>{{$items->enddate}}</td>
                     <td>{{$items->duration}}</td>
@@ -58,7 +58,7 @@
         </table>
         <button type="button" class=" btn bg-primary" data-toggle="modal" data-target="#exampleModal"
             data-whatever="@mdo"> <i class="material-icons flaot-left">add</i>Create Leave Request</button>
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -69,9 +69,9 @@
                        <form action="{{action('LeaveRequestController@store')}}" method="POST">
                           @csrf
                           <div class="form-group row">
-                                    <label class="col-4" for="leave">Employee Name</label>
+                                    <label class="col-4" for="employee name">Employee Name</label>
                                     <div class="col-5" class="input-group">
-                                            <select class="custom-select" name="user_id">
+                                            <select class="custom-select" id="inputGroupSelect04s" name="user_id">
                                                 @foreach ($user as $item)   
                                                     <option value="{{$item->id}}" selected>{{$item->name}}</option>
                                                 @endforeach
@@ -79,7 +79,7 @@
                                      </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-4" for="firstname" >Start Date</label>
+                                <label class="col-4" for="startdate" >Start Date</label>
                                 <input class="col-4" type="date" data-date=""  data-date-format="DD-YY-MM" name="startdate"  class="form-control"
                                     placeholder="start date" required>
                                 <!-- <div class="col-4" class="input-group">
@@ -110,7 +110,7 @@
                                     placeholder="Duration" required>
                             </div>
                             <div class="form-group row">
-                                <label class="col-4" for="leave">Leave Types</label>
+                                <label class="col-4" for="leave type">Leave Types</label>
                                 <div class="col-5" class="input-group">
                                 <select class="custom-select" id="inputGroupSelect04s" name="leave_type_id">
                                     @foreach ($leave_type as $reqest)
