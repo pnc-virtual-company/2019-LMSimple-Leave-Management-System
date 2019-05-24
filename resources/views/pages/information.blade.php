@@ -41,8 +41,8 @@
                       <p>Leave type</p>
                   </div>
                   <div class="col-3">
-                      <p>15/05/2019(morning)</p>
-                      <p>17/05/2019(afternoon)</p>
+                      <p>15/05/2019</p>
+                      <p>17/05/2019</p>
                       <p>3 days</p>
                       <p>Vacation</p>
                   </div>

@@ -198,6 +198,7 @@ class UserController extends Controller
         $request->user()->authorizeRoles(['HR']);
         $user = User::find($id);
         $user->delete();
+        return redirect('users');
     }
 
     /**
