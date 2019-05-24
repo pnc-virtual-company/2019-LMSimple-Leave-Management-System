@@ -6,7 +6,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12"> 
             <div class="card">
                 <div class="card-header">@lang('Edit a user')</div>
 
@@ -27,7 +27,7 @@
                             <label for="email">@lang('Email')</label>
                             <input type="email" class="form-control" id="email" name="email" value="{{ $user->email }}">
                         </div>
-
+ 
                         <div class="form-group">
                             <label for="roles[]">Roles</label>
                             <select class="form-control" id="roles" name="roles[]" multiple size="5">
@@ -36,7 +36,6 @@
                             @endforeach
                             </select>
                         </div>
-
                         <input type="submit" class="btn btn-info" value="Save" />
                     </form>
                 </div>

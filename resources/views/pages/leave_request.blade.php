@@ -44,7 +44,7 @@
 
                 <tr>
                     <!-- <td hidden>{{$items->id}}</td> -->
-                    <td><a href="{{url('/request_id')}}"</a></td>
+                    <td><a href="{{route('leave_request.show',$items->id)}}">{{$items->user->name}}</a></td>
                     <td>{{$items->startdate}}</td>
                     <td>{{$items->enddate}}</td>
                     <td>{{$items->duration}}</td>
@@ -58,7 +58,7 @@
         </table>
         <button type="button" class=" btn bg-primary" data-toggle="modal" data-target="#exampleModal"
             data-whatever="@mdo"> <i class="material-icons flaot-left">add</i>Create Leave Request</button>
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">

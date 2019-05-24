@@ -18,6 +18,12 @@ class CreateDepartmentsTable extends Migration
             $table->string('department');
             $table->timestamps();
         });
+        DB::table('departments')->insert(
+            array(
+                'id' => 1,
+                'department' => 'HR officer'
+            )
+        );
     }
 
     /**

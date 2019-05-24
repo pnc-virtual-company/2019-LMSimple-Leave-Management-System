@@ -28,14 +28,10 @@
 
                     <div class="col-3">
 
-                    @foreach ($reqest as $items)
-                    
-                        <p>{{$items->startdate}}</p>
-                        <p>{{$items->enddate}}</p>
-                        <p>{{$items->duration}}</p>
-                        <p>{{$items->leave_type->leave_type}}</p>
-
-                    @endforeach
+                        <p>{{$request_show->startdate}}</p>
+                        <p>{{$request_show->enddate}}</p>
+                        <p>{{$request_show->duration}}</p>
+                        <p>{{$request_show->leave_type->leave_type}}</p>
 
                     </div>
         
@@ -57,10 +53,10 @@
                     <div class="col text-center">
                         <a href="{{url('/information')}}" class="btn bg-primary flaot-right"><i
                                 class="material-icons flaot-left">check</i>Submit Leave Request</a>
-                        <button type="button" class="btn btn-danger btn-center"> <i
-                                class="material-icons flaot-left">close</i>Cencel Leave Request</button>
-                        <button type="button" class="btn btn-primary"> <i
-                                class="material-icons flaot-left">chevron_left</i>Back To List</button>
+                        <a href="{{url('/leave_request')}}" class="btn bg-danger flaot-right"><i
+                                class="material-icons flaot-left">check</i>Cencel Leave Request</a>
+                        <a href="{{url('/leave_request')}}" class="btn bg-success flaot-right"><i
+                                class="material-icons flaot-left">check</i>Back To Listt</a>
                     </div>
                 </div>
             </footer>

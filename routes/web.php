@@ -66,6 +66,7 @@ Route::get('examples', 'ExamplesController@index')->name('examples');
 // });
  
 Route::resource('department','departmentController'); 
+Route::post('/pf','uploadProfile@uploadProfile'); 
 Route::resource('manager','ManagerController');
 Route::resource('leave_type','LeaveTypeController');
 Route::resource('leave_request','LeaveRequestController');

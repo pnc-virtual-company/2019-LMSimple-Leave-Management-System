@@ -18,7 +18,7 @@
                         <div class="form-group">
                             <label for="name">@lang('Name')</label>
                             <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}">
-                        </div>
+                        </div> 
 
                         <div class="form-group">
                             <label for="email">@lang('Email')</label>

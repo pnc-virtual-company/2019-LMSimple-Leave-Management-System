@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="{{asset('css/manager.css')}}">
     <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{asset('css/dataTables.bootstrap4.min.css')}}">
-    {{-- <script src="{{asset('js/jquery-3.3.1.js')}}"></script> --}}
     <script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('js/dataTables.bootstrap4.min.js')}}"></script>
 
@@ -55,7 +54,7 @@
         </table> 
         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal"
 
-            data-whatever="@mdo"><i class="fas fa-plus-circle"></i> Create News</button>
+            data-whatever="@mdo"><i class="fas fa-plus-circle"></i> Create News</button> 
 
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
@@ -76,9 +75,9 @@
                                     </div> --}}
                                 </div>    
                             <div class="form-group row">
-                                <label class="col-4" for="firstname">First Name</label>
-                                <input class="col-7" type="text" name="firstname" class="form-control"
-                                    placeholder="First Name" required>
+                                <label class="col-4" for="firstname">Name</label>
+                                <input class="col-7" type="text" name="name" class="form-control"
+                                    placeholder="Name" required>
                             </div>
                             <div class="form-group row">
                                 <label class="col-4" for="lastname">Last Name</label>
@@ -140,46 +139,14 @@
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-
-                {{-- <div class="col-12">
-                    <div>
-                        <img src="{{url('storage/img'.)}}" class="imge" alt="images" style="border:1px solid black;">
-                    </div> --}}
-                    {{-- <div class="icons">
-                        <a href=""><i class="fas fa-plus text-success"></i></a>
-                        <a href=""> <i class="fas fa-pencil-alt text-info"></i></a>
-                        <a href=""> <i class="far fa-trash-alt text-danger"></i></a>
-                    </div> --}}
-                {{-- </div>     --}}
                 <div class="container mt-4">
                     <form action="" method="post" id="modalEdit">
                         @csrf
                         @method('PATCH')
-                        {{-- <div class="form-group row">
-                             <label class="col-4" for="firstname">ID</label>
-                             <p class="col-4"></p>   
-
-                        </div> --}}
-                        {{-- <div class="col-12"> --}}
-                                {{-- <div>
-                                <img src="" class="imge" alt="images" name="profile" id="profile" style="border:1px solid black;">
-                                </div> --}}
-                                {{-- <div class="icons">
-                                    <a href=""><i class="fas fa-plus text-success"></i></a>
-                                    <a href=""> <i class="fas fa-pencil-alt text-info"></i></a>
-                                    <a href=""> <i class="far fa-trash-alt text-danger"></i></a>
-                                </div> --}}
-                        {{-- </div>     --}}
-
                         <div class="form-group row">
-                            <label class="col-4" for="firstname">First Name</label>
+                            <label class="col-4" for="firstname">Name</label>
                             <input class="col-7" type="text" id="firstname" name="firstname" class="form-control"
                                 placeholder="First Name" required>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-4" for="lastname">Last Name</label>
-                            <input class="col-7" type="text" id="lastname" name="lastname" class="form-control"
-                                placeholder="Last Name" required>
                         </div>
                         <div class="form-group row">
                             <label class="col-4" for="department">Department</label>
