@@ -16,6 +16,8 @@
     <script src="{{asset('jquery.min.js')}}"></script>
     <script src="{{asset('jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('dataTables.bootstrap4.min.js')}}"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
@@ -25,9 +27,10 @@
     <link rel="stylesheet" href="{{asset('request_id')}}"> 
 </head>
 <body>
+<h1 class="text-center">LIST OF LEAVE REQUESTS</h1>
     <div class="container mt-4">
         <table id="request" class="table table-striped table-bordered" style="width:100%">
-            <thead>
+            <thead class="text-center">
                 <tr>
                     <!-- <th hidden>ID</th> -->
                     <th>Name</th>
@@ -38,7 +41,7 @@
                     <th>Status</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="text-center">
 
              @foreach ($reqest as $items)
 
@@ -135,7 +138,8 @@
 <script>
     $(document).ready(function () {
         $('#request').DataTable({
-
+            "scrollY":300,
+            "scrollCollapse": true,
         });
     });
 </script>

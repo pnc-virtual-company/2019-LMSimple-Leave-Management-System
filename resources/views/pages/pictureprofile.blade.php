@@ -43,7 +43,7 @@
                  <div>
                     <input type="file" name="inputFile" style="margin-left:260px">
                 </div>
-                <button type="submit"  class="btn btn-primary ml-auto">Save</button>
+                <button type="submit"  class="btn btn-info ml-auto">Save</button>
                 </form>
                 </div>
             </div>

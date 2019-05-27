@@ -19,30 +19,28 @@
         crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Type of leave</h1><br>
+    <h1 class="text-center">LIST OF TYPE LEAVES</h1><br>
     <div class="container">
         <table id="table" class="table table-striped table-bordered" style="width:100%">
-            <thead>
+            <thead class="text-center">
                 <tr>
                     <th>ID</th>
-                    <th>Leav Type</th>
-                    <th>Action</th>
+                    <th>Leave Type</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="text-center">
 
             @foreach ($pages as $item)
                 <tr>
-                <td>{{$item->id}}</td>
-                <td>{{$item->leave_type}}</td>
-                    <td>
-                        <a href="" data-toggle="modal" data-target="#deleteModal"  data-id="{{$item->id}}" data-leave_type="{{$item->leave_type}}">
+                <td>
+                        <a href="" data-toggle="modal" data-placement="left" title="delete!" data-target="#deleteModal"  data-id="{{$item->id}}" data-leave_type="{{$item->leave_type}}">
                         <i class="material-icons text-danger">delete</i> </a>
 
-                        <a href="" data-toggle="modal" data-target="#editModal"  data-id="{{$item->id}}" data-leave_type="{{$item->leave_type}}">
-                        <i class="material-icons text-info">edit</i></a>
-
-                    </td>
+                        <a href="" data-toggle="modal" data-placement="right" title="edit!" data-target="#editModal"  data-id="{{$item->id}}" data-leave_type="{{$item->leave_type}}">
+                        <i class="material-icons text-primary">edit</i></a>
+                {{$item->id}}
+                </td>
+                <td>{{$item->leave_type}}</td>
                 </tr>
                
          @endforeach   
@@ -50,7 +48,7 @@
         </table>
 
     <button type="button" class="btn bg-primary" data-toggle="modal" data-target="#exampleModalCenter">
-            <i class="material-icons flaot-left">add</i>Create type Request</a>
+    <i class="fas fa-plus-circle"></i> Create type Request</a>
      </button>
 
    {{--delete Model  --}}
@@ -58,7 +56,7 @@
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                          <h5 class="modal-title" id="exampleModalLabel">Delete Leave Type</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
@@ -95,8 +93,8 @@
                                     @csrf
                                     @method('PATCH')
                             <div class="form-group">
-                                <label for="">ID</label><br>
-                                <input type="text" class="form-control" placeholder="205" id="inputId" name="id" value=""  required>
+                            <label class="col-4" for="firstname">ID</label>
+                                <small id="inputId" value=""></small>
                             </div>
                             <div class="form-group">
                                 <label for="">Leave type</label><br>
@@ -145,7 +143,8 @@
 <script>
     $(document).ready(function () {
         $('#table').DataTable({
-          
+          "scrollY":300,
+            "scrollCollapse": true,
         });
     });
 
@@ -164,11 +163,12 @@
     var id = button.data('id')
     var leave_type = button.data('leave_type')
     var modal= $(this)
-    modal.find('#inputId').attr('value',id)
+    modal.find('#inputId').text(id)
     modal.find('#inputLeave').attr('value',leave_type)
     var url ="{{url('leave_type')}}/"+id;
     $('#mEdit').attr('action',url);
   });
+  $('[data-toggle="modal"]').tooltip();
 
 </script>
  

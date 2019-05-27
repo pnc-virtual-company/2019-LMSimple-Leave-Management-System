@@ -42,7 +42,7 @@
           @if(Auth::user()->roles->pluck('name')->implode(', ')=="HR")
           <li class="nav-item dropdown " id="li">
                 <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="material-icons">person</i>
+                  <i class="material-icons text-dark">person</i>
                   <p>HR</p>
                 </a> 
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
@@ -53,7 +53,7 @@
           </li>
           <li class="nav-item ">
             <a class="nav-link" href="{{route('users.index')}}">
-              <i class="material-icons">people</i>
+              <i class="material-icons text-dark">people</i>
               <p>User</p>
             </a>
           </li> 
@@ -63,13 +63,13 @@
           <li class="nav-item">
 
             <a class="nav-link" href="{{route('leave_request.index')}}">
-              <i class="material-icons">content_paste</i>
+              <i class="material-icons text-dark">content_paste</i>
               <p>Leave Request</p>
             </a>
           </li> 
           <li class="nav-item  ">
           <a class="nav-link " href="{{url('calendar')}}">
-              <i class="material-icons">date_range</i>
+              <i class="material-icons text-dark">date_range</i>
               <p >Calendar</p>
             </a>
           </li>
@@ -120,8 +120,6 @@
 
       <div class="content">
         <div class="container-fluid">
-   
-   
       <script src="{{asset('js/jquery.min.js')}}"></script>
       <script src="{{asset('js/jquery-3.2.1.slim.min.js')}}"></script>
       <script src="{{asset('js/popper.min.js')}}"></script>
@@ -326,8 +324,8 @@
     // Add active class to the current button (highlight it)
   
 }
-</scr
-      </script>
+</script>
+     
 </body>
 
 </html>

@@ -17,6 +17,7 @@
 <script type="text/javascript" src="{{asset('js/script.js')}}"></script>
 </head>
 <body>
+<h2 class="text-center">DASHBOARD</h2>
 <div class="container mt-4">
 	<div class="row">
 		<div class="col col-md-4 mt-5">

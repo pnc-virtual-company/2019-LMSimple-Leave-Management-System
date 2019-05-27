@@ -23,29 +23,27 @@
 </head>
  
 <body>
-    <h1 class="text-center">List Department</h1><br>
+    <h1 class="text-center">LIST OF DEPARTMENTS</h1><br>
     <div class="container">
         <table id="table" class="table table-bordered">
-            <thead>
+            <thead class="text-center">
                 <tr>
-                    <th>Action</th>
+                    <!-- <th>Action</th> -->
                     <th>ID</th>
-                    <th>Department</th>
+                    <th>Departments</th>
                 </tr>
             </thead>
 
-            <tbody> 
+            <tbody class="text-center"> 
                 @foreach ( $item as $items)
                 <tr>
-                    <td>
-                         
-                    <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger" data-department="{{$items->department}}" data-id="{{$items->id}}"><i
-                                        class="far fa-trash-alt"></i></a>
-                    <a href="" data-toggle="modal" data-target="#editModal" class="text-info" data-department="{{$items->department}}" data-id="{{$items->id}}"><i
-                                        class="fas fa-pencil-alt" ></i></a>
-                      
-                    </td>
-                   <td>{{$items->id}}</td>
+                   <td>
+                    <a href=""data-toggle="modal" data-placement="left" title="delete!" data-target="#deleteModal" class="text-danger" data-department="{{$items->department}}" data-id="{{$items->id}}"><i
+                                        class="material-icons">delete</i></a>
+                    <a href="" data-toggle="modal" data-placement="right" title="edit!" data-target="#editModal" class="text-primary" data-department="{{$items->department}}" data-id="{{$items->id}}"><i
+                                        class="material-icons" >edit</i></a>
+                   {{$items->id}}
+                   </td>
                     <td>{{$items->department}}</td>
                    
                 </tr>
@@ -111,7 +109,7 @@
                  <div class="modal-footer">
 
 
-                     <button type="submit" class="btn btn-info">Ok</button>
+                     <button type="submit" class="btn bg-primary">Ok</button>
 
                      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
 
@@ -132,10 +130,10 @@
                      </button>
                  </div>
                  <form action="" method="POST" id="mEdit">
+                 <div class="modal-body">
                    @csrf
                    @method('PATCH')
-                 <div class="modal-body">
-                 <form>
+             
                       <div class="form-group row">
                             <label class="col-4" for="firstname">ID</label>
                              <small id="inputId" class="col-7" value=""></small>
@@ -145,14 +143,14 @@
                              <input class="col-7 form-control" type="text"  id="input" name="department" 
                                  required>
                         </div>
-                   </from>
                  </div>
                 
                  <div class="modal-footer">
                      <button type="submit" class="btn bg-primary" >Ok</button>
                      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
                  </div>
-                </form>
+                   </form>
+                
              </div>
          </div>
      </div>
@@ -166,7 +164,8 @@
 <script>
     $(document).ready(function () {
         $('#table').DataTable({
-            
+            "scrollY":300,
+            "scrollCollapse": true
         });
     });
 </script> 
@@ -192,6 +191,7 @@
           var url ="{{url('department')}}/"+id;
           $('#mEdit').attr('action',url);
         })
+        $('[data-toggle="modal"]').tooltip();
     </script>
 @endsection 
 

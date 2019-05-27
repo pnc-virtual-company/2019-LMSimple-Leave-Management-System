@@ -21,10 +21,10 @@
         crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1 class="text-center">List of Users</h1><br>
+    <h1 class="text-center">LIST OF USERS</h1><br>
     <div class="container">
         <table id="table" class="table table-bordered">
-            <thead>
+            <thead class="text-center">
                 <tr>
                    <th>@lang('ID')</th>
                    <th>@lang('Name')</th>
@@ -36,12 +36,16 @@
                 </tr>
             </thead>
 
-            <tbody> 
+            <tbody class="text-center"> 
                   @foreach ($users as $user)
                         <tr data-id="{{ $user->id }}">
                             <td>
-                            <a href="#deleteModal" data-toggle="modal" data-name="{{$user->name}}" data-id="{{$user->id}}" data-target="#deleteModal"><i class="material-icons text-danger">delete</i></a>
-                                <a href="" data-toggle="modal" data-target="#Edit" data-id={{$user->id}} data-name={{$user->name}} data-email={{$user->email}} data-department_id={{$user->department_id}} data-position_id={{$user->position_id}} data-roles={{$user->roles}} data-startdate={{$user->startdate}}> <i class="material-icons text-success">create</i></a>
+                            <a href="#"  data-toggle="modal" data-placement="left" title="delete!"
+                             data-name="{{$user->name}}"  data-id="{{$user->id}}" data-target="#deleteModal"><i class="material-icons text-danger">delete</i></a>
+
+                                <a href="#" data-toggle="modal" data-placement="right" title="edit!" data-placement="left" data-target="#Edit" data-id={{$user->id}}  data-name={{$user->name}} data-email={{$user->email}}
+                                 data-department_id={{$user->department_id}} data-position_id={{$user->position_id}} data-roles={{$user->roles}}  data-startdate={{$user->startdate}}>
+                                  <i class="material-icons text-primary">create</i></a>
                                     <span>{{ $user->id }}</span>
                             </td>
                             <td> 
@@ -67,7 +71,7 @@
              
             </tbody>
         </table>
-        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal"
+        <button type="button" class="btn bg-primary" data-toggle="modal" data-target="#exampleModal"
             data-whatever="@mdo"><i class="fas fa-plus-circle"></i> Create New User</button> 
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
@@ -130,7 +134,7 @@
                         
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-info">Create</button>
+                        <button type="submit" class="btn bg-primary">Create</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
 
                     </div>
@@ -196,7 +200,7 @@
                         
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-info">Update</button>
+                        <button type="submit" class="btn bg-primary">Update</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancle</button>
                     </div>
                 </form>
@@ -223,8 +227,8 @@
             @method('delete')
             @csrf
           <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary">Delete</button>
+          <button type="button" class="btn bg-danger" data-dismiss="modal">Cancle</button>
+          <button type="submit" class="btn bg-primary">OK</button>
         </div>
         </form>
         </div>
@@ -236,8 +240,10 @@
     <script>
         $(document).ready(function () {
         $('#table').DataTable({
-            
+            "scrollY":300,
+            "scrollCollapse": true,
         });
+        $('[data-toggle="modal"]').tooltip(); 
     });
 </script>
 <script src="{{asset('js/app.js')}}"></script>
@@ -259,10 +265,14 @@
           var url ="{{url('users')}}/"+id;
           $('#modalEdit').attr('action',url);
         });
+</script> 
 
-        // delete modal
+<script>
 
-        $('#deleteModal').on('show.bs.modal',function(event){
+// delete modal
+
+
+ $('#deleteModal').on('show.bs.modal',function(event){
         var button =$(event.relatedTarget)
         var name= button.data('name')
         var id= button.data('id')
@@ -270,8 +280,8 @@
         modal.find('#text').text(name)
         var url ="{{url('users')}}/"+id;
         $('#Delete').attr('action',url)
-    })
-</script> 
+    });
+</script>
 @endsection 
 
 

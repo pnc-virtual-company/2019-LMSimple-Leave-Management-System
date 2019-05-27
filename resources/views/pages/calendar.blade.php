@@ -14,6 +14,9 @@
     <script src="{{asset('js/fullcalendar.min.js')}}"></script>
 </head> 
 <body>
+    <div>
+    <h1 class="text-center">THE CALENDAR</h1><br>
+    </div>
     <div id="calendar"></div>
 </body>
     <script>
