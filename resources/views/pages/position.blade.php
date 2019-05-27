@@ -37,10 +37,10 @@
                     @foreach ( $position as $positions)
                 <tr>
                     <td>
-                        <a href="#"  data-toggle="modal" data-position="{{$positions->position}}"
+                        <a href="#"  data-toggle="modal" data-placement="left" title="delete!" data-position="{{$positions->position}}"
                             data-id="{{$positions->id}}" data-target="#deleteModal" class="text-danger"><i
                                 class="material-icons">delete</i></a>
-                        <a href="#" data-toggle="modal" data-target="#editModal" data-position="{{$positions->position}}"
+                        <a href="#" data-toggle="modal" data-placement="right" title="edit!" data-target="#editModal" data-position="{{$positions->position}}"
                             data-id="{{$positions->id}}" class="text-primary"><i class="material-icons">edit</i></a>
                         {{$positions->id}}
                     </td>

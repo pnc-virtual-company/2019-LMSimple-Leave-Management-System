@@ -40,14 +40,12 @@
                   @foreach ($users as $user)
                         <tr data-id="{{ $user->id }}">
                             <td>
-<<<<<<< HEAD
-                                <!-- <a href="#"><i class="material-icons clickable text-danger" data-id="{{ $user->id }}" title="@lang('delete the user')">delete</i></a> -->
-                                <a href="" data-toggle="modal" data-placement="left" title="edit!" data-toggle="modal" data-target="#Edit" data-id="{{$user->id}} data-name={{$user->name}} data-email={{$user->email}}" data-department_id="{{$user->department_id}}" data-position_id="{{$user->position_id}} data-roles={{$user->roles}}" data-startdate="{{$user->startdate}}"> <i class="material-icons text-primary">create</i></a>
-                                <a href="" data-toggle="modal" data-placement="right" title="detail!"><i class="material-icons clickable text-primary">visibility</i></a>
-=======
-                            <a href="#deleteModal" data-toggle="modal" data-name="{{$user->name}}" data-id="{{$user->id}}" data-target="#deleteModal"><i class="material-icons text-danger">delete</i></a>
-                                <a href="" data-toggle="modal" data-target="#Edit" data-id={{$user->id}} data-name={{$user->name}} data-email={{$user->email}} data-department_id={{$user->department_id}} data-position_id={{$user->position_id}} data-roles={{$user->roles}} data-startdate={{$user->startdate}}> <i class="material-icons text-success">create</i></a>
->>>>>>> a6c605626adcc60b0f87347b16d05a09120458f3
+                            <a href="#"  data-toggle="modal" data-placement="left" title="delete!"
+                             data-name="{{$user->name}}"  data-id="{{$user->id}}" data-target="#deleteModal"><i class="material-icons text-danger">delete</i></a>
+
+                                <a href="#" data-toggle="modal" data-placement="right" title="edit!" data-placement="left" data-target="#Edit" data-id={{$user->id}}  data-name={{$user->name}} data-email={{$user->email}}
+                                 data-department_id={{$user->department_id}} data-position_id={{$user->position_id}} data-roles={{$user->roles}}  data-startdate={{$user->startdate}}>
+                                  <i class="material-icons text-primary">create</i></a>
                                     <span>{{ $user->id }}</span>
                             </td>
                             <td> 
@@ -229,8 +227,8 @@
             @method('delete')
             @csrf
           <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary">Delete</button>
+          <button type="button" class="btn bg-danger" data-dismiss="modal">Cancle</button>
+          <button type="submit" class="btn bg-primary">OK</button>
         </div>
         </form>
         </div>
@@ -242,8 +240,10 @@
     <script>
         $(document).ready(function () {
         $('#table').DataTable({
-            
+            "scrollY":300,
+            "scrollCollapse": true,
         });
+        $('[data-toggle="modal"]').tooltip(); 
     });
 </script>
 <script src="{{asset('js/app.js')}}"></script>
@@ -264,15 +264,15 @@
           modal.find('#position_id').attr('value',position_id)
           var url ="{{url('users')}}/"+id;
           $('#modalEdit').attr('action',url);
-<<<<<<< HEAD
-        })
-        $('[data-toggle="modal"]').tooltip();
-=======
         });
+</script> 
 
-        // delete modal
+<script>
 
-        $('#deleteModal').on('show.bs.modal',function(event){
+// delete modal
+
+
+ $('#deleteModal').on('show.bs.modal',function(event){
         var button =$(event.relatedTarget)
         var name= button.data('name')
         var id= button.data('id')
@@ -280,9 +280,8 @@
         modal.find('#text').text(name)
         var url ="{{url('users')}}/"+id;
         $('#Delete').attr('action',url)
-    })
->>>>>>> a6c605626adcc60b0f87347b16d05a09120458f3
-</script> 
+    });
+</script>
 @endsection 
 
 

@@ -60,13 +60,8 @@
             </tbody>
         </table>
         <button type="button" class=" btn bg-primary" data-toggle="modal" data-target="#exampleModal"
-<<<<<<< HEAD
-            data-whatever="@mdo"> <i class="fas fa-plus-circle "></i> Create Leave Request</button>
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-=======
             data-whatever="@mdo"> <i class="material-icons flaot-left">add</i>Create Leave Request</button>
        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
->>>>>>> a6c605626adcc60b0f87347b16d05a09120458f3
             aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">

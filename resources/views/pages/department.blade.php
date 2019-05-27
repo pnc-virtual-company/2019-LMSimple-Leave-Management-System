@@ -38,9 +38,9 @@
                 @foreach ( $item as $items)
                 <tr>
                    <td>
-                    <a href="" data-toggle="modal" data-target="#deleteModal" class="text-danger" data-department="{{$items->department}}" data-id="{{$items->id}}"><i
+                    <a href=""data-toggle="modal" data-placement="left" title="delete!" data-target="#deleteModal" class="text-danger" data-department="{{$items->department}}" data-id="{{$items->id}}"><i
                                         class="material-icons">delete</i></a>
-                    <a href="" data-toggle="modal" data-target="#editModal" class="text-primary" data-department="{{$items->department}}" data-id="{{$items->id}}"><i
+                    <a href="" data-toggle="modal" data-placement="right" title="edit!" data-target="#editModal" class="text-primary" data-department="{{$items->department}}" data-id="{{$items->id}}"><i
                                         class="material-icons" >edit</i></a>
                    {{$items->id}}
                    </td>
@@ -165,7 +165,7 @@
     $(document).ready(function () {
         $('#table').DataTable({
             "scrollY":300,
-            "scrollCollapse": true,
+            "scrollCollapse": true
         });
     });
 </script> 
@@ -191,7 +191,7 @@
           var url ="{{url('department')}}/"+id;
           $('#mEdit').attr('action',url);
         })
-        // $('[data-toggle="modal"]').tooltip();
+        $('[data-toggle="modal"]').tooltip();
     </script>
 @endsection 
 

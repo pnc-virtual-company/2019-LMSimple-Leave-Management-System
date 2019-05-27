@@ -7,7 +7,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <a class="btn btn-info" href="{{url('users')}}">@lang('Back to list')</a>
+            <a class="btn bg-primary" href="{{url('users')}}">@lang('Back to list')</a>
         </div>
         <div class="col-md-12">
             <div class="card">
@@ -44,7 +44,7 @@
                             </select>
                         </div>
 
-                        <input type="submit" class="btn btn-info" value="Save" />
+                        <input type="submit" class="btn bg-pramary" value="Save" />
                     </form>
                 </div>
             </div>

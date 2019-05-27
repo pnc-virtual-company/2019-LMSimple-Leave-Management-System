@@ -25,7 +25,7 @@
             <thead class="text-center">
                 <tr>
                     <th>ID</th>
-                    <th>Leav Type</th>
+                    <th>Leave Type</th>
                 </tr>
             </thead>
             <tbody class="text-center">
@@ -56,7 +56,7 @@
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                          <h5 class="modal-title" id="exampleModalLabel">Delete Leave Type</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
@@ -143,7 +143,8 @@
 <script>
     $(document).ready(function () {
         $('#table').DataTable({
-          
+          "scrollY":300,
+            "scrollCollapse": true,
         });
     });
 
